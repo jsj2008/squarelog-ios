@@ -24,4 +24,4 @@ Particularly proud of
 
 https://github.com/robspychala/squarelog-ios/blob/master/Classes/Data/FourSquare/FSPostQueue.m
 
-serializes network requests to cordite so that upon app crash or quit (this is pre app-backgrounding), the photo, tip, network call would be guaranteed to get execute
+serializes network requests to coredata so that upon app crash or quit (this is pre app-backgrounding), the photo, tip, network call would be guaranteed to get executed when app is started again
