@@ -1,0 +1,42 @@
+#import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import "FSCheckinsLookup.h"
+#import "NSDate+TimeAgo.h"
+#import "FSSettings.h"
+#import "URLConnectionHandler.h"
+
+#import "FSCheckin.h"
+
+@interface FSCheckinsLookup : URLConnectionHandler {
+    
+    NSOperationQueue *queue;
+	NSMutableArray *checkins;
+    NSMutableArray *recentlyPostedCheckins;
+}
+
+- (void) lookupWithLocation:(CLLocation*) location;
+- (void) didFinishParsing:(NSArray *)sectionCheckins;
+- (void) parseErrorOccurred:(NSError *)_error;
+- (void) addPostedCheckin:(FSCheckin*)checkin;
+- (NSIndexPath*) combineRecentlyPostedCheckins;
+- (void) refreshCheckinTimes;
+
+- (void) saveCheckins;
+- (void) loadCheckins;
+
++ (FSCheckinsLookup*) sharedInstance;
+
++ (void) cleanServerValues:(NSMutableDictionary*)checkin;
++ (BOOL) isShout:(NSDictionary*)checkin;
++ (NSMutableArray*) parseToTableViewCheckinSections:(NSDictionary*)checkinsFromServer distanceSections:(BOOL)distanceSections;
++ (NSMutableArray*) parseToTableViewCheckinSections:(NSDictionary*)locationDataFromServer;
++ (NSString*) formatLocationWithVenue:(NSDictionary*)venue;
++ (NSString*) formatCityWithVenue:(NSDictionary*)venue;
++ (BOOL) computeTransientValues:(NSDictionary*)checkin;
+
+
+@property (nonatomic, retain) NSArray *checkins;
+@property (nonatomic, retain) NSArray *recentlyPostedCheckins;
+@property (nonatomic, retain) NSOperationQueue *queue;
+
+@end

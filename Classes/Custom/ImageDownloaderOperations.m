@@ -1,0 +1,331 @@
+#import "ImageDownloaderOperations.h"
+#import "CGHelper.h"
+#import "UIScreen+Scale.h"
+#import "UIImage+Resize.h"
+
+@implementation IdentityOperation
+
+@synthesize dataToParse, delegate;
+
+- (id)initWithData:(NSData*)_dataToParse delegate:(id)_delegate {
+    
+    if (![super init]) return nil;
+    
+    self.dataToParse = _dataToParse;
+    self.delegate = _delegate;
+    
+    return self;
+}
+
+- (void)dealloc {
+    self.delegate = nil;
+    [super dealloc];
+}
+
++ (UIImage*)process:(UIImage*)image
+{
+    return [image retain];
+}
+
+- (void)main {
+    
+    UIImage *image = [[UIImage alloc] initWithData:dataToParse];
+    [dataToParse release]; dataToParse = nil;
+    
+    UIImage *img = [[self class] process:image];
+    [image release];
+	
+	if (![self isCancelled] && [self.delegate respondsToSelector:@selector(doneProcessingImage:)]) {
+        [self.delegate performSelector:@selector(doneProcessingImage:) withObject:img];
+    }
+}
+
+@end
+
+@implementation AvatarOperation
+
+@synthesize dataToParse, delegate;
+
++ (CGSize) sizeToFit
+{
+    return CGSizeMake(54, 55);
+}
+
++ (CGSize) imageSize
+{
+    return CGSizeMake(50, 50);
+}
+
+- (id)initWithData:(NSData*)_dataToParse delegate:(id)_delegate {
+    
+    if (![super init]) return nil;
+    
+    self.dataToParse = _dataToParse;
+    self.delegate = _delegate;
+    
+    return self;
+}
+
+- (void)dealloc {
+    self.delegate = nil;
+    [super dealloc];
+}
+
++ (UIImage*)process:(UIImage*)image {
+	
+    // resize to avatar size
+    
+	CGFloat scale = [[UIScreen mainScreen] backwardsCompatibleScale];
+	
+	CGSize imageSize = CGSizeMake([self imageSize].width*scale, [self imageSize].height*scale);
+	int byteSize = imageSize.width * imageSize.height * 4;
+	void *data = malloc(byteSize); bzero(data, byteSize);
+	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+	CGContextRef context = CGBitmapContextCreate(data, imageSize.width, imageSize.height, 8, 
+                                                 imageSize.width*4, colorSpace, kCGImageAlphaPremultipliedFirst);
+    CGContextAddRoundRect(context, CGRectMake(0, 0, imageSize.width, imageSize.height), 4*scale, RoundRectAllCorners);
+    CGContextClip(context);  
+    CGContextDrawImage (context, CGRectMake(0, 0, imageSize.width, imageSize.height), image.CGImage);
+    CGImageRef roundedImage = CGBitmapContextCreateImage(context);
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    free(data); data = NULL;
+    
+//    NSData *d1 = UIImagePNGRepresentation([[UIImage alloc] initWithCGImage:roundedImage]);
+//    [d1 writeToFile:@"/tmp/d1.png" atomically:YES];    
+    
+    // draw shadow
+    
+	imageSize = CGSizeMake([[self class] sizeToFit].width*scale, [[self class] sizeToFit].height*scale);
+	byteSize = imageSize.width * imageSize.height * 4;
+	data = malloc(byteSize); bzero(data, byteSize);
+	colorSpace = CGColorSpaceCreateDeviceRGB();
+	context = CGBitmapContextCreate(data, imageSize.width, imageSize.height, 8, 
+                                    imageSize.width*4, colorSpace, kCGImageAlphaPremultipliedFirst);
+    
+    CGContextSaveGState(context);
+    CGContextTranslateCTM(context, 0, [self imageSize].height*scale);
+    CGContextScaleCTM(context, 1.0, -1.0);    
+    CGContextSetShadowWithColor(context, CGSizeMake(0*scale, 1*scale), 2*scale, HEXCOLOR(0x00000066).CGColor);
+    CGContextDrawImage (context, CGRectMake(2*scale, -2*scale, [self imageSize].width*scale, [self imageSize].height*scale), roundedImage);
+    CGContextRestoreGState(context);
+    CGImageRelease(roundedImage);
+    CGColorSpaceRelease(colorSpace);
+    
+    CGImageRef prerenderedImage = CGBitmapContextCreateImage(context);
+    UIImage *img = [UIImage imageWithCGImage:prerenderedImage];
+    CGImageRelease(prerenderedImage);
+    
+//    NSData *d2 = UIImagePNGRepresentation(img);
+//    [d2 writeToFile:@"/tmp/d2.png" atomically:YES];      
+    
+    return img;
+}
+
+- (void)main {
+    
+    UIImage *image = [[UIImage alloc] initWithData:dataToParse];
+    [dataToParse release]; dataToParse = nil;
+    
+    UIImage *img = [[self class] process:image];
+    [image release];
+    
+	if (![self isCancelled] && [self.delegate respondsToSelector:@selector(doneProcessingImage:)]) {
+        [self.delegate performSelector:@selector(doneProcessingImage:) withObject:img];
+    }
+}
+
+//- (void)main {
+//    
+//    UIImage *new_image = [[UIImage alloc] initWithData:dataToParse];
+//    
+//    [dataToParse release]; dataToParse = nil;
+//	
+//    // resize to avatar size
+//    
+//	CGFloat scale = [[UIScreen mainScreen] backwardsCompatibleScale];
+//	
+//	CGSize imageSize = CGSizeMake(MIN(50*scale, new_image.size.width), MIN(50*scale, new_image.size.height));
+//	int byteSize = imageSize.width * imageSize.height * 4;
+//	void *data = malloc(byteSize); bzero(data, byteSize);
+//	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+//	CGContextRef context = CGBitmapContextCreate(data, imageSize.width, imageSize.height, 8, 
+//                                                 imageSize.width*4, colorSpace, kCGImageAlphaPremultipliedFirst);
+//	CGRect rect = CGRectMake(0, 0, imageSize.width, imageSize.height);
+//	CGContextDrawImage (context, rect, new_image.CGImage);
+//    CGImageRef originalImage = CGBitmapContextCreateImage(context);
+//    CGContextRelease(context);
+//    CGColorSpaceRelease(colorSpace);
+//    free(data); data = NULL;
+//    [new_image release];
+//    
+//    // uncompress
+//    
+//    CFDataRef imageData = CGDataProviderCopyData(CGImageGetDataProvider(originalImage));
+//    CGDataProviderRef imageDataProvider = CGDataProviderCreateWithCFData(imageData);
+//    CFRelease(imageData);
+//    CGImageRef image = CGImageCreate(
+//                                     CGImageGetWidth(originalImage),
+//                                     CGImageGetHeight(originalImage),
+//                                     CGImageGetBitsPerComponent(originalImage),
+//                                     CGImageGetBitsPerPixel(originalImage),
+//                                     CGImageGetBytesPerRow(originalImage),
+//                                     CGImageGetColorSpace(originalImage),
+//                                     CGImageGetBitmapInfo(originalImage),
+//                                     imageDataProvider,
+//                                     CGImageGetDecode(originalImage),
+//                                     CGImageGetShouldInterpolate(originalImage),
+//                                     CGImageGetRenderingIntent(originalImage));
+//    CGDataProviderRelease(imageDataProvider);
+//    
+//    CGImageRelease(originalImage);
+//	
+//	UIImage *img = [UIImage imageWithCGImage:image];
+//	
+//    if (![self isCancelled] && [self.delegate respondsToSelector:@selector(setImage:)]) {
+//        [self.delegate performSelectorOnMainThread:@selector(setImage:) withObject:img waitUntilDone:NO];
+//    }
+//}
+
+@end
+
+@implementation SmallAvatarOperation
+
++ (CGSize) sizeToFit
+{
+    return CGSizeMake(38, 39);
+}
+
++ (CGSize) imageSize
+{
+    return CGSizeMake(34, 34);
+}
+
+@end
+
+@implementation ThumbOperation
+
++ (CGSize) sizeToFit
+{
+    return CGSizeMake(75, 75);
+}
+
++ (CGSize) imageSize
+{
+    return CGSizeMake(75, 75);
+}
+
++ (UIImage*)process:(UIImage*)image {
+    
+	CGFloat scale = [[UIScreen mainScreen] backwardsCompatibleScale];
+	
+	CGSize imageSize = CGSizeMake([self imageSize].width*scale, [self imageSize].height*scale);
+	int byteSize = imageSize.width * imageSize.height * 4;
+	void *data = malloc(byteSize); bzero(data, byteSize);
+	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+	CGContextRef context = CGBitmapContextCreate(data, imageSize.width, imageSize.height, 8, 
+                                                 imageSize.width*4, colorSpace, kCGImageAlphaPremultipliedFirst);
+    CGContextAddRoundRect(context, CGRectMake(0, 0, imageSize.width, imageSize.height), 6*scale, RoundRectAllCorners);
+    CGContextClip(context);  
+    CGContextDrawImage (context, CGRectMake(0, 0, imageSize.width, imageSize.height), image.CGImage);
+    CGImageRef roundedImage = CGBitmapContextCreateImage(context);
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    free(data); data = NULL;
+    
+    UIImage *img = [UIImage imageWithCGImage:roundedImage];
+    CGImageRelease(roundedImage);
+    
+    return img;
+    
+}
+
+@end
+
+@implementation BadgeBigOperation
+
++ (CGSize) sizeToFit
+{
+    return CGSizeMake(100, 100);
+}
+
++ (CGSize) imageSize
+{
+    return CGSizeMake(100, 100);
+}
+
++ (UIImage*)process:(UIImage*)image {
+    
+	CGFloat scale = [[UIScreen mainScreen] backwardsCompatibleScale];
+	
+	CGSize imageSize = CGSizeMake([self imageSize].width*scale, [self imageSize].height*scale);
+	int byteSize = imageSize.width * imageSize.height * 4;
+	void *data = malloc(byteSize); bzero(data, byteSize);
+	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+	CGContextRef context = CGBitmapContextCreate(data, imageSize.width, imageSize.height, 8, 
+                                                 imageSize.width*4, colorSpace, kCGImageAlphaPremultipliedFirst);
+    
+    CGContextDrawImage (context, CGRectMake(0, 0, imageSize.width, imageSize.height), image.CGImage);
+    CGImageRef roundedImage = CGBitmapContextCreateImage(context);
+    CGContextRelease(context);
+    CGColorSpaceRelease(colorSpace);
+    free(data); data = NULL;
+    
+    UIImage *img = [UIImage imageWithCGImage:roundedImage];
+    CGImageRelease(roundedImage);
+    
+    return img;
+}
+
+@end
+
+
+@implementation BadgeSmallOperation
+
++ (CGSize) sizeToFit
+{
+    return CGSizeMake(36, 36);
+}
+
++ (CGSize) imageSize
+{
+    return CGSizeMake(36, 36);
+}
+
+@end
+
+@implementation WikipediaThumbOperation
+
++ (CGSize) sizeToFit
+{
+    return CGSizeMake(54, 55);
+}
+
++ (CGSize) imageSize
+{
+    return CGSizeMake(50, 50);
+}
+
++ (UIImage*)wikiProcess:(UIImage*)image {
+    
+    int size = image.size.width > image.size.height ? image.size.height : image.size.width;
+    
+    UIImage *squareImage = [image thumbnailImage:size*[[UIScreen mainScreen] backwardsCompatibleScale] transparentBorder:0 cornerRadius:4 interpolationQuality:kCGInterpolationDefault];
+    
+    return [[self class] process:squareImage];
+}
+
+- (void)main {
+    
+    UIImage *image = [[UIImage alloc] initWithData:dataToParse];
+    [dataToParse release]; dataToParse = nil;
+    
+    UIImage *img = [[self class] wikiProcess:image];
+    [image release];
+    
+	if (![self isCancelled] && [self.delegate respondsToSelector:@selector(doneProcessingImage:)]) {
+        [self.delegate performSelector:@selector(doneProcessingImage:) withObject:img];
+    }
+}
+
+@end

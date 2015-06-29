@@ -1,0 +1,2685 @@
+TParseKitMobile
+v7
+r3
+t304214606.556266
+cCheck dependencies
+cCpHeader build/Release-iphoneos/usr/local/include/ParseKit.h include/ParseKit/ParseKit.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKTypes.h include/ParseKit/PKTypes.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKReader.h include/ParseKit/PKReader.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKAssembly.h include/ParseKit/PKAssembly.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKParser.h include/ParseKit/PKParser.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKRepetition.h include/ParseKit/PKRepetition.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKCollectionParser.h include/ParseKit/PKCollectionParser.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKAlternation.h include/ParseKit/PKAlternation.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKSequence.h include/ParseKit/PKSequence.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKTrack.h include/ParseKit/PKTrack.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKTrackException.h include/ParseKit/PKTrackException.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKIntersection.h include/ParseKit/PKIntersection.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKDifference.h include/ParseKit/PKDifference.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKNegation.h include/ParseKit/PKNegation.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKTerminal.h include/ParseKit/PKTerminal.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKEmpty.h include/ParseKit/PKEmpty.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKTokenAssembly.h include/ParseKit/PKTokenAssembly.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKToken.h include/ParseKit/PKToken.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKTokenArraySource.h include/ParseKit/PKTokenArraySource.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKTokenizer.h include/ParseKit/PKTokenizer.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKTokenizerState.h include/ParseKit/PKTokenizerState.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKNumberState.h include/ParseKit/PKNumberState.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKSymbolState.h include/ParseKit/PKSymbolState.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKWordState.h include/ParseKit/PKWordState.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKWhitespaceState.h include/ParseKit/PKWhitespaceState.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKDelimitState.h include/ParseKit/PKDelimitState.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKCommentState.h include/ParseKit/PKCommentState.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKSingleLineCommentState.h include/ParseKit/PKSingleLineCommentState.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKMultiLineCommentState.h include/ParseKit/PKMultiLineCommentState.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKSymbolNode.h include/ParseKit/PKSymbolNode.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKSymbolRootNode.h include/ParseKit/PKSymbolRootNode.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKPattern.h include/ParseKit/PKPattern.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKWord.h include/ParseKit/PKWord.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKQuotedString.h include/ParseKit/PKQuotedString.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKSymbol.h include/ParseKit/PKSymbol.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKLiteral.h include/ParseKit/PKLiteral.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKCaseInsensitiveLiteral.h include/ParseKit/PKCaseInsensitiveLiteral.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKWhitespace.h include/ParseKit/PKWhitespace.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKComment.h include/ParseKit/PKComment.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKDelimitedString.h include/ParseKit/PKDelimitedString.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKAny.h include/ParseKit/PKAny.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKLowercaseWord.h include/ParseKit/PKLowercaseWord.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKUppercaseWord.h include/ParseKit/PKUppercaseWord.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKCharacterAssembly.h include/ParseKit/PKCharacterAssembly.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKChar.h include/ParseKit/PKChar.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKDigit.h include/ParseKit/PKDigit.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKLetter.h include/ParseKit/PKLetter.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKSpecificChar.h include/ParseKit/PKSpecificChar.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKParserFactory.h include/ParseKit/PKParserFactory.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKQuoteState.h include/ParseKit/PKQuoteState.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKNumber.h include/ParseKit/PKNumber.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKEmailState.h include/ParseKit/PKEmailState.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKURLState.h include/ParseKit/PKURLState.h
+cCpHeader build/Release-iphoneos/usr/local/include/PKTwitterState.h include/ParseKit/PKTwitterState.h
+cProcessPCH /var/folders/5I/5IipyKOyHlahRE14uK7uBE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ParseKitMobile_Prefix-ciqptzwkgvvqbcczbqlyivylsprw/ParseKitMobile_Prefix.pch.gch ParseKitMobile_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/5I/5IipyKOyHlahRE14uK7uBE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ParseKitMobile_Prefix-ckspmjafwbbvqkekusitmxuajawd/ParseKitMobile_Prefix.pch.gch ParseKitMobile_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk
+c000000004C63F59E0000000000000110
+t1281619358
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFArray.h
+c000000004BFE05AF0000000000007AC8
+t1274938799
+s31432
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBase.h
+c000000004BFE05AF00000000000045BF
+t1274938799
+s17855
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFString.h
+c000000004BFE05AF000000000000B1F9
+t1274938799
+s45561
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004BFE06FA000000000034A850
+t1274939130
+s3450960
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.h
+c000000004BFE05F700000000000004FE
+t1274938871
+s1278
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004BFE07D200000000003E1EB0
+t1274939346
+s4071088
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004BFE07B10000000000001466
+t1274939313
+s5222
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSArray.h
+c000000004BFE07B10000000000001B27
+t1274939313
+s6951
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSDictionary.h
+c000000004BFE07B10000000000000E3B
+t1274939313
+s3643
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSError.h
+c000000004BFE07B10000000000001DE5
+t1274939313
+s7653
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSException.h
+c000000004BFE07B10000000000002033
+t1274939313
+s8243
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSNotification.h
+c000000004BFE07B1000000000000059D
+t1274939313
+s1437
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObjCRuntime.h
+c000000004BFE07B10000000000002AD2
+t1274939313
+s10962
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSObject.h
+c000000004BFE07B10000000000000EAD
+t1274939313
+s3757
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+c000000004BFE07B1000000000000049D
+t1274939313
+s1181
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRunLoop.h
+c000000004BFE07B10000000000000915
+t1274939313
+s2325
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h
+c000000004BFE07B10000000000006506
+t1274939313
+s25862
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/AvailabilityMacros.h
+c000000004BF4D50E0000000000006724
+t1274336526
+s26404
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/TargetConditionals.h
+c000000004BF4D50E00000000000031E9
+t1274336526
+s12777
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/dlfcn.h
+c000000004C5A13EB0000000000000B1C
+t1280971755
+s2844
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/libkern/OSAtomic.h
+c000000004BF75A3C0000000000002519
+t1274501692
+s9497
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/mach-o/loader.h
+c000000004BFDEF1E000000000000EFDB
+t1274933022
+s61403
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/objc/runtime.h
+c000000004BFDF9B700000000000053F9
+t1274935735
+s21497
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/stdio.h
+c000000004BF75A3D00000000000040AC
+t1274501693
+s16556
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/stdlib.h
+c000000004BF75A3D0000000000002DF5
+t1274501693
+s11765
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/string.h
+c000000004BF75A3D0000000000001731
+t1274501693
+s5937
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/include/sys/types.h
+c000000004C5A15130000000000002905
+t1280972051
+s10501
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/lib/gcc/arm-apple-darwin10/4.2.1/include/limits.h
+c000000004BCCA1780000000000000C7E
+t1271701880
+s3198
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/lib/gcc/arm-apple-darwin10/4.2.1/include/stdarg.h
+c000000004BCCA17800000000000010DD
+t1271701880
+s4317
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk/usr/lib/gcc/arm-apple-darwin10/4.2.1/include/stdint.h
+c000000004BCCA2A2000000000000190C
+t1271702178
+s6412
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/ParseKitMobile_Prefix.pch
+c000000004BD8B1F4000000000000008B
+t1272492532
+s139
+i<Foundation/Foundation.h>
+i<Foundation/NSObject.h>
+i<CoreGraphics/CoreGraphics.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/NSArray+ParseKitAdditions.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/NSString+ParseKitAdditions.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKAlternation.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKAny.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKAssembly.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKCaseInsensitiveLiteral.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKChar.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKCharacterAssembly.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKCollectionParser.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKComment.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKCommentState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKDelimitState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKDelimitedString.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKDifference.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKDigit.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKEmailState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKEmpty.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKGrammarParser.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKIntersection.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKLetter.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKLiteral.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKLowercaseWord.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKMultiLineCommentState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKNegation.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKNumber.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKNumberState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKParser.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKParserFactory.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKPattern.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKQuoteState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKQuotedString.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKReader.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKRepetition.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSequence.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSingleLineCommentState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSpecificChar.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSymbol.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSymbolNode.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSymbolRootNode.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSymbolState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTerminal.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKToken.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTokenArraySource.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTokenAssembly.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTokenizer.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTokenizerState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTrack.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTrackException.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTwitterState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKURLState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKUppercaseWord.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKWhitespace.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKWhitespaceState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKWord.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKWordState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/RegexKitLite.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/parsekit.LinkFileList
+c000000004C71BACC00000000000024BD
+t1282521804
+s9405
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/parsekit.a
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/NSArray+ParseKitAdditions.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/NSString+ParseKitAdditions.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKAlternation.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKAny.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKAssembly.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKCaseInsensitiveLiteral.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKChar.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKCharacterAssembly.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKCollectionParser.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKComment.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKCommentState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKDelimitState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKDelimitedString.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKDifference.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKDigit.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKEmailState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKEmpty.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKGrammarParser.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKIntersection.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKLetter.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKLiteral.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKLowercaseWord.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKMultiLineCommentState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKNegation.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKNumber.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKNumberState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKParser.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKParserFactory.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKPattern.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKQuoteState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKQuotedString.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKReader.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKRepetition.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSequence.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSingleLineCommentState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSpecificChar.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSymbol.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSymbolNode.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSymbolRootNode.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSymbolState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTerminal.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKToken.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTokenArraySource.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTokenAssembly.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTokenizer.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTokenizerState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTrack.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTrackException.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTwitterState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKURLState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKUppercaseWord.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKWhitespace.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKWhitespaceState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKWord.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKWordState.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/RegexKitLite.o
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/parsekit.LinkFileList
+c000000004C71BACC00000000000024BD
+t1282521804
+s9405
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/parsekit.a
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/parsekit.a
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKAlternation.h
+t1282521805
+s1251
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKAny.h
+t1282521805
+s1000
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKAssembly.h
+t1282521805
+s3751
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKCaseInsensitiveLiteral.h
+t1282521805
+s894
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKChar.h
+t1282521805
+s1130
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKCharacterAssembly.h
+t1282521805
+s894
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKCollectionParser.h
+t1282521805
+s1514
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKComment.h
+t1282521805
+s1027
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKCommentState.h
+t1282521805
+s3963
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKDelimitState.h
+t1282521805
+s2705
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKDelimitedString.h
+t1282521805
+s1317
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKDifference.h
+t1282521805
+s2500
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKDigit.h
+t1282521805
+s1081
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKEmailState.h
+t1282521805
+s436
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKEmpty.h
+t1282521805
+s1331
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKIntersection.h
+t1282521805
+s1736
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKLetter.h
+t1282521805
+s1097
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKLiteral.h
+t1282521805
+s1190
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKLowercaseWord.h
+t1282521805
+s710
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKMultiLineCommentState.h
+t1282521805
+s837
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKNegation.h
+t1282521805
+s1919
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKNumber.h
+t1282521805
+s1019
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKNumberState.h
+t1282521805
+s2596
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKParser.h
+t1282521805
+s9221
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKParserFactory.h
+t1282521805
+s1376
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKPattern.h
+t1282521805
+s1335
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKQuoteState.h
+t1282521805
+s2189
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKQuotedString.h
+t1282521805
+s1086
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKReader.h
+t1282521805
+s1896
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKRepetition.h
+t1282521805
+s1839
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKSequence.h
+t1282521805
+s1198
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKSingleLineCommentState.h
+t1282521805
+s806
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKSpecificChar.h
+t1282521805
+s1564
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKSymbol.h
+t1282521805
+s1540
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKSymbolNode.h
+t1282521805
+s3229
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKSymbolRootNode.h
+t1282521805
+s1849
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKSymbolState.h
+t1282521805
+s2555
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKTerminal.h
+t1282521805
+s1739
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKToken.h
+t1282521805
+s6830
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKTokenArraySource.h
+t1282521805
+s2244
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKTokenAssembly.h
+t1282521805
+s2496
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKTokenizer.h
+t1282521805
+s6286
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKTokenizerState.h
+t1282521805
+s2679
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKTrack.h
+t1282521805
+s1246
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKTrackException.h
+t1282521805
+s1325
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKTwitterState.h
+t1282521805
+s405
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKTypes.h
+t1282521805
+s731
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKURLState.h
+t1282521805
+s490
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKUppercaseWord.h
+t1282521805
+s710
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKWhitespace.h
+t1282521805
+s1047
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKWhitespaceState.h
+t1282521805
+s2003
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKWord.h
+t1282521805
+s1004
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/PKWordState.h
+t1282521805
+s2423
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include/ParseKit.h
+t1282521805
+s3756
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKAlternation.h
+c000000004BD8B1F400000000000004E3
+t1272492532
+s1251
+i<Foundation/Foundation.h>
+i<ParseKit/PKCollectionParser.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKAny.h
+c000000004BD8B1F400000000000003E8
+t1272492532
+s1000
+i<Foundation/Foundation.h>
+i<ParseKit/PKTerminal.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKAssembly.h
+c000000004BD8B1F40000000000000EA7
+t1272492532
+s3751
+i<Foundation/Foundation.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKCaseInsensitiveLiteral.h
+c000000004BD8B1F4000000000000037E
+t1272492532
+s894
+i<Foundation/Foundation.h>
+i<ParseKit/PKLiteral.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKChar.h
+c000000004BD8B1F4000000000000046A
+t1272492532
+s1130
+i<ParseKit/PKTerminal.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKCharacterAssembly.h
+c000000004BD8B1F4000000000000037E
+t1272492532
+s894
+i<ParseKit/PKAssembly.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKCollectionParser.h
+c000000004BD8B1F400000000000005EA
+t1272492532
+s1514
+i<Foundation/Foundation.h>
+i<ParseKit/PKParser.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKComment.h
+c000000004BD8B1F40000000000000403
+t1272492532
+s1027
+i<Foundation/Foundation.h>
+i<ParseKit/PKTerminal.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKCommentState.h
+c000000004BD8B1F40000000000000F7B
+t1272492532
+s3963
+i<Foundation/Foundation.h>
+i<ParseKit/PKTokenizerState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKDelimitState.h
+c000000004BD8B1F40000000000000A91
+t1272492532
+s2705
+i<ParseKit/PKTokenizerState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKDelimitedString.h
+c000000004BD8B1F40000000000000525
+t1272492532
+s1317
+i<Foundation/Foundation.h>
+i<ParseKit/PKTerminal.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKDifference.h
+c000000004BD8B1F400000000000009C4
+t1272492532
+s2500
+i<Foundation/Foundation.h>
+i<ParseKit/PKParser.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKDigit.h
+c000000004BD8B1F40000000000000439
+t1272492532
+s1081
+i<ParseKit/PKTerminal.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKEmailState.h
+c000000004BD8B1F400000000000001B4
+t1272492532
+s436
+i<Foundation/Foundation.h>
+i<ParseKit/PKTokenizerState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKEmpty.h
+c000000004BD8B1F40000000000000533
+t1272492532
+s1331
+i<Foundation/Foundation.h>
+i<ParseKit/PKParser.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKIntersection.h
+c000000004BD8B1F400000000000006C8
+t1272492532
+s1736
+i<Foundation/Foundation.h>
+i<ParseKit/PKCollectionParser.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKLetter.h
+c000000004BD8B1F40000000000000449
+t1272492532
+s1097
+i<ParseKit/PKTerminal.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKLiteral.h
+c000000004BD8B1F400000000000004A6
+t1272492532
+s1190
+i<Foundation/Foundation.h>
+i<ParseKit/PKTerminal.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKLowercaseWord.h
+c000000004BD8B1F400000000000002C6
+t1272492532
+s710
+i<Foundation/Foundation.h>
+i<ParseKit/PKWord.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKMultiLineCommentState.h
+c000000004BD8B1F40000000000000345
+t1272492532
+s837
+i<Foundation/Foundation.h>
+i<ParseKit/PKTokenizerState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKNegation.h
+c000000004BD8B1F4000000000000077F
+t1272492532
+s1919
+i<ParseKit/PKParser.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKNumber.h
+c000000004BD8B1F400000000000003FB
+t1272492532
+s1019
+i<Foundation/Foundation.h>
+i<ParseKit/PKTerminal.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKNumberState.h
+c000000004BD8B1F40000000000000A24
+t1272492532
+s2596
+i<Foundation/Foundation.h>
+i<ParseKit/PKTokenizerState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKParser.h
+c000000004BD8B1F40000000000002405
+t1272492532
+s9221
+i<Foundation/Foundation.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKParserFactory.h
+c000000004BD8B1F40000000000000560
+t1272492532
+s1376
+i<Foundation/Foundation.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKPattern.h
+c000000004BD8B1F40000000000000537
+t1272492532
+s1335
+i<Foundation/Foundation.h>
+i<ParseKit/PKTerminal.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKQuoteState.h
+c000000004BD8B1F4000000000000088D
+t1272492532
+s2189
+i<Foundation/Foundation.h>
+i<ParseKit/PKTokenizerState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKQuotedString.h
+c000000004BD8B1F4000000000000043E
+t1272492532
+s1086
+i<Foundation/Foundation.h>
+i<ParseKit/PKTerminal.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKReader.h
+c000000004BD8B1F40000000000000768
+t1272492532
+s1896
+i<Foundation/Foundation.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKRepetition.h
+c000000004BD8B1F4000000000000072F
+t1272492532
+s1839
+i<Foundation/Foundation.h>
+i<ParseKit/PKParser.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSequence.h
+c000000004BD8B1F400000000000004AE
+t1272492532
+s1198
+i<Foundation/Foundation.h>
+i<ParseKit/PKCollectionParser.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSingleLineCommentState.h
+c000000004BD8B1F40000000000000326
+t1272492532
+s806
+i<Foundation/Foundation.h>
+i<ParseKit/PKTokenizerState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSpecificChar.h
+c000000004BD8B1F4000000000000061C
+t1272492532
+s1564
+i<ParseKit/PKTerminal.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSymbol.h
+c000000004BD8B1F40000000000000604
+t1272492532
+s1540
+i<Foundation/Foundation.h>
+i<ParseKit/PKTerminal.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSymbolNode.h
+c000000004BD8B1F40000000000000C9D
+t1272492532
+s3229
+i<Foundation/Foundation.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSymbolRootNode.h
+c000000004BD8B1F40000000000000739
+t1272492532
+s1849
+i<Foundation/Foundation.h>
+i<ParseKit/PKSymbolNode.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSymbolState.h
+c000000004BD8B1F400000000000009FB
+t1272492532
+s2555
+i<Foundation/Foundation.h>
+i<ParseKit/PKTokenizerState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTerminal.h
+c000000004BD8B1F400000000000006CB
+t1272492532
+s1739
+i<Foundation/Foundation.h>
+i<ParseKit/PKParser.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKToken.h
+c000000004BD8B1F40000000000001AAE
+t1272492532
+s6830
+i<Foundation/Foundation.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTokenArraySource.h
+c000000004BD8B1F400000000000008C4
+t1272492532
+s2244
+i<Foundation/Foundation.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTokenAssembly.h
+c000000004BD8B1F400000000000009C0
+t1272492532
+s2496
+i<ParseKit/PKAssembly.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTokenizer.h
+c000000004BD8B1F4000000000000188E
+t1272492532
+s6286
+i<Foundation/Foundation.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTokenizerState.h
+c000000004BD8B1F40000000000000A77
+t1272492532
+s2679
+i<Foundation/Foundation.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTrack.h
+c000000004BD8B1F400000000000004DE
+t1272492532
+s1246
+i<Foundation/Foundation.h>
+i<ParseKit/PKSequence.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTrackException.h
+c000000004BD8B1F4000000000000052D
+t1272492532
+s1325
+i<Foundation/Foundation.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTwitterState.h
+c000000004BD8B1F40000000000000195
+t1272492532
+s405
+i<Foundation/Foundation.h>
+i<ParseKit/PKTokenizerState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTypes.h
+c000000004BD8B1F400000000000002DB
+t1272492532
+s731
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKURLState.h
+c000000004BD8B1F400000000000001EA
+t1272492532
+s490
+i<Foundation/Foundation.h>
+i<ParseKit/PKTokenizerState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKUppercaseWord.h
+c000000004BD8B1F400000000000002C6
+t1272492532
+s710
+i<Foundation/Foundation.h>
+i<ParseKit/PKWord.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKWhitespace.h
+c000000004BD8B1F40000000000000417
+t1272492532
+s1047
+i<Foundation/Foundation.h>
+i<ParseKit/PKTerminal.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKWhitespaceState.h
+c000000004BD8B1F400000000000007D3
+t1272492532
+s2003
+i<Foundation/Foundation.h>
+i<ParseKit/PKTokenizerState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKWord.h
+c000000004BD8B1F400000000000003EC
+t1272492532
+s1004
+i<Foundation/Foundation.h>
+i<ParseKit/PKTerminal.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKWordState.h
+c000000004BD8B1F40000000000000977
+t1272492532
+s2423
+i<Foundation/Foundation.h>
+i<ParseKit/PKTokenizerState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/ParseKit.h
+c000000004BD8B1F40000000000000EAC
+t1272492532
+s3756
+i<Foundation/Foundation.h>
+i<ParseKit/PKTypes.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKParser.h>
+i<ParseKit/PKAssembly.h>
+i<ParseKit/PKSequence.h>
+i<ParseKit/PKDifference.h>
+i<ParseKit/PKNegation.h>
+i<ParseKit/PKIntersection.h>
+i<ParseKit/PKCollectionParser.h>
+i<ParseKit/PKAlternation.h>
+i<ParseKit/PKRepetition.h>
+i<ParseKit/PKEmpty.h>
+i<ParseKit/PKTerminal.h>
+i<ParseKit/PKTrack.h>
+i<ParseKit/PKTrackException.h>
+i<ParseKit/PKCharacterAssembly.h>
+i<ParseKit/PKChar.h>
+i<ParseKit/PKSpecificChar.h>
+i<ParseKit/PKLetter.h>
+i<ParseKit/PKDigit.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKTokenArraySource.h>
+i<ParseKit/PKTokenAssembly.h>
+i<ParseKit/PKTokenizerState.h>
+i<ParseKit/PKNumberState.h>
+i<ParseKit/PKQuoteState.h>
+i<ParseKit/PKDelimitState.h>
+i<ParseKit/PKURLState.h>
+i<ParseKit/PKEmailState.h>
+i<ParseKit/PKTwitterState.h>
+i<ParseKit/PKCommentState.h>
+i<ParseKit/PKSingleLineCommentState.h>
+i<ParseKit/PKMultiLineCommentState.h>
+i<ParseKit/PKSymbolNode.h>
+i<ParseKit/PKSymbolRootNode.h>
+i<ParseKit/PKSymbolState.h>
+i<ParseKit/PKWordState.h>
+i<ParseKit/PKWhitespaceState.h>
+i<ParseKit/PKWord.h>
+i<ParseKit/PKUppercaseWord.h>
+i<ParseKit/PKLowercaseWord.h>
+i<ParseKit/PKNumber.h>
+i<ParseKit/PKQuotedString.h>
+i<ParseKit/PKWhitespace.h>
+i<ParseKit/PKDelimitedString.h>
+i<ParseKit/PKSymbol.h>
+i<ParseKit/PKComment.h>
+i<ParseKit/PKLiteral.h>
+i<ParseKit/PKCaseInsensitiveLiteral.h>
+i<ParseKit/PKAny.h>
+i<ParseKit/PKPattern.h>
+i<ParseKit/PKParserFactory.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/NSArray+ParseKitAdditions.h
+c000000004BD8B1F40000000000000133
+t1272492532
+s307
+i<Foundation/Foundation.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/NSArray+ParseKitAdditions.m
+c000000004BD8B1F4000000000000023F
+t1272492532
+s575
+i"NSArray+ParseKitAdditions.h"
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/NSString+ParseKitAdditions.h
+c000000004BD8B1F40000000000000114
+t1272492532
+s276
+i<Foundation/Foundation.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/NSString+ParseKitAdditions.m
+c000000004BD8B1F400000000000002FE
+t1272492532
+s766
+i"NSString+ParseKitAdditions.h"
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKAlternation.m
+c000000004BD8B1F40000000000000625
+t1272492532
+s1573
+i<ParseKit/PKAlternation.h>
+i<ParseKit/PKAssembly.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKAny.m
+c000000004BD8B1F4000000000000034F
+t1272492532
+s847
+i<ParseKit/PKAny.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKAssembly.m
+c000000004BD8B1F40000000000001558
+t1272492532
+s5464
+i<ParseKit/PKAssembly.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKCaseInsensitiveLiteral.m
+c000000004BD8B1F4000000000000037E
+t1272492532
+s894
+i<ParseKit/PKCaseInsensitiveLiteral.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKChar.m
+c000000004BD8B1F40000000000000314
+t1272492532
+s788
+i<ParseKit/PKChar.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKCharacterAssembly.m
+c000000004BD8B1F40000000000000BD0
+t1272492532
+s3024
+i<ParseKit/PKCharacterAssembly.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKCollectionParser.m
+c000000004BD8B1F400000000000009BD
+t1272492532
+s2493
+i<ParseKit/PKCollectionParser.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKComment.m
+c000000004BD8B1F40000000000000369
+t1272492532
+s873
+i<ParseKit/PKComment.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKCommentState.m
+c000000004BD8B1F4000000000000122A
+t1272492532
+s4650
+i<ParseKit/PKCommentState.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKSymbolRootNode.h>
+i<ParseKit/PKSingleLineCommentState.h>
+i<ParseKit/PKMultiLineCommentState.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKDelimitState.m
+c000000004BD8B1F40000000000001BBB
+t1272492532
+s7099
+i<ParseKit/PKDelimitState.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKWhitespaceState.h>
+i<ParseKit/PKSymbolRootNode.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKDelimitedString.m
+c000000004BD8B1F4000000000000072C
+t1272492532
+s1836
+i<ParseKit/PKDelimitedString.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKDifference.m
+c000000004BD8B1F40000000000000A4A
+t1272492532
+s2634
+i"PKDifference.h"
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKDigit.m
+c000000004BD8B1F4000000000000035E
+t1272492532
+s862
+i<ParseKit/PKDigit.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKEmailState.m
+c000000004BD8B1F40000000000000AEA
+t1272492532
+s2794
+i<ParseKit/PKEmailState.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKEmpty.m
+c000000004BD8B1F400000000000003A0
+t1272492532
+s928
+i<ParseKit/PKEmpty.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKGrammarParser.h
+c000000004BD8B1F40000000000000F95
+t1272492532
+s3989
+i<ParseKit/PKCollectionParser.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKGrammarParser.m
+c000000004BD8B1F40000000000005792
+t1272492532
+s22418
+i"PKGrammarParser.h"
+i<ParseKit/ParseKit.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKIntersection.m
+c000000004BD8B1F400000000000008D6
+t1272492532
+s2262
+i"PKIntersection.h"
+i<ParseKit/PKAssembly.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKLetter.m
+c000000004BD8B1F40000000000000362
+t1272492532
+s866
+i<ParseKit/PKLetter.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKLiteral.m
+c000000004BD8B1F40000000000000697
+t1272492532
+s1687
+i<ParseKit/PKLiteral.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKLowercaseWord.m
+c000000004BD8B1F40000000000000395
+t1272492532
+s917
+i<ParseKit/PKLowercaseWord.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKMultiLineCommentState.m
+c000000004BD8B1F4000000000000117E
+t1272492532
+s4478
+i<ParseKit/PKMultiLineCommentState.h>
+i<ParseKit/PKCommentState.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKSymbolRootNode.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKNegation.m
+c000000004BD8B1F400000000000006F7
+t1272492532
+s1783
+i"PKNegation.h"
+i<ParseKit/PKAny.h>
+i<ParseKit/PKDifference.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKNumber.m
+c000000004BD8B1F40000000000000364
+t1272492532
+s868
+i<ParseKit/PKNumber.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKNumberState.m
+c000000004BD8B1F4000000000000194F
+t1272492532
+s6479
+i<ParseKit/PKNumberState.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKSymbolState.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKParser.m
+c000000004BD8B1F4000000000000139E
+t1272492532
+s5022
+i<ParseKit/PKParser.h>
+i<ParseKit/PKAssembly.h>
+i<ParseKit/PKTokenAssembly.h>
+i<ParseKit/PKTokenizer.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKParserFactory.m
+c000000004BD8B1F40000000000007EE7
+t1272492532
+s32487
+i"PKParserFactory.h"
+i<ParseKit/ParseKit.h>
+i"PKGrammarParser.h"
+i"NSString+ParseKitAdditions.h"
+i"NSArray+ParseKitAdditions.h"
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKPattern.m
+c000000004BD8B1F400000000000005D4
+t1272492532
+s1492
+i<ParseKit/PKPattern.h>
+i"RegexKitLite.h"
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKQuoteState.m
+c000000004BD8B1F40000000000000A8B
+t1272492532
+s2699
+i<ParseKit/PKQuoteState.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKQuotedString.m
+c000000004BD8B1F40000000000000383
+t1272492532
+s899
+i<ParseKit/PKQuotedString.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKReader.m
+c000000004BD8B1F400000000000005EC
+t1272492532
+s1516
+i<ParseKit/PKReader.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKRepetition.m
+c000000004BD8B1F40000000000000781
+t1272492532
+s1921
+i<ParseKit/PKRepetition.h>
+i<ParseKit/PKAssembly.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSequence.m
+c000000004BD8B1F40000000000000608
+t1272492532
+s1544
+i<ParseKit/PKSequence.h>
+i<ParseKit/PKAssembly.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSingleLineCommentState.m
+c000000004BD8B1F40000000000000AE0
+t1272492532
+s2784
+i<ParseKit/PKSingleLineCommentState.h>
+i<ParseKit/PKCommentState.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSpecificChar.m
+c000000004BD8B1F40000000000000446
+t1272492532
+s1094
+i<ParseKit/PKSpecificChar.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSymbol.m
+c000000004BD8B1F4000000000000080E
+t1272492532
+s2062
+i<ParseKit/PKSymbol.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSymbolNode.m
+c000000004BD8B1F400000000000009DE
+t1272492532
+s2526
+i<ParseKit/PKSymbolNode.h>
+i<ParseKit/PKSymbolRootNode.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSymbolRootNode.m
+c000000004BD8B1F400000000000012F9
+t1272492532
+s4857
+i<ParseKit/PKSymbolRootNode.h>
+i<ParseKit/PKReader.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSymbolState.m
+c000000004BD8B1F40000000000000C08
+t1272492532
+s3080
+i<ParseKit/PKSymbolState.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKSymbolRootNode.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKTokenizer.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTerminal.m
+c000000004BD8B1F400000000000008DF
+t1272492532
+s2271
+i<ParseKit/PKTerminal.h>
+i<ParseKit/PKAssembly.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKToken.m
+c000000004BD8B1F4000000000000187E
+t1272492532
+s6270
+i<ParseKit/PKToken.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTokenArraySource.m
+c000000004BD8B1F4000000000000083D
+t1272492532
+s2109
+i<ParseKit/PKTokenArraySource.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKTokenizer.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTokenAssembly.m
+c000000004BD8B1F400000000000012FC
+t1272492532
+s4860
+i<ParseKit/PKTokenAssembly.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTokenizer.m
+c000000004BD8B1F40000000000002008
+t1272492532
+s8200
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/ParseKit.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTokenizerState.m
+c000000004BD8B1F40000000000000C53
+t1272492532
+s3155
+i<ParseKit/PKTokenizerState.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTrack.m
+c000000004BD8B1F40000000000000BA2
+t1272492532
+s2978
+i<ParseKit/PKTrack.h>
+i<ParseKit/PKAssembly.h>
+i<ParseKit/PKTrackException.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTrackException.m
+c000000004BD8B1F400000000000002DA
+t1272492532
+s730
+i"PKTrackException.h"
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTwitterState.m
+c000000004BD8B1F4000000000000064F
+t1272492532
+s1615
+i<ParseKit/PKTwitterState.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKURLState.m
+c000000004BD8B1F40000000000001331
+t1272492532
+s4913
+i<ParseKit/PKURLState.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKUppercaseWord.m
+c000000004BD8B1F40000000000000395
+t1272492532
+s917
+i<ParseKit/PKUppercaseWord.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKWhitespace.m
+c000000004BD8B1F4000000000000036F
+t1272492532
+s879
+i"PKWhitespace.h"
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKWhitespaceState.m
+c000000004BD8B1F40000000000000C16
+t1272492532
+s3094
+i<ParseKit/PKWhitespaceState.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKWord.m
+c000000004BD8B1F4000000000000035B
+t1272492532
+s859
+i<ParseKit/PKWord.h>
+i<ParseKit/PKToken.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKWordState.m
+c000000004BD8B1F40000000000000E06
+t1272492532
+s3590
+i<ParseKit/PKWordState.h>
+i<ParseKit/PKReader.h>
+i<ParseKit/PKTokenizer.h>
+i<ParseKit/PKToken.h>
+i<ParseKit/PKTypes.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/RegexKitLite.h
+c000000004BD8B1F400000000000027D4
+t1272492532
+s10196
+i<Foundation/NSArray.h>
+i<Foundation/NSError.h>
+i<Foundation/NSObjCRuntime.h>
+i<Foundation/NSRange.h>
+i<Foundation/NSString.h>
+i<limits.h>
+i<stdint.h>
+i<sys/types.h>
+i<TargetConditionals.h>
+i<AvailabilityMacros.h>
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/RegexKitLite.m
+c000000004BD8B1F4000000000001B315
+t1272492532
+s111381
+i<CoreFoundation/CFBase.h>
+i<CoreFoundation/CFArray.h>
+i<CoreFoundation/CFString.h>
+i<Foundation/NSArray.h>
+i<Foundation/NSDictionary.h>
+i<Foundation/NSError.h>
+i<Foundation/NSException.h>
+i<Foundation/NSNotification.h>
+i<Foundation/NSRunLoop.h>
+i<Foundation/NSGarbageCollector.h>
+i<objc/runtime.h>
+i<libkern/OSAtomic.h>
+i<mach-o/loader.h>
+i<AvailabilityMacros.h>
+i<dlfcn.h>
+i<string.h>
+i<stdarg.h>
+i<stdlib.h>
+i<stdio.h>
+i"RegexKitLite.h"
+
+N/var/folders/5I/5IipyKOyHlahRE14uK7uBE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ParseKitMobile_Prefix-ciqptzwkgvvqbcczbqlyivylsprw/ParseKitMobile_Prefix.pch.gch
+t2
+s0
+
+N/var/folders/5I/5IipyKOyHlahRE14uK7uBE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ParseKitMobile_Prefix-ckspmjafwbbvqkekusitmxuajawd/ParseKitMobile_Prefix.pch.gch
+t2
+s0
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies304214604#304214605#0(0"0(0#1#0"8691524800#0"0#
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/NSArray+ParseKitAdditions.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/NSArray+ParseKitAdditions.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/NSString+ParseKitAdditions.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/NSString+ParseKitAdditions.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKAlternation.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKAlternation.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKAny.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKAny.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKAssembly.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKAssembly.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKCaseInsensitiveLiteral.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKCaseInsensitiveLiteral.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKChar.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKChar.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKCharacterAssembly.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKCharacterAssembly.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKCollectionParser.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKCollectionParser.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKComment.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKComment.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKCommentState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKCommentState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKDelimitState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKDelimitState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKDelimitedString.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKDelimitedString.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKDifference.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKDifference.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKDigit.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKDigit.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKEmailState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKEmailState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKEmpty.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKEmpty.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKGrammarParser.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKGrammarParser.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKIntersection.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKIntersection.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKLetter.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKLetter.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKLiteral.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKLiteral.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKLowercaseWord.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKLowercaseWord.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKMultiLineCommentState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKMultiLineCommentState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKNegation.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKNegation.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKNumber.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKNumber.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKNumberState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKNumberState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKParser.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKParser.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKParserFactory.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKParserFactory.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKPattern.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKPattern.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKQuoteState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKQuoteState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKQuotedString.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKQuotedString.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKReader.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKReader.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKRepetition.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKRepetition.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSequence.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSequence.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSingleLineCommentState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSingleLineCommentState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSpecificChar.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSpecificChar.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSymbol.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSymbol.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSymbolNode.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSymbolNode.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSymbolRootNode.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSymbolRootNode.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKSymbolState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSymbolState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTerminal.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTerminal.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKToken.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKToken.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTokenArraySource.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTokenArraySource.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTokenAssembly.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTokenAssembly.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTokenizer.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTokenizer.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTokenizerState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTokenizerState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTrack.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTrack.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTrackException.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTrackException.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKTwitterState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTwitterState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKURLState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKURLState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKUppercaseWord.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKUppercaseWord.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKWhitespace.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKWhitespace.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKWhitespaceState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKWhitespaceState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKWord.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKWord.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/PKWordState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKWordState.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/RegexKitLite.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/RegexKitLite.m normal armv6 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/NSArray+ParseKitAdditions.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/NSArray+ParseKitAdditions.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/NSString+ParseKitAdditions.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/NSString+ParseKitAdditions.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKAlternation.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKAlternation.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKAny.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKAny.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKAssembly.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKAssembly.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKCaseInsensitiveLiteral.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKCaseInsensitiveLiteral.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKChar.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKChar.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKCharacterAssembly.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKCharacterAssembly.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKCollectionParser.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKCollectionParser.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKComment.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKComment.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKCommentState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKCommentState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKDelimitState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKDelimitState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKDelimitedString.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKDelimitedString.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKDifference.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKDifference.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKDigit.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKDigit.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKEmailState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKEmailState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKEmpty.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKEmpty.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKGrammarParser.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKGrammarParser.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKIntersection.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKIntersection.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKLetter.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKLetter.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKLiteral.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKLiteral.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKLowercaseWord.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKLowercaseWord.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKMultiLineCommentState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKMultiLineCommentState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKNegation.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKNegation.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKNumber.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKNumber.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKNumberState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKNumberState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKParser.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKParser.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKParserFactory.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKParserFactory.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKPattern.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKPattern.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKQuoteState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKQuoteState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKQuotedString.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKQuotedString.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKReader.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKReader.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKRepetition.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKRepetition.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSequence.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSequence.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSingleLineCommentState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSingleLineCommentState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSpecificChar.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSpecificChar.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSymbol.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSymbol.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSymbolNode.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSymbolNode.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSymbolRootNode.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSymbolRootNode.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKSymbolState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKSymbolState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTerminal.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTerminal.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKToken.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKToken.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTokenArraySource.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTokenArraySource.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTokenAssembly.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTokenAssembly.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTokenizer.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTokenizer.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTokenizerState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTokenizerState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTrack.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTrack.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTrackException.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTrackException.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKTwitterState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKTwitterState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKURLState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKURLState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKUppercaseWord.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKUppercaseWord.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKWhitespace.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKWhitespace.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKWhitespaceState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKWhitespaceState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKWord.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKWord.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/PKWordState.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/PKWordState.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/RegexKitLite.o /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/src/RegexKitLite.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKAlternation.h include/ParseKit/PKAlternation.h
+s304214605.147834
+e304214605.163669
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKAlternation.h
+xinclude/ParseKit/PKAlternation.h
+lSLF07#2@37"Copy include/ParseKit/PKAlternation.h304214605#304214605#0(0"0(0#0#104"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKAlternation.h8699866368#590"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKAlternation.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKAny.h include/ParseKit/PKAny.h
+s304214605.443795
+e304214605.519488
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKAny.h
+xinclude/ParseKit/PKAny.h
+lSLF07#2@29"Copy include/ParseKit/PKAny.h304214605#304214605#0(0"0(0#0#96"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKAny.h8697401024#582"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKAny.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKAssembly.h include/ParseKit/PKAssembly.h
+s304214605.131601
+e304214605.162804
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKAssembly.h
+xinclude/ParseKit/PKAssembly.h
+lSLF07#2@34"Copy include/ParseKit/PKAssembly.h304214605#304214605#0(0"0(0#0#101"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKAssembly.h8701000288#587"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKAssembly.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKCaseInsensitiveLiteral.h include/ParseKit/PKCaseInsensitiveLiteral.h
+s304214605.412398
+e304214605.427463
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKCaseInsensitiveLiteral.h
+xinclude/ParseKit/PKCaseInsensitiveLiteral.h
+lSLF07#2@48"Copy include/ParseKit/PKCaseInsensitiveLiteral.h304214605#304214605#0(0"0(0#0#115"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKCaseInsensitiveLiteral.h8700875840#601"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKCaseInsensitiveLiteral.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKChar.h include/ParseKit/PKChar.h
+s304214605.494018
+e304214605.519999
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKChar.h
+xinclude/ParseKit/PKChar.h
+lSLF07#2@30"Copy include/ParseKit/PKChar.h304214605#304214605#0(0"0(0#0#97"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKChar.h8699253696#583"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKChar.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKCharacterAssembly.h include/ParseKit/PKCharacterAssembly.h
+s304214605.486343
+e304214605.519874
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKCharacterAssembly.h
+xinclude/ParseKit/PKCharacterAssembly.h
+lSLF07#2@43"Copy include/ParseKit/PKCharacterAssembly.h304214605#304214605#0(0"0(0#0#110"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKCharacterAssembly.h8701667456#596"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKCharacterAssembly.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKCollectionParser.h include/ParseKit/PKCollectionParser.h
+s304214605.145079
+e304214605.163451
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKCollectionParser.h
+xinclude/ParseKit/PKCollectionParser.h
+lSLF07#2@42"Copy include/ParseKit/PKCollectionParser.h304214605#304214605#0(0"0(0#0#109"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKCollectionParser.h8700087968#595"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKCollectionParser.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKComment.h include/ParseKit/PKComment.h
+s304214605.433205
+e304214605.519242
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKComment.h
+xinclude/ParseKit/PKComment.h
+lSLF07#2@33"Copy include/ParseKit/PKComment.h304214605#304214605#0(0"0(0#0#100"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKComment.h8698094784#586"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKComment.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKCommentState.h include/ParseKit/PKCommentState.h
+s304214605.303421
+e304214605.328608
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKCommentState.h
+xinclude/ParseKit/PKCommentState.h
+lSLF07#2@38"Copy include/ParseKit/PKCommentState.h304214605#304214605#0(0"0(0#0#105"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKCommentState.h8698201024#591"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKCommentState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKDelimitState.h include/ParseKit/PKDelimitState.h
+s304214605.297965
+e304214605.328226
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKDelimitState.h
+xinclude/ParseKit/PKDelimitState.h
+lSLF07#2@38"Copy include/ParseKit/PKDelimitState.h304214605#304214605#0(0"0(0#0#105"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKDelimitState.h8698213024#591"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKDelimitState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKDelimitedString.h include/ParseKit/PKDelimitedString.h
+s304214605.439300
+e304214605.519368
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKDelimitedString.h
+xinclude/ParseKit/PKDelimitedString.h
+lSLF07#2@41"Copy include/ParseKit/PKDelimitedString.h304214605#304214605#0(0"0(0#0#108"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKDelimitedString.h8697739904#594"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKDelimitedString.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKDifference.h include/ParseKit/PKDifference.h
+s304214605.176760
+e304214605.212964
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKDifference.h
+xinclude/ParseKit/PKDifference.h
+lSLF07#2@36"Copy include/ParseKit/PKDifference.h304214605#304214605#0(0"0(0#0#103"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKDifference.h8699924288#589"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKDifference.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKDigit.h include/ParseKit/PKDigit.h
+s304214605.501209
+e304214605.520124
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKDigit.h
+xinclude/ParseKit/PKDigit.h
+lSLF07#2@31"Copy include/ParseKit/PKDigit.h304214605#304214605#0(0"0(0#0#98"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKDigit.h8697560000#584"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKDigit.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKEmailState.h include/ParseKit/PKEmailState.h
+s304214605.576082
+e304214605.606520
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKEmailState.h
+xinclude/ParseKit/PKEmailState.h
+lSLF07#2@36"Copy include/ParseKit/PKEmailState.h304214605#304214605#0(0"0(0#0#103"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKEmailState.h8696172352#589"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKEmailState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKEmpty.h include/ParseKit/PKEmpty.h
+s304214605.192008
+e304214605.213294
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKEmpty.h
+xinclude/ParseKit/PKEmpty.h
+lSLF07#2@31"Copy include/ParseKit/PKEmpty.h304214605#304214605#0(0"0(0#0#98"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKEmpty.h8699046592#584"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKEmpty.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKIntersection.h include/ParseKit/PKIntersection.h
+s304214605.170902
+e304214605.212848
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKIntersection.h
+xinclude/ParseKit/PKIntersection.h
+lSLF07#2@38"Copy include/ParseKit/PKIntersection.h304214605#304214605#0(0"0(0#0#105"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKIntersection.h8701489056#591"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKIntersection.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKLetter.h include/ParseKit/PKLetter.h
+s304214605.508179
+e304214605.520243
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKLetter.h
+xinclude/ParseKit/PKLetter.h
+lSLF07#2@32"Copy include/ParseKit/PKLetter.h304214605#304214605#0(0"0(0#0#99"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKLetter.h8697229888#585"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKLetter.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKLiteral.h include/ParseKit/PKLiteral.h
+s304214605.403630
+e304214605.427339
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKLiteral.h
+xinclude/ParseKit/PKLiteral.h
+lSLF07#2@33"Copy include/ParseKit/PKLiteral.h304214605#304214605#0(0"0(0#0#100"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKLiteral.h8701528128#586"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKLiteral.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKLowercaseWord.h include/ParseKit/PKLowercaseWord.h
+s304214605.453068
+e304214605.519618
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKLowercaseWord.h
+xinclude/ParseKit/PKLowercaseWord.h
+lSLF07#2@39"Copy include/ParseKit/PKLowercaseWord.h304214605#304214605#0(0"0(0#0#106"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKLowercaseWord.h8697117920#592"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKLowercaseWord.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKMultiLineCommentState.h include/ParseKit/PKMultiLineCommentState.h
+s304214605.339650
+e304214605.426450
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKMultiLineCommentState.h
+xinclude/ParseKit/PKMultiLineCommentState.h
+lSLF07#2@47"Copy include/ParseKit/PKMultiLineCommentState.h304214605#304214605#0(0"0(0#0#114"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKMultiLineCommentState.h8698032192#600"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKMultiLineCommentState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKNegation.h include/ParseKit/PKNegation.h
+s304214605.181987
+e304214605.213074
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKNegation.h
+xinclude/ParseKit/PKNegation.h
+lSLF07#2@34"Copy include/ParseKit/PKNegation.h304214605#304214605#0(0"0(0#0#101"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKNegation.h8699345312#587"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKNegation.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKNumber.h include/ParseKit/PKNumber.h
+s304214605.566094
+e304214605.606384
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKNumber.h
+xinclude/ParseKit/PKNumber.h
+lSLF07#2@32"Copy include/ParseKit/PKNumber.h304214605#304214605#0(0"0(0#0#99"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKNumber.h8700309696#585"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKNumber.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKNumberState.h include/ParseKit/PKNumberState.h
+s304214605.227583
+e304214605.320815
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKNumberState.h
+xinclude/ParseKit/PKNumberState.h
+lSLF07#2@37"Copy include/ParseKit/PKNumberState.h304214605#304214605#0(0"0(0#0#104"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKNumberState.h8701946784#590"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKNumberState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKParser.h include/ParseKit/PKParser.h
+s304214605.137671
+e304214605.163018
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKParser.h
+xinclude/ParseKit/PKParser.h
+lSLF07#2@32"Copy include/ParseKit/PKParser.h304214605#304214605#0(0"0(0#0#99"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKParser.h8700453824#585"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKParser.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKParserFactory.h include/ParseKit/PKParserFactory.h
+s304214605.525090
+e304214605.606114
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKParserFactory.h
+xinclude/ParseKit/PKParserFactory.h
+lSLF07#2@39"Copy include/ParseKit/PKParserFactory.h304214605#304214605#0(0"0(0#0#106"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKParserFactory.h8680442720#592"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKParserFactory.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKPattern.h include/ParseKit/PKPattern.h
+s304214605.375250
+e304214605.426831
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKPattern.h
+xinclude/ParseKit/PKPattern.h
+lSLF07#2@33"Copy include/ParseKit/PKPattern.h304214605#304214605#0(0"0(0#0#100"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKPattern.h8697151488#586"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKPattern.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKQuoteState.h include/ParseKit/PKQuoteState.h
+s304214605.559549
+e304214605.606252
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKQuoteState.h
+xinclude/ParseKit/PKQuoteState.h
+lSLF07#2@36"Copy include/ParseKit/PKQuoteState.h304214605#304214605#0(0"0(0#0#103"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKQuoteState.h8671080064#589"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKQuoteState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKQuotedString.h include/ParseKit/PKQuotedString.h
+s304214605.393037
+e304214605.427084
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKQuotedString.h
+xinclude/ParseKit/PKQuotedString.h
+lSLF07#2@38"Copy include/ParseKit/PKQuotedString.h304214605#304214605#0(0"0(0#0#105"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKQuotedString.h8702056320#591"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKQuotedString.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKReader.h include/ParseKit/PKReader.h
+s304214605.127457
+e304214605.162579
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKReader.h
+xinclude/ParseKit/PKReader.h
+lSLF07#2@32"Copy include/ParseKit/PKReader.h304214605#304214605#0(0"0(0#0#99"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKReader.h8701644320#585"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKReader.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKRepetition.h include/ParseKit/PKRepetition.h
+s304214605.138715
+e304214605.163233
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKRepetition.h
+xinclude/ParseKit/PKRepetition.h
+lSLF07#2@36"Copy include/ParseKit/PKRepetition.h304214605#304214605#0(0"0(0#0#103"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKRepetition.h8700218592#589"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKRepetition.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKSequence.h include/ParseKit/PKSequence.h
+s304214605.153271
+e304214605.163884
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKSequence.h
+xinclude/ParseKit/PKSequence.h
+lSLF07#2@34"Copy include/ParseKit/PKSequence.h304214605#304214605#0(0"0(0#0#101"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSequence.h8699534048#587"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSequence.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKSingleLineCommentState.h include/ParseKit/PKSingleLineCommentState.h
+s304214605.328682
+e304214605.426300
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKSingleLineCommentState.h
+xinclude/ParseKit/PKSingleLineCommentState.h
+lSLF07#2@48"Copy include/ParseKit/PKSingleLineCommentState.h304214605#304214605#0(0"0(0#0#115"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSingleLineCommentState.h8698190976#601"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSingleLineCommentState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKSpecificChar.h include/ParseKit/PKSpecificChar.h
+s304214605.520317
+e304214605.605732
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKSpecificChar.h
+xinclude/ParseKit/PKSpecificChar.h
+lSLF07#2@38"Copy include/ParseKit/PKSpecificChar.h304214605#304214605#0(0"0(0#0#105"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSpecificChar.h8689661088#591"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSpecificChar.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKSymbol.h include/ParseKit/PKSymbol.h
+s304214605.398440
+e304214605.427215
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKSymbol.h
+xinclude/ParseKit/PKSymbol.h
+lSLF07#2@32"Copy include/ParseKit/PKSymbol.h304214605#304214605#0(0"0(0#0#99"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSymbol.h8701779648#585"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSymbol.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKSymbolNode.h include/ParseKit/PKSymbolNode.h
+s304214605.366697
+e304214605.426581
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKSymbolNode.h
+xinclude/ParseKit/PKSymbolNode.h
+lSLF07#2@36"Copy include/ParseKit/PKSymbolNode.h304214605#304214605#0(0"0(0#0#103"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSymbolNode.h8697583232#589"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSymbolNode.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKSymbolRootNode.h include/ParseKit/PKSymbolRootNode.h
+s304214605.367816
+e304214605.426709
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKSymbolRootNode.h
+xinclude/ParseKit/PKSymbolRootNode.h
+lSLF07#2@40"Copy include/ParseKit/PKSymbolRootNode.h304214605#304214605#0(0"0(0#0#107"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSymbolRootNode.h8697496672#593"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSymbolRootNode.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKSymbolState.h include/ParseKit/PKSymbolState.h
+s304214605.265268
+e304214605.320941
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKSymbolState.h
+xinclude/ParseKit/PKSymbolState.h
+lSLF07#2@37"Copy include/ParseKit/PKSymbolState.h304214605#304214605#0(0"0(0#0#104"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSymbolState.h8701801952#590"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKSymbolState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKTerminal.h include/ParseKit/PKTerminal.h
+s304214605.185842
+e304214605.213185
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKTerminal.h
+xinclude/ParseKit/PKTerminal.h
+lSLF07#2@34"Copy include/ParseKit/PKTerminal.h304214605#304214605#0(0"0(0#0#101"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTerminal.h8699246816#587"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTerminal.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKToken.h include/ParseKit/PKToken.h
+s304214605.204682
+e304214605.328356
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKToken.h
+xinclude/ParseKit/PKToken.h
+lSLF07#2@31"Copy include/ParseKit/PKToken.h304214605#304214605#0(0"0(0#0#98"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKToken.h8692294304#584"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKToken.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKTokenArraySource.h include/ParseKit/PKTokenArraySource.h
+s304214605.206838
+e304214605.328483
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKTokenArraySource.h
+xinclude/ParseKit/PKTokenArraySource.h
+lSLF07#2@42"Copy include/ParseKit/PKTokenArraySource.h304214605#304214605#0(0"0(0#0#109"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTokenArraySource.h8690980448#595"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTokenArraySource.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKTokenAssembly.h include/ParseKit/PKTokenAssembly.h
+s304214605.200025
+e304214605.213403
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKTokenAssembly.h
+xinclude/ParseKit/PKTokenAssembly.h
+lSLF07#2@39"Copy include/ParseKit/PKTokenAssembly.h304214605#304214605#0(0"0(0#0#106"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTokenAssembly.h8695229280#592"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTokenAssembly.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKTokenizer.h include/ParseKit/PKTokenizer.h
+s304214605.213592
+e304214605.320543
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKTokenizer.h
+xinclude/ParseKit/PKTokenizer.h
+lSLF07#2@35"Copy include/ParseKit/PKTokenizer.h304214605#304214605#0(0"0(0#0#102"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTokenizer.h8689275200#588"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTokenizer.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKTokenizerState.h include/ParseKit/PKTokenizerState.h
+s304214605.226570
+e304214605.320690
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKTokenizerState.h
+xinclude/ParseKit/PKTokenizerState.h
+lSLF07#2@40"Copy include/ParseKit/PKTokenizerState.h304214605#304214605#0(0"0(0#0#107"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTokenizerState.h8672045600#593"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTokenizerState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKTrack.h include/ParseKit/PKTrack.h
+s304214605.157708
+e304214605.213515
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKTrack.h
+xinclude/ParseKit/PKTrack.h
+lSLF07#2@31"Copy include/ParseKit/PKTrack.h304214605#304214605#0(0"0(0#0#98"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTrack.h8699500960#584"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTrack.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKTrackException.h include/ParseKit/PKTrackException.h
+s304214605.164055
+e304214605.212714
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKTrackException.h
+xinclude/ParseKit/PKTrackException.h
+lSLF07#2@40"Copy include/ParseKit/PKTrackException.h304214605#304214605#0(0"0(0#0#107"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTrackException.h8698622624#593"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTrackException.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKTwitterState.h include/ParseKit/PKTwitterState.h
+s304214605.593376
+e304214605.618483
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKTwitterState.h
+xinclude/ParseKit/PKTwitterState.h
+lSLF07#2@38"Copy include/ParseKit/PKTwitterState.h304214605#304214605#0(0"0(0#0#105"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTwitterState.h8687184512#591"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTwitterState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKTypes.h include/ParseKit/PKTypes.h
+s304214605.122202
+e304214605.162360
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKTypes.h
+xinclude/ParseKit/PKTypes.h
+lSLF07#2@31"Copy include/ParseKit/PKTypes.h304214605#304214605#0(0"0(0#0#98"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTypes.h8701666144#584"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKTypes.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKURLState.h include/ParseKit/PKURLState.h
+s304214605.584897
+e304214605.618269
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKURLState.h
+xinclude/ParseKit/PKURLState.h
+lSLF07#2@34"Copy include/ParseKit/PKURLState.h304214605#304214605#0(0"0(0#0#101"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKURLState.h8690892352#587"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKURLState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKUppercaseWord.h include/ParseKit/PKUppercaseWord.h
+s304214605.479754
+e304214605.519748
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKUppercaseWord.h
+xinclude/ParseKit/PKUppercaseWord.h
+lSLF07#2@39"Copy include/ParseKit/PKUppercaseWord.h304214605#304214605#0(0"0(0#0#106"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKUppercaseWord.h8673512288#592"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKUppercaseWord.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKWhitespace.h include/ParseKit/PKWhitespace.h
+s304214605.427532
+e304214605.519103
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKWhitespace.h
+xinclude/ParseKit/PKWhitespace.h
+lSLF07#2@36"Copy include/ParseKit/PKWhitespace.h304214605#304214605#0(0"0(0#0#103"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKWhitespace.h8698647360#589"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKWhitespace.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKWhitespaceState.h include/ParseKit/PKWhitespaceState.h
+s304214605.283201
+e304214605.328085
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKWhitespaceState.h
+xinclude/ParseKit/PKWhitespaceState.h
+lSLF07#2@41"Copy include/ParseKit/PKWhitespaceState.h304214605#304214605#0(0"0(0#0#108"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKWhitespaceState.h8669399680#594"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKWhitespaceState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKWord.h include/ParseKit/PKWord.h
+s304214605.380911
+e304214605.426960
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKWord.h
+xinclude/ParseKit/PKWord.h
+lSLF07#2@30"Copy include/ParseKit/PKWord.h304214605#304214605#0(0"0(0#0#97"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKWord.h8669093472#583"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKWord.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/PKWordState.h include/ParseKit/PKWordState.h
+s304214605.274507
+e304214605.327895
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/PKWordState.h
+xinclude/ParseKit/PKWordState.h
+lSLF07#2@35"Copy include/ParseKit/PKWordState.h304214605#304214605#0(0"0(0#0#102"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKWordState.h8701563872#588"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/PKWordState.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCpHeader build/Release-iphoneos/usr/local/include/ParseKit.h include/ParseKit/ParseKit.h
+s304214605.120467
+e304214605.162129
+r1
+xCpHeader
+xbuild/Release-iphoneos/usr/local/include/ParseKit.h
+xinclude/ParseKit/ParseKit.h
+lSLF07#2@32"Copy include/ParseKit/ParseKit.h304214605#304214605#0(0"0(0#0#99"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/ParseKit.h8701698592#585"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/include/ParseKit/ParseKit.h /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/usr/local/include0#
+
+CCreateUniversalBinary /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/parsekit.a normal "armv6 armv7"
+r0
+
+CLibtool /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv6/parsekit.a normal armv6
+r0
+
+CLibtool /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/Objects-normal/armv7/parsekit.a normal armv7
+r0
+
+CProcessPCH /var/folders/5I/5IipyKOyHlahRE14uK7uBE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ParseKitMobile_Prefix-ciqptzwkgvvqbcczbqlyivylsprw/ParseKitMobile_Prefix.pch.gch ParseKitMobile_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
+s304214605.618584
+e304214606.455720
+r0
+xProcessPCH
+x/var/folders/5I/5IipyKOyHlahRE14uK7uBE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ParseKitMobile_Prefix-ciqptzwkgvvqbcczbqlyivylsprw/ParseKitMobile_Prefix.pch.gch
+xParseKitMobile_Prefix.pch
+xnormal
+xarmv6
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@36"Precompile ParseKitMobile_Prefix.pch304214605#304214606#0(0"0(0#0#97"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/ParseKitMobile_Prefix.pch8683823104#2012"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/parsekit-generated-files.hmap -I/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/parsekit-own-target-headers.hmap -I/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/parsekit-all-target-headers.hmap -iquote /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/parsekit-project-headers.hmap -F/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos -I/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/include -I/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/DerivedSources/armv6 -I/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/DerivedSources -c /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/ParseKitMobile_Prefix.pch -o /var/folders/5I/5IipyKOyHlahRE14uK7uBE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ParseKitMobile_Prefix-ciqptzwkgvvqbcczbqlyivylsprw/ParseKitMobile_Prefix.pch.gch2#
+
+CProcessPCH /var/folders/5I/5IipyKOyHlahRE14uK7uBE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ParseKitMobile_Prefix-ckspmjafwbbvqkekusitmxuajawd/ParseKitMobile_Prefix.pch.gch ParseKitMobile_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s304214605.640450
+e304214606.556235
+r0
+xProcessPCH
+x/var/folders/5I/5IipyKOyHlahRE14uK7uBE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ParseKitMobile_Prefix-ckspmjafwbbvqkekusitmxuajawd/ParseKitMobile_Prefix.pch.gch
+xParseKitMobile_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@36"Precompile ParseKitMobile_Prefix.pch304214605#304214606#0(0"0(0#0#97"/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/ParseKitMobile_Prefix.pch8699935616#2012"    cd /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -Os -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.0.sdk -gdwarf-2 -mthumb -miphoneos-version-min=4.0 -iquote /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/parsekit-generated-files.hmap -I/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/parsekit-own-target-headers.hmap -I/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/parsekit-all-target-headers.hmap -iquote /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/parsekit-project-headers.hmap -F/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos -I/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Release-iphoneos/include -I/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/DerivedSources/armv7 -I/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/ParseKit.build/Release-iphoneos/ParseKitMobile.build/DerivedSources -c /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/ParseKitMobile_Prefix.pch -o /var/folders/5I/5IipyKOyHlahRE14uK7uBE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/ParseKitMobile_Prefix-ckspmjafwbbvqkekusitmxuajawd/ParseKitMobile_Prefix.pch.gch2#
+

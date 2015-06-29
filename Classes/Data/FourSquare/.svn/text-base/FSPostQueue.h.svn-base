@@ -1,0 +1,70 @@
+#import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+
+#import "URLConnectionHandler.h"
+
+#import "CheckInViewController320.h"
+
+#define RETRY_TIME_SECONDS 10
+
+typedef enum {
+    FSTipTypeTodo,
+    FSTipTypeTip,
+} FSTipType;
+
+@interface FSPostQueue : URLConnectionHandler {
+
+	id current;	
+	NSNumber *progress;
+	NSDictionary *response;
+    
+    NSUInteger backgroundTask;
+    BOOL active;
+    
+    @private
+    
+    int totalBytesQueued;
+    int totalBytesUploaded;
+    
+    int currentUploaded;
+    
+    NSDate *failedDate;
+}
+
++ (FSPostQueue*)sharedInstance;
+
++ (void) addTipWithVenueId:(NSInteger)venueId
+                      text:(NSString*)text
+                      type:(FSTipType)type
+                  location:(CLLocation*)location
+                    images:(NSArray*)tempImagesPaths;
+
++ (void) addCheckinWithVenueId:(NSInteger)venueId 
+						  shout:(NSString*)shout 
+					   location:(CLLocation*)location 
+						offgrid:(BOOL)offgrid 
+						twitter:(BOOL)twitter 
+					   facebook:(BOOL)facebook
+						 images:(NSArray*)tempImagesPaths
+                          style:(PostStyle)checkinStyle
+                           data:(NSDictionary*)data;
+
++ (void) preProcessReqDataForImagePath:(NSString*)path params:(NSDictionary*)params;
+
+- (void) uploadNext;
+- (void) uploadNextRetry;
+- (void) didStartQueue;
+- (void) didFinishQueue;
+
+- (void) computeProgress;
+- (void) computeQueuedBytes;
+- (void) computeQueuedBytesAndShowProgress;
+
+- (BOOL) isActive;
+
+- (void) stop;
+
+@property (nonatomic, retain) NSNumber *progress;
+@property (nonatomic, retain) NSDate *failedDate;
+
+@end

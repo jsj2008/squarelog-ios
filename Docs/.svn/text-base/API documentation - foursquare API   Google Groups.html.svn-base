@@ -1,0 +1,2657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0067)http://groups.google.com/group/foursquare-api/web/api-documentation -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <link rel="SHORTCUT ICON" href="http://groups.google.com/groups/img/3/favicon.ico">
+  <title>
+  API documentation -
+  foursquare API |
+  Google Groups
+  </title>
+  <meta name="save" content="history">
+<noscript></noscript>
+<script language="javascript"><!--
+  document.write('<style type="text/css">.scripthide { display: none; } .scriptinline { display: inline; } .scriptblock { display: block; }</style>');
+//--></script><style type="text/css">.scripthide { display: none; } .scriptinline { display: inline; } .scriptblock { display: block; }</style>
+<script language="javascript1.2"><!--
+  if (document.getElementById)
+    document.write('<style type="text/css">.script12hide { display: none; } .script12inline { display: inline; } .script12block { display: block; } .lnav { position: absolute; } .lnavch { margin-left:23.0ex;}</style>');
+//--></script><style type="text/css">.script12hide { display: none; } .script12inline { display: inline; } .script12block { display: block; } .lnav { position: absolute; } .lnavch { margin-left:23.0ex;}</style>
+<script language="javascript1.3"><!--
+  if (document.getElementById)
+    document.write('<style type="text/css">.script13hide { display: none; } .script13inline { display: inline; } .script13block { display: block; }</style>');
+//--></script><style type="text/css">.script13hide { display: none; } .script13inline { display: inline; } .script13block { display: block; }</style>
+<style type="text/css"><!--
+  @import "/groups/style.css?ig=1&stock=0&av=3&hl=en&v=680";
+  
+--></style>
+  <script language="javascript1.3" src="./API documentation - foursquare API   Google Groups_files/g2_common-8178f98c657229b9c46df77c18475531.js"></script>
+<script language="javascript"><!--
+
+// ----------------------------------
+// used for dynamic function generation on event handlers
+
+var loaddef = "";
+var resizedef = "";
+
+//-----------------------------------
+// Browser detection and support
+
+var agt = navigator.userAgent.toLowerCase();
+var is_opera = (agt.indexOf("opera") != -1);
+var is_ie = (agt.indexOf("msie") != -1) && document.all && !is_opera;
+var is_ie5 = (agt.indexOf("msie 5") != -1) && document.all;
+window.agt = agt;
+window.is_opera = is_opera;
+window.is_ie = is_ie;
+window.is_ie5 = is_ie5;
+
+// ----------------------------------
+// cross-browser functions
+
+var IE_all_cache = new Object();
+function IE_getElementById(id) {
+  if (IE_all_cache[id] == null) {
+    IE_all_cache[id] = document.all[id];
+  }
+  return IE_all_cache[id];
+}
+
+if (document.all) {
+  if (!document.getElementById) {
+    document.getElementById = IE_getElementById;
+  }
+}
+
+
+
+  //----------------------------------
+  // Timezone detection (sets cookie)
+
+  try {
+    document.cookie = 'GTZ=' + (new Date()).getTimezoneOffset() + ';path=/;expires=Mon, 01-Jan-2024 00:00:01 GMT';
+  } catch(e) {}
+
+
+// ---------------------------------
+// shelled functions for old javascript
+function tog() {}
+
+//--></script>
+<script language="javascript1.3"><!--
+
+// ----------------------------------
+// visibility functions
+
+function tog() {
+  // tog: toggle the visibility of html elements (arguments[1..]) from none to
+  // arguments[0].  Return what should be returned in a javascript onevent().
+  display = arguments[0];
+  for( var i=1; i<arguments.length; i++ ) {    
+    var x = document.getElementById(arguments[i]);
+    if (!x) continue;
+    if (x.style.display == "none" || x.style.display == "") {
+      x.style.display = display;
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  var e = is_ie ? window.event : this;
+  if (e) {
+    if (is_ie) {
+      e.cancelBubble = true;
+      e.returnValue = false;
+      return false;
+    } else {
+      return false;
+    }
+  }
+}
+
+
+_G2_initCurrentDomain('googlegroups.com',
+            false,
+            true);
+
+_G2_initCurrentGroup('foursquare-api',
+            'a');
+
+
+
+
+//--></script>
+<script language="javascript"><!--
+  window.gbar={};(function(){function h(a,b,d){var c="on"+b;if(a.addEventListener)a.addEventListener(b,d,false);else if(a.attachEvent)a.attachEvent(c,d);else{var e=a[c];a[c]=function(){var f=e.apply(this,arguments),g=d.apply(this,arguments);return f==undefined?g:g==undefined?f:g&&f}}};var i=window.gbar,k,l,m;function n(a){var b=window.encodeURIComponent&&(document.forms[0].q||"").value;if(b)a.href=a.href.replace(/([?&])q=[^&]*|$/,function(d,c){return(c||"&")+"q="+encodeURIComponent(b)})}i.qs=n;function o(a,b,d,c,e,f){var g=document.getElementById(a);if(g){var j=g.style;j.left=c?"auto":b+"px";j.right=c?b+"px":"auto";j.top=d+"px";j.visibility=l?"hidden":"visible";if(e&&f){j.width=e+"px";j.height=f+"px"}else{o(k,b,d,c,g.offsetWidth,g.offsetHeight);l=l?"":a}}}
+i.tg=function(a){a=a||window.event;var b,d=a.target||a.srcElement;a.cancelBubble=true;if(k!=null)p(d);else{b=document.createElement(Array.every||window.createPopup?"iframe":"div");b.frameBorder="0";k=b.id="gbs";b.src="javascript:''";d.parentNode.appendChild(b);h(document,"click",i.close);p(d);i.alld&&i.alld(function(){var c=document.getElementById("gbli");if(c){var e=c.parentNode;q(e,c);var f=c.prevSibling;e.removeChild(c);i.removeExtraDelimiters(e,f);b.style.height=e.offsetHeight+"px"}})}};
+function r(a){var b,d=document.defaultView;if(d&&d.getComputedStyle){if(a=d.getComputedStyle(a,""))b=a.direction}else b=a.currentStyle?a.currentStyle.direction:a.style.direction;return b=="rtl"}
+function p(a){var b=0;if(a.className!="gb3")a=a.parentNode;var d=a.getAttribute("aria-owns")||"gbi",c=a.offsetWidth,e=a.offsetTop>20?46:24;if(document.getElementById("tphdr"))e-=3;var f=false;do b+=a.offsetLeft||0;while(a=a.offsetParent);a=(document.documentElement.clientWidth||document.body.clientWidth)-b-c;c=r(document.body);if(d=="gbi"){var g=document.getElementById("gbi");q(g,document.getElementById("gbli")||g.firstChild);if(c){b=a;f=true}}else if(!c){b=a;f=true}l!=d&&i.close();o(d,b,e,f)}
+i.close=function(){l&&o(l,0,0)};function s(a,b,d){if(!m){m="gb2";if(i.alld){var c=i.findClassName(a);if(c)m=c}}a.insertBefore(b,d).className=m}function q(a,b){for(var d,c=window.navExtra;c&&(d=c.pop());)s(a,d,b)}i.addLink=function(a,b,d){if((b=document.getElementById(b))&&a){a.className="gb4";var c=document.createElement("span");c.appendChild(a);c.appendChild(document.createTextNode(" | "));c.id=d;b.appendChild(c)}};
+})();
+//--></script>
+<style type="text/css"><!--
+  #gbar,#guser{font-size:13px;padding-top:1px !important}#gbar{float:left;height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}#gbs,.gbm{background:#fff;left:0;position:absolute;text-align:left;visibility:hidden;z-index:1000}.gbm{border:1px solid;border-color:#c9d7f1 #36c #36c #a2bae7;z-index:1001}.gb1{margin-right:.5em}.gb1,.gb3{zoom:1}.gb2{display:block;padding:.2em .5em}.gb2,.gb3{text-decoration:none;border-bottom:none}a.gb1,a.gb2,a.gb3,a.gb4{color:#00c !important}.gbi .gb3,.gbi .gb2,.gbi .gb4{color:#dd8e27 !important}.gbf .gb3,.gbf .gb2,.gbf .gb4{color:#900 !important}a.gb2:hover{background:#36c;color:#fff !important}
+--></style>
+<script language="javascript"><!--
+function ad_resize() {}
+function if_resize() {}
+function fin_resize() {}
+function qs() {}
+//--></script>
+<script language="javascript1.2"><!--
+function if_resize(name, w, h) {
+  if (document.getElementById && document.getElementById(name)){
+    document.getElementById(name).style.height = h + "px";
+    document.getElementById(name).style.width = w + "px";
+  }
+}
+function ad_resize(w, h) {
+  if_resize("google_ads_frame",w,h);
+}
+function fin_resize(w, h) {
+  if_resize("google_finance_frame",w,h);
+}
+
+function qs(el) {
+  if (window.RegExp && window.encodeURIComponent) {
+    var qe=encodeURIComponent(document.gs.q.value);
+
+    if (qe == '') {
+      return 1;
+    }
+
+    if (el.href.indexOf("q=")!=-1) {
+      el.href=el.href.replace(new RegExp("q=[^&$]*"),"q="+qe);
+    } else {
+      el.href+="&q="+qe;
+    }
+  }
+  return 1;
+}
+
+//--></script>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://groups.google.com/group/foursquare-api/feed/rss_v2_0_msgs.xml">
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="http://groups.google.com/group/foursquare-api/feed/atom_v1_0_msgs.xml">
+</head>
+<body onresize="" onload="" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="white">
+  <style type="text/css"><!--
+    .mygp1 { padding-bottom: 7px;padding-right: 12px}
+    .mygp2 { padding-bottom: 7px; padding-left: 12px}
+  --></style>
+  <div class="algnl padall8" id="myg_popup" style="display:none; position: absolute; background-color: white;border-top: 1px solid #cccccc; border-left: 2px solid #cccccc; border-right: 2px solid #b3b3b3; border-bottom: 2px solid #b3b3b3;z-index: 2">
+  <table cellpadding="0" border="0" cellspacing="0">
+  <colgroup><col style="width: 23.0ex">
+  <col style="width: 23.0ex">
+  </colgroup><tbody><tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/?lnk="></a>&nbsp;<b><font color="#6f6f6f" dir="ltr">(79)</font></b>
+  </td>
+  <td class="mygp2" valign="top">
+  <a class="on" href="http://groups.google.com/group/ec2ubuntu?lnk=">ec2ubuntu</a>&nbsp;<b><font color="#6f6f6f" dir="ltr">(3316)</font></b>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/?lnk="></a>&nbsp;<b><font color="#6f6f6f" dir="ltr">(30)</font></b>
+  </td>
+  <td class="mygp2" valign="top">
+  foursquare API
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/?lnk="></a>&nbsp;<b><font color="#6f6f6f" dir="ltr">(330)</font></b>
+  </td>
+  <td class="mygp2" valign="top">
+  <a class="on" href="http://groups.google.com/group/google-appengine?lnk=">Google App Engine</a>&nbsp;<b><font color="#6f6f6f" dir="ltr">(195)</font></b>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/android-beginners?lnk=">Android Beginners</a>&nbsp;<b><font color="#6f6f6f" dir="ltr">(16955)</font></b>
+  </td>
+  <td class="mygp2" valign="top">
+  <a class="on" href="http://groups.google.com/group/liftweb?lnk=">Lift</a>&nbsp;<b><font color="#6f6f6f" dir="ltr">(10051)</font></b>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/hosted-mail-delivery?lnk=">Best Practices</a>&nbsp;<b><font color="#6f6f6f" dir="ltr">(822)</font></b>
+  </td>
+  <td class="mygp2" valign="top">
+  <a class="on" href="http://groups.google.com/group/apps-features?lnk=">News &amp; Updates</a>&nbsp;<b><font color="#6f6f6f" dir="ltr">(2344)</font></b>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/django-users?lnk=">Django users</a>&nbsp;<b><font color="#6f6f6f" dir="ltr">(16577)</font></b>
+  </td>
+  <td class="mygp2" valign="top">
+  <a class="on" href="http://groups.google.com/group/hosted-misc?lnk=">Updates &amp; Announcements</a>&nbsp;<b><font color="#6f6f6f" dir="ltr">(679)</font></b>
+  </td>
+  </tr>
+  <tr><td class="padb7 padt8" valign="bottom" colspan="2"><b>Recently visited</b>&nbsp;
+  <a href="http://groups.google.com/groups/clearrecent?Action.ClearRecent&_done=%2Fgroup%2Ffoursquare-api%2Fweb%2Fapi-documentation" class="ucl">[clear]</a></td></tr>
+  <tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/brightkite-api?lnk=">Brightkite API</a>
+  </td>
+  <td valign="top" class="mygp2">
+  <a class="on" href="http://groups.google.com/group/jsio?lnk=">js.io</a>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/clojure?lnk=">Clojure</a>
+  </td>
+  <td valign="top" class="mygp2">
+  <a class="on" href="http://groups.google.com/group/prediction-api-discuss?lnk=">prediction-api-discuss</a>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/des-moines-cocoaheads?lnk=">Des Moines CocoaHeads</a>
+  </td>
+  <td valign="top" class="mygp2">
+  <a class="on" href="http://groups.google.com/group/spdy-dev?lnk=">spdy-dev</a>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/google-appengine-java?lnk=">Google App Engine for Java</a>
+  </td>
+  <td valign="top" class="mygp2">
+  <a class="on" href="http://groups.google.com/group/three20?lnk=">Three20</a>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/gs-discussion?lnk=">Google Storage for Developers</a>
+  </td>
+  <td valign="top" class="mygp2">
+  <a class="on" href="http://groups.google.com/group/python-tornado?lnk=">Tornado Web Server</a>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/google-appengine-python?lnk=">google-appengine-python</a>
+  </td>
+  <td valign="top" class="mygp2">
+  <a class="on" href="http://groups.google.com/group/twitter-development-talk?lnk=">Twitter Development Talk</a>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" class="mygp1">
+  <a class="on" href="http://groups.google.com/group/jquery-dev?lnk=">jQuery Development</a>
+  </td>
+  </tr>
+  </tbody></table>
+  <div class="padt8">
+  <a href="http://www.google.com/alerts?t=8"><img src="./API documentation - foursquare API   Google Groups_files/envelope.gif" alt="Groups Alerts" border="0" height="15" width="16"></a>
+  <a href="http://www.google.com/alerts?t=8">Groups Alerts</a>
+  </div>
+  <div style="padding-top: 15px;">
+  <b><a href="http://groups.google.com/groups/create?lnk=l">Create a group...</a></b>
+  </div>
+  </div>
+  <div class="ggaiabar">
+  <div id="gbar"><nobr><a href="http://mail.google.com/mail/?tab=gm" class="gb1">Gmail</a> <a href="http://www.google.com/calendar/render?tab=gc" class="gb1">Calendar</a> <a href="http://docs.google.com/?tab=go&authuser=0" class="gb1">Documents</a> <a href="http://www.google.com/webhp?hl=en&tab=gw" onclick="gbar.qs(this)" class="gb1">Web</a> <a href="http://www.google.com/reader/?tab=gy" class="gb1">Reader</a> <a href="http://www.google.com/intl/en/options/" onclick="this.blur();gbar.tg(event);return !1" aria-haspopup="true" class="gb3"><u>more</u> <small>▼</small></a><div class="gbm" id="gbi"><a href="http://picasaweb.google.com/home?hl=en&tab=gq" onclick="gbar.qs(this)" class="gb2">Photos</a> <a href="http://sites.google.com/?tab=g3" class="gb2">Sites</a> <b class="gb2">Groups</b> <a href="http://www.youtube.com/?hl=en&tab=g1" onclick="gbar.qs(this)" class="gb2">YouTube</a> <div class="gb2"><div class="gbd"></div></div><a href="http://www.google.com/imghp?hl=en&tab=gi" onclick="gbar.qs(this)" class="gb2">Images</a> <a href="http://video.google.com/?hl=en&tab=gv" onclick="gbar.qs(this)" class="gb2">Videos</a> <a href="http://maps.google.com/maps?hl=en&tab=gl" onclick="gbar.qs(this)" class="gb2">Maps</a> <a href="http://news.google.com/nwshp?hl=en&tab=gn" onclick="gbar.qs(this)" class="gb2">News</a> <a href="http://www.google.com/prdhp?hl=en&tab=gf" onclick="gbar.qs(this)" class="gb2">Shopping</a> <a href="http://books.google.com/bkshp?hl=en&tab=gp" onclick="gbar.qs(this)" class="gb2">Books</a> <a href="http://translate.google.com/?hl=en&tab=gT" onclick="gbar.qs(this)" class="gb2">Translate</a> <a href="http://scholar.google.com/schhp?hl=en&tab=gs" onclick="gbar.qs(this)" class="gb2">Scholar</a> <a href="http://www.google.com/finance?hl=en&tab=ge" onclick="gbar.qs(this)" class="gb2">Finance</a> <a href="http://blogsearch.google.com/?hl=en&tab=gb" onclick="gbar.qs(this)" class="gb2">Blogs</a> <div class="gb2"><div class="gbd"></div></div><a href="http://www.google.com/intl/en/options/" class="gb2">even more »</a> </div></nobr></div><div class="gbh" style="left:0"></div><div class="gbh" style="right:0"></div>
+  <div align="right" id="guser" width="100%">
+  <nobr>
+  <b>robspychala@gmail.com</b> |
+  <a class="on" id="myg_lnk" href="http://groups.google.com/">My Groups</a><img id="myg_img" src="./API documentation - foursquare API   Google Groups_files/mygroups_lt.gif" width="14" height="14" align="absmiddle" style="position: relative;margin-top: -1px;" class="noscripthide scripthide script12hide script13inline mrgl2">
+  <script language="javascript1.3"><!--
+    function MygPopup(el, link_el) {
+      this.link_el = link_el;
+      this.el = el;
+      this.popupOpened = false;
+      this.mouseOver = false;
+      this.el.onclick = this.onClick.bind(this);
+      this.el.onmouseover = this.onMouseOver.bind(this);
+      this.el.onmouseout = this.onMouseOut.bind(this);
+      window.onresize = this.onResize.bind(this);
+      this.ignoreNext = false;
+    }
+    MygPopup.prototype.onClick = function(e) {
+      var e = e || window.event;
+      if (IsDescendant(this.el, GetEventTarget(e))
+          && this.popupOpened) {
+        
+        if (this.ignoreNext) {
+          this.ignoreNext = false;
+          return;
+        }
+      }
+      if (!IsDescendant(this.getPopup(), GetEventTarget(e))) {
+        this.toggle();
+      }
+    }
+    MygPopup.prototype.getPopup = function() {
+      if (!this.popup_el) {
+        this.popup_el = document.getElementById('myg_popup');
+      }
+      return this.popup_el;
+    }
+    MygPopup.prototype.toggle = function() {
+      this.popupOpened = !this.popupOpened;
+      var popup = this.getPopup();
+      if (this.popupOpened) {
+        popup.style.visibility = "hidden";
+        popup.style.display = "block";
+        this.setLeftPos();
+        popup.style.top = (GetPageOffsetTop(this.el)
+                           + this.el.offsetHeight) + "px";
+        this.mouseUpListener = this.onClick.bind(this);
+        listen(document, "mousedown", this.mouseUpListener);
+        
+        popup.style.visibility = "visible";
+        this.ignoreNext = true;
+      } else {
+        unlisten(document, "mousedown", this.mouseUpListener);
+        this.mouseUpListener = null;
+        
+        popup.style.visibility = "hidden";
+      }
+      this.updateImage();
+    }
+    MygPopup.prototype.updateImage = function() {
+      if (this.popupOpened) {
+        this.el.src = "/groups/img/mygroups_down.gif";
+      } else if (this.mouseOver) {
+        this.el.src = "/groups/img/mygroups_up.gif";
+      } else {
+        this.el.src = "/groups/img/mygroups_lt.gif";
+      }
+    }
+    MygPopup.prototype.onMouseOver = function() {
+      this.mouseOver = true;
+      this.updateImage();
+    }
+    MygPopup.prototype.onMouseOut = function() {
+      this.mouseOver = false;
+      this.updateImage();
+    }
+
+    
+
+    MygPopup.prototype.setLeftPos = function() {
+      var popup = this.getPopup();
+      
+        var setLeft = GetWindowWidth(window) - popup.offsetWidth - 5;
+        popup.style.left = Math.min(setLeft,
+                                    GetPageOffsetLeft(this.link_el)) + "px";
+      
+    }
+    MygPopup.prototype.onResize = function() {
+      if (this.popupOpened) {
+        this.setLeftPos();
+      }
+    }
+
+    var mygPopup = new MygPopup(document.getElementById('myg_img'),
+                                document.getElementById('myg_lnk'));
+  //--></script>
+ |
+  <a class="on" href="http://groups.google.com/groups/favorites">Favorites</a> |
+  <a class="on" href="http://groups.google.com/groups/profile?myprofile">Profile</a> |
+  <a target="_blank" href="http://groups.google.com/support?hl=en">Help</a> |
+  <a href="https://www.google.com/accounts/ManageAccount?hl=en">My Account</a> |
+  <a target="_top" href="http://groups.google.com/groups/signout?q=1&_done=%2Fgroup%2Ffoursquare-api%2Fweb%2Fapi-documentation">Sign out</a>
+</nobr>
+  </div>
+  </div>
+  <div class="clear"></div>
+  <div class="gtopbar">
+  <table cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody><tr valign="top">
+  <td class="maincell">
+  <table cellpadding="0" cellspacing="0" border="0"><tbody><tr valign="top"><td width="140" style="overflow: hidden;"><a href="http://groups.google.com/"><img src="./API documentation - foursquare API   Google Groups_files/groups_logo_sm.gif" width="140" height="30" alt="Google Groups Home" border="0" style="position: relative; top: 2px; margin-right: 10px;"></a></td>
+  </tr></tbody></table>
+  </td>
+  </tr>
+  </tbody></table>
+  </div>
+  <script language="javascript"><!--
+
+    
+    function google_ad_request_done(google_ads) {
+      /*
+       * Verify that there are actually ads to display.
+       */
+      var google_num_ads = google_ads.length;
+      if (google_num_ads <= 0) {
+        return;
+      }
+
+      var narrowAds = "<div class=\"box\">";
+  narrowAds += "<div class=\"sponsor-note\">Sponsored links</div>";
+  for(var i = 0; i < google_num_ads; i++){
+        narrowAds += '<div class="ad-item">' +
+  '<a href="' + google_ads[i].url + '" ' +
+          'onmouseout="window.status=\'\';return true" ' +
+          'onmouseover="window.status=\'go to ' +
+          google_ads[i].visible_url + '\';return true" ' +
+          'style="text-decoration:none">' +
+  '<span style="text-decoration:underline;" class="ad-subject">' +
+  google_ads[i].line1 + '<br></span>' +
+  '<span style="color:#000000">' + google_ads[i].line2 + '<br></span>' +
+  '<span style="color:#000000">' + google_ads[i].line3 + '<br></span>' +
+  '<span style="color:#008000">' + google_ads[i].visible_url +
+  '</span></a></div>';
+  }
+  var fill_ad_div = function() {
+  var ad_div = document.getElementById("google_ads_site");
+  if (ad_div) {
+  ad_div.innerHTML = narrowAds;
+  } else {
+  setTimeout(fill_ad_div, 10);
+  }
+  }
+  fill_ad_div();
+  }
+  function adsIframeHtml() {
+  return "<!DOCTYPE html><html><body><script type='text/javascript'>google_ad_request_done = parent.google_ad_request_done;google_ad_client = 'ca-google_groups'; google_max_num_ads = 3; google_ad_output = 'js'; google_ad_type = 'text'; google_language = 'en'; google_page_url = 'http://groups.google.com\x5Cx2Fgroup\x5Cx2Ffoursquare-api\x5Cx2Fweb\x5Cx2Fapi-documentation'; google_encoding = 'utf8'; google_safe = 'high'; google_adtest = 'off';"
+  + "<\/script> <script language='JavaScript' src='http://pagead2.googlesyndication.com/pagead/show_ads.js'><\/script><\/body><\/html>";
+  }
+  //--></script>
+  <iframe width="0" height="0" frameborder="0" scrolling="no" src="javascript:parent.adsIframeHtml()"></iframe>
+  <div style="border-top: 1px solid #7799dd; z-index: 1; position: relative;"></div>
+  <div style="background-color: #e8eef7; padding: 4px 10px 4px 10px; ">
+  <table class="grhdr " cellpadding="0" cellspacing="0" width="100%"><tbody>
+  <tr valign="middle">
+  <td class="padr10" width="42" height="42">
+  <div style="width:42px; height:42px; overflow: hidden;">
+  <div style="width:42px; height:42px; background:url(/group/foursquare-api/icon?v=1&amp;hl=en)"></div>
+  </div>
+  </td><td>
+  <div class="ghgrn">
+  <a class="ln" href="http://groups.google.com/group/foursquare-api">foursquare API</a>
+  </div>
+  </td><td style="padding-left: 35px" align="right">
+  <script><!--
+                function sg() {
+                  document.gs3.q.value = document.gs2.q.value;
+                  document.gs3.submit();
+                }
+              //--></script>
+  <form name="gs2" method="GET" action="http://groups.google.com/group/foursquare-api/search">
+  <table cellpadding="0" cellspacing="0"><tbody><tr><td>
+  <input type="hidden" name="group" value="foursquare-api"><input type="text" name="q" size="20" maxlength="2048" value="" style="width: 25ex">
+  </td>
+  <td class="padl5">
+  <input type="submit" class="bt" style="width:100%" name="qt_g" value="Search this group">
+  </td>
+  <td class="padl5">
+  <input type="button" class="bt" style="width:100%" name="qt_s" onclick="sg();" value="Search Groups">
+  </td>
+  </tr></tbody></table>
+  </form>
+  <form class="hide" name="gs3" method="GET" action="http://groups.google.com/groups/search">
+  <input type="hidden" name="qt_s" value="1">
+  <input type="hidden" name="q" size="20" maxlength="2048" value="">
+  </form>
+  </td>
+  </tr>
+  </tbody></table>
+  </div>
+  <div style="border-top: 1px solid #7799dd"></div>
+  <div class="rf" style="width: 32ex;">
+  <div class="overflow-hide" style="position: absolute; margin-top: -1px; margin-left: -1px;z-index: 1;">
+  <div class="mrgl1 " style="width: 32ex; background-color: #e8eef7;">
+  <div class="padb10 padr10">
+  <div class="rnsecs">
+  <table></table>
+  <div class="sec">
+  <a class="secln" href="http://groups.google.com/group/foursquare-api">Home</a>
+  </div>
+  <table></table>
+  <div class="sec">
+  <div style="">
+  <a class="seclnact" href="http://groups.google.com/group/foursquare-api/topics">Discussions</a>
+  </div>
+  </div>
+  <table></table>
+  <div class="selsec">
+  <a class="seclnact" href="http://groups.google.com/group/foursquare-api/web">Pages</a>
+  <div class="actlns">
+  </div>
+  </div>
+  <table></table>
+  <div class="sec">
+  <a class="secln" href="http://groups.google.com/group/foursquare-api/members">Members</a>
+  </div>
+  <table></table>
+  <div class="mrgt5 mrgl10" style="border-bottom: 1px solid #7799dd"></div>
+  <div class="padt10"></div>
+  <div class="sec">
+  <a class="seclnlt" href="http://groups.google.com/group/foursquare-api/about">About this group</a>
+  </div>
+  <div class="sec">
+  <a class="seclnlt" href="http://groups.google.com/group/foursquare-api/subscribe">Edit my membership</a>
+  </div>
+  </div>
+  <div id="google_ads_site" class="g3rtn-ad-site"><div class="box"><div class="sponsor-note">Sponsored links</div><div class="ad-item"><a href="http://googleads.g.doubleclick.net/aclk?sa=l&ai=B0CRE9WdlTMS0JMeGlge75Y3oBu6Hir8Blu2CmxbugOLZSfCcgwEQARgBIPfbjQIoAzgAUIWB_d4BYMm2m4fQo9gQoAH6q7TzA7IBEWdyb3Vwcy5nb29nbGUuY29tyAEB2gFDaHR0cDovL2dyb3Vwcy5nb29nbGUuY29tL2dyb3VwL2ZvdXJzcXVhcmUtYXBpL3dlYi9hcGktZG9jdW1lbnRhdGlvbvgBAYACAcACAcgC-PTpCqgDAegD2AL1AwAAgMQ&num=1&sig=AGiWqtwYY0jLXJ0kQDHI0Edd5324BrMbEQ&client=ca-google_groups&adurl=http://ad.doubleclick.net/clk%3B227451513%3B51180912%3Bw%3Fhttp://aptm.phoenix.edu%3Fcreative_desc%3D5867205198%26provider%3Dgooglecontent%26keyword%3DGCN%2BText%2B_%2BExplorer%26user3%3D1%26unit%3Ddir%26channel%3Dsrch%26initiative%3Dgen%26mktg_prog%3Dgen%26placement%3Dsrch%26version%3D1x1%26classification%3Dad_ntwk%26destination%3Daptm%26distribution%3Dros%26user1%3Dcpc%26user2%3Ddr%26creative_id%3Dgroups.google.com%26pvp_campaign%3D14210_0917_9_95%26cm_mmc%3Ddir-_-srch-_-googlecontent-_-gen%26cm_mmca1%3Dgen%26cm_mmca2%3Dsrch%26cm_mmca3%3Dgroups.google.com%26cm_mmca4%3D5867205198%26cm_mmca5%3D1x1%26cm_mmca6%3Dad_ntwk%26cm_mmca7%3DGCN%2BText%2B_%2BExplorer%26cm_mmca8%3Daptm%26cm_mmca9%3Dros%26cm_mmca11%3Dcpc%26cm_mmca12%3Ddr%26cm_mmca13%3D1%26vrefid%3D%5Bdistribution%5D%5Buniq_id%5D_%5Bcreative_id%5D_RefDomain_groups.google.com" onmouseout="window.status=&#39;&#39;;return true" onmouseover="window.status=&#39;go to Phoenix.edu&#39;;return true" style="text-decoration:none"><span style="text-decoration:underline;" class="ad-subject">University of Phoenix®<br></span><span style="color:#000000">Official Site. Online Programs.<br></span><span style="color:#000000">Flexible Classes. Get Info Today.<br></span><span style="color:#008000">Phoenix.edu</span></a></div><div class="ad-item"><a href="http://googleads.g.doubleclick.net/aclk?sa=l&ai=B8NlO9WdlTMS0JMeGlge75Y3oBp7Q3N8Bvv-MmhXAjbcB8JaCAhACGAIg99uNAigDOABQi9DOm_n_____AWDJtpuH0KPYEKABxou5_gOyARFncm91cHMuZ29vZ2xlLmNvbcgBAdoBQ2h0dHA6Ly9ncm91cHMuZ29vZ2xlLmNvbS9ncm91cC9mb3Vyc3F1YXJlLWFwaS93ZWIvYXBpLWRvY3VtZW50YXRpb26AAgGoAwHoA9gC9QMAAIDE&num=2&sig=AGiWqtwJwHne4KgB6GcH92aw5-A86BdmOg&client=ca-google_groups&adurl=http://info.centrify.com/active-directory-cross-platform-management.html%3F_kk%3Dintegrated%2520authentication%2520problem%26_kt%3D96a42320-03a9-41df-8753-f0467ba650a6" onmouseout="window.status=&#39;&#39;;return true" onmouseover="window.status=&#39;go to www.Centrify.com/FreeWhitePaper&#39;;return true" style="text-decoration:none"><span style="text-decoration:underline;" class="ad-subject">Centrify Active Directory<br></span><span style="color:#000000">Control Cross-Platform User Access<br></span><span style="color:#000000">w/ Active Directory. Sign Up Now<br></span><span style="color:#008000">www.Centrify.com/FreeWhitePaper</span></a></div><div class="ad-item"><a href="http://googleads.g.doubleclick.net/aclk?sa=l&ai=BJ1V99WdlTMS0JMeGlge75Y3oBo3zoZEB8-7p6wvAjbcBgJBOEAMYAyD3240CKAM4AFCDvbaOBWDJtpuH0KPYEKABtIul_wOyARFncm91cHMuZ29vZ2xlLmNvbcgBAdoBQ2h0dHA6Ly9ncm91cHMuZ29vZ2xlLmNvbS9ncm91cC9mb3Vyc3F1YXJlLWFwaS93ZWIvYXBpLWRvY3VtZW50YXRpb26AAgGoAwHoA9gC9QMAAIDE&num=3&sig=AGiWqtwMItWsXcRAH-9CMizk9ctwVMharw&client=ca-google_groups&adurl=http://www.globeuniversity.edu/landing-pages/gu-online-lp/" onmouseout="window.status=&#39;&#39;;return true" onmouseover="window.status=&#39;go to www.GlobeUniversity.edu&#39;;return true" style="text-decoration:none"><span style="text-decoration:underline;" class="ad-subject">Distance Education Degree<br></span><span style="color:#000000">Globe University Online.<br></span><span style="color:#000000">Training for Todays In-Demand Jobs.<br></span><span style="color:#008000">www.GlobeUniversity.edu</span></a></div></div></div>
+  <div class="padt5"></div>
+  <div class="rnimc">
+  <div><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><div style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=e8eef7&amp;w=2&amp;h=2&amp;a=af) 0px 0px; width: 2px; height: 2px"></div></td><td bgcolor="#7799dd" width="100%" height="2"><img alt="" width="1" height="1"></td><td><div style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=e8eef7&amp;w=2&amp;h=2&amp;a=af) 2px 0px; width: 2px; height: 2px"></div></td></tr></tbody></table></div>
+  <div class="padl10 padb2" style="background-color: #7799dd; color: #ffffff;">
+  <b>Group info</b>
+  </div>
+  <div class="padt4 padb4 padl10 padr10" style="background-color: #ffffff;">
+  <style type="text/css"><!--
+        #moduleGroupInfo td {
+          font-size: 91%;
+        }
+        --></style>
+<style type="text/css"><!--
+
+#moduleGroupInfo .moduleSMALL cat {
+  font-size: 0%;
+  padding-right:7px;
+}
+
+--></style>
+<div class="module" id="moduleGroupInfo">
+  <div class="moduleSMALL">
+<table class="modtab" cellpadding="0" cellspacing="0" border="0" width="100%" style="table-layout: fixed">
+  <tbody><tr>
+  <td class="overflow-hide" nowrap="">
+  <b>Members:</b> 1247
+  </td>
+  </tr>
+  <tr>
+  <td class="overflow-hide" nowrap="">
+  <b>Language:</b> English
+  </td>
+  </tr>
+  <tr>
+  <td class="overflow-hide">
+  <b>Group categories:</b>
+  <br>
+  <a href="http://groups.google.com/groups/dir?sel=topic%3D46479.46475">
+  <nobr>
+  Computers</nobr><nobr> &gt;
+  Programming</nobr></a><br>
+  <a href="http://groups.google.com/groups/dir?sel=topic%3D46479.46478">
+  <nobr>
+  Computers</nobr><nobr> &gt;
+  Internet</nobr></a><br>
+  </td>
+  </tr>
+  <tr>
+  <td class="overflow-hide" nowrap="">
+  <b><a class="on" href="http://groups.google.com/group/foursquare-api/about">More group info »</a></b>
+  </td>
+  </tr>
+</tbody></table>
+  </div>
+</div>
+<script language="javascript1.3"><!--
+
+(function () {
+  var module = document.getElementById('moduleGroupInfo');
+
+  module.getChildElement = function(child_id) {
+    return document.getElementById(this.id + '_' + child_id);
+  }
+
+  module.load = function() {
+  }
+
+  module.load();
+})();
+
+//--></script>
+  </div>
+  </div>
+  <div class="rnimc">
+  <div><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><div style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=e8eef7&amp;w=2&amp;h=2&amp;a=af) 0px 0px; width: 2px; height: 2px"></div></td><td bgcolor="#7799dd" width="100%" height="2"><img alt="" width="1" height="1"></td><td><div style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=e8eef7&amp;w=2&amp;h=2&amp;a=af) 2px 0px; width: 2px; height: 2px"></div></td></tr></tbody></table></div>
+  <div class="padl10 padb2" style="background-color: #7799dd; color: #ffffff;">
+  <b>Recent pages and files</b>
+  </div>
+  <div class="padt4 padb4 padl10 padr10" style="background-color: #ffffff;">
+  <style type="text/css"><!--
+        #moduleRecentItems .item {
+          font-size: 91%;
+        }
+      --></style>
+<style type="text/css"><!--
+
+--></style>
+<div class="module" id="moduleRecentItems">
+  <div class="moduleSMALL">
+  <table class="modtab" cellpadding="0" cellspacing="0" border="0" width="100%" style="table-layout: fixed">
+  <tbody><tr class="item">
+  <td class="overflow-hide" nowrap="">
+  <img src="./API documentation - foursquare API   Google Groups_files/webpage.gif" alt="" class="icon" align="top" height="16" width="16">
+  <a href="./API documentation - foursquare API   Google Groups_files/API documentation - foursquare API   Google Groups.html" class="on">
+  API documentation
+  </a>
+  </td><td align="right" nowrap="" width="25%">
+  Aug 10
+  </td></tr><tr class="item">
+  <td class="overflow-hide" nowrap="">
+  <img src="./API documentation - foursquare API   Google Groups_files/webpage.gif" alt="" class="icon" align="top" height="16" width="16">
+  <a href="http://groups.google.com/group/foursquare-api/web/oauth" class="on">
+  OAuth
+  </a>
+  </td><td align="right" nowrap="" width="25%">
+  Aug 9
+  </td></tr><tr class="item">
+  <td class="overflow-hide" nowrap="">
+  <img src="./API documentation - foursquare API   Google Groups_files/webpage.gif" alt="" class="icon" align="top" height="16" width="16">
+  <a href="http://groups.google.com/group/foursquare-api/web/integrations" class="on">
+  Integrations
+  </a>
+  </td><td align="right" nowrap="" width="25%">
+  Apr 14
+  </td></tr><tr class="item">
+  <td class="overflow-hide" nowrap="">
+  <img src="./API documentation - foursquare API   Google Groups_files/webpage.gif" alt="" class="icon" align="top" height="16" width="16">
+  <a href="http://groups.google.com/group/foursquare-api/web/libraries" class="on">
+  Libraries
+  </a>
+  </td><td align="right" nowrap="" width="25%">
+  Mar 5
+  </td></tr><tr class="item">
+  <td class="overflow-hide" nowrap="">
+  <img src="./API documentation - foursquare API   Google Groups_files/webpage.gif" alt="" class="icon" align="top" height="16" width="16">
+  <a href="http://groups.google.com/group/foursquare-api/web/resources" class="on">
+  resources
+  </a>
+  </td><td align="right" nowrap="" width="25%">
+  Jan 20
+  </td></tr><tr class="item">
+  <td class="overflow-hide" nowrap="">
+  <img src="./API documentation - foursquare API   Google Groups_files/photo.gif" alt="" class="icon" align="top" height="16" width="16">
+  <a target="_blank" href="http://foursquare-api.googlegroups.com/web/special-unlocked.png?gda=5COg_UYAAABCtGIpc8Nv45GOmTB4ImQVmLq1VV66ujsU-cey7FH3sxGWY2E7bJbMHco0sgWFxPl3riz0RlMs_1ov_iNdB7P8E-Ea7GxYMt0t6nY0uV5FIQ" class="on">
+  special-unlocked.png
+  </a>
+  </td><td align="right" nowrap="" width="25%">
+  Jan 20
+  </td></tr><tr class="item">
+  <td class="overflow-hide" nowrap="">
+  <img src="./API documentation - foursquare API   Google Groups_files/photo.gif" alt="" class="icon" align="top" height="16" width="16">
+  <a target="_blank" href="http://foursquare-api.googlegroups.com/web/special-nearby.png?gda=sy6es0QAAABCtGIpc8Nv45GOmTB4ImQVmLq1VV66ujsU-cey7FH3sxveh-_Khc9a-oTLo3bxvZtV6u9SiETdg0Q2ffAyHU-dzc4BZkLnSFWX59nr5BxGqA" class="on">
+  special-nearby.png
+  </a>
+  </td><td align="right" nowrap="" width="25%">
+  Jan 20
+  </td></tr><tr class="item">
+  <td class="overflow-hide" nowrap="">
+  <img src="./API documentation - foursquare API   Google Groups_files/photo.gif" alt="" class="icon" align="top" height="16" width="16">
+  <a target="_blank" href="http://foursquare-api.googlegroups.com/web/special-here.png?gda=fy4wXUIAAABCtGIpc8Nv45GOmTB4ImQVmLq1VV66ujsU-cey7FH3s8GUo-IG_K2_MTALHKESgX9V4u3aa4iAIyYQIqbG9naPgh6o8ccLBvP6Chud5KMzIQ" class="on">
+  special-here.png
+  </a>
+  </td><td align="right" nowrap="" width="25%">
+  Jan 20
+  </td></tr><tr class="item">
+  <td class="overflow-hide" nowrap="">
+  <img src="./API documentation - foursquare API   Google Groups_files/photo.gif" alt="" class="icon" align="top" height="16" width="16">
+  <a target="_blank" href="http://foursquare-api.googlegroups.com/web/crown.png?gda=gI27kjsAAABCtGIpc8Nv45GOmTB4ImQVW61oUCJSFG6LCisyTYxgavS7jQYXEQlRoAnWjnxM_ZYGRdr3QrylPkw2aRbXD_gF" class="on">
+  crown.png
+  </a>
+  </td><td align="right" nowrap="" width="25%">
+  Jan 20
+  </td></tr><tr class="item">
+  <td class="overflow-hide" nowrap="">
+  <img src="./API documentation - foursquare API   Google Groups_files/photo.gif" alt="" class="icon" align="top" height="16" width="16">
+  <a target="_blank" href="http://foursquare-api.googlegroups.com/web/crown_50x50.png?gda=QGPEmEEAAABCtGIpc8Nv45GOmTB4ImQVW61oUCJSFG6LCisyTYxgajykQ07YUIwS8FGDnMQvmSJTCT_pCLcFTwcI3Sro5jAzlXFeCn-cdYleF-vtiGpWAA" class="on">
+  crown_50x50.png
+  </a>
+  </td><td align="right" nowrap="" width="25%">
+  Jan 20
+  </td></tr></tbody></table>
+  </div>
+</div>
+<script language="javascript1.3"><!--
+
+(function () {
+  var module = document.getElementById('moduleRecentItems');
+
+  module.getChildElement = function(child_id) {
+    return document.getElementById(this.id + '_' + child_id);
+  }
+
+  module.load = function() {
+  }
+
+  module.load();
+})();
+
+//--></script>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+  <table class="wdth100  overflow-hide" cellpadding="0" cellspacing="0" style="table-layout: fixed;">
+  <colgroup><col width="*" height="100%"><col style="width:32ex;"></colgroup><tbody><tr valign="top"><td class=" overflow-hide" style="border-bottom: 1px solid #7799dd;; border-right: 1px solid #7799dd;">
+<script><!--
+  function GN_confirmChangeCurrentVersion() {
+    return confirm("Are you sure you want to make this version the current version?");
+  }
+  function GN_confirmDeletePage() {
+    return confirm("Are you sure you want to delete this page?");
+  }
+//--></script>
+<div class="maincontheaderbox hide" id="message_bar_padding" name="message_bar_padding">
+</div>
+<div class="maincontheaderbox" style="">
+  <div class="secttlbarwrap">
+  <div><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><div style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=white&amp;w=4&amp;h=4&amp;a=af) 0px 0px; width: 4px; height: 4px"></div></td><td bgcolor="#7799dd" width="100%" height="4"><img alt="" width="1" height="1"></td><td><div style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=white&amp;w=4&amp;h=4&amp;a=af) 4px 0px; width: 4px; height: 4px"></div></td></tr></tbody></table></div>
+  <div class="secttlbar">
+  <table cellpadding="0" cellspacing="0" width="100%"><tbody><tr>
+  <td>
+  <span class="secttl">
+  API documentation &nbsp;
+  </span>
+  </td><td align="right">
+  &nbsp; <span class="frtxt">
+  </span>
+  </td></tr></tbody></table>
+  </div>
+  <div><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><div style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=white&amp;w=4&amp;h=4&amp;a=af) 0px 4px; width: 4px; height: 4px"></div></td><td bgcolor="#7799dd" width="100%" height="4"><img alt="" width="1" height="1"></td><td><div style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=white&amp;w=4&amp;h=4&amp;a=af) 4px 4px; width: 4px; height: 4px"></div></td></tr></tbody></table></div>
+  </div>
+</div>
+<div class="maincontboxhead">
+<div class="module" id="moduleEditablePage1">
+  <style type="text/css"><!--
+  .editable {
+    border: 0;
+  }
+
+  .layout img {
+    border: 0;
+  }
+
+  .layout h1 {
+  	/*font-size: 3em;*/
+  	font-weight: bold;
+  	letter-spacing: 2px;
+  }
+  .layout h2 {
+  	/*font-size: 2em;*/
+  	font-weight: normal;
+  }
+  .layout h3 {
+  	/*font-size: 1.5em;*/
+  }
+  .layout h4 {
+  	/*font-size: 1.2em;*/
+  	letter-spacing: 0.2em;
+  }
+  .layout h5 {
+  	/*font-size: 1.2em;*/
+  }
+  .layout h6 {
+  	/*font-size: 1em;*/
+  	font-weight: bold;
+  }
+
+  .layout p,
+  .layout td {
+  	/*line-height: 1.6em;*/
+        margin: 0;
+  }
+--></style>
+<div class="layout">
+  <div class="layoutregion">
+  <div id="g_body" style="overflow: auto;"><font size="4"><b>Intro</b></font><br><br><span><p>The foursquare API enables developers to build applications
+that interact with the foursquare platform. You can use the API to
+create new ways to check-in to foursquare or visualize the data
+generated by the foursquare community. Our API is still a work in
+progress and we look forward to your feedback and suggestions.</p><p><br></p><p>In addition to the methods exposed below, you can also retrieve your check-in history using our feeds system. Feeds are available in three formats: RSS, KML, iCal. See <a href="http://feeds.foursquare.com/" rel="nofollow">feeds.foursquare.com</a> for more.</p><p><br></p><p>Usage of this API is subject to our <a href="http://foursquare.com/legal/api" rel="nofollow">Terms of Service</a>.<br></p></span><br><br><h3><font size="4">Authentication</font></h3>
+For most methods, we require either <a href="http://en.wikipedia.org/wiki/Basic_access_authentication" rel="nofollow">Basic Authentication</a> or <a href="http://groups.google.com/group/foursquare-api/web/oauth" rel="nofollow">OAuth Authentication</a>. OAuth is the method we <b>strongly encourage</b> you use so that clients do not have to hang on to usernames and passwords but can initiate requests on a user's behalf via a special token.<br><br>To use Basic, you should send the credentials (phone, password) in the HTTP header. For instance, here's an example using curl from the command line:<br><br><span style="font-family:courier new,monospace">&nbsp; curl -u PHONE_OR_EMAIL:PASSWORD http://api.foursquare.com/v1/user</span><br><br>To use OAuth, read our <a href="http://groups.google.com/group/foursquare-api/web/oauth" rel="nofollow">OAuth Howto</a><br><div><div><br><h3><b><font size="4">Formats</font></b></h3>You can currently request output in XML (the default) as well as JSON. You should format the URL like this:<br><br><span style="font-family:courier new,monospace">http://api.foursquare.com/v1/user.json</span><br><br>If your URL has no format extension, XML will be served up:<br><br><span style="font-family:courier new,monospace">http://api.foursquare.com/v1/user</span></div><div><font face="&#39;courier new&#39;, monospace"><br></font></div><div><font face="&#39;courier new&#39;, monospace"><font face="arial, sans-serif">We prefer that you use JSON to code up your application. Not only are objects properly typed, but it will make it easier for you to move to v2 of our API.</font><br></font><br><h3><font size="4"><b>Notes</b></font></h3>Distances are always returned in <b>meters<span style="font-family:courier new,monospace"></span></b>.<br><br>As a best practice, can we ask that you <b>strip out blank parameters</b> from your requests? i.e., send "/v1/user?uid=33" instead of "/v1/user?uid="<br><br>If the method requires <b>GET</b>, use GET. If it indicates <b>POST</b>, use POST. Otherwise, your request will be rejected.</div><div><br></div><div>We strongly recommend that all <b>ID</b>s be stored as strings in your code and database schemas.<br><br>Some fields in the response (like <span style="font-family:courier new,monospace">lastname</span>) can be empty. We'll try to put in a note in the method description for most such cases.<br><br><b>Usernames</b> are currently inherited from Twitter. Be careful about using usernames as a key to store backend details because if the user chooses to change their Twitter handle for some reason, your map will break. Make use of the uid instead.<br><br>For any geo method (/checkin, /checkins, /tips, ...), we recommend that you pass in <b>geolat</b> (latitude), <b>geolong</b> (longitude), <b>geohacc</b> (horizontal accuracy), <b>geovacc</b> (vertical accuracy) and <b>geoalt</b> (altitude) as parameters. This will allow us to return even better data about the location query. All values should be in meters.<br><br>The idea of "<b>cityid</b>" is now deprecated from the API. This means that all city-modifier calls (/switchcity, /checkcity) are no longer available. You should take care to build your clients so that they pass <b>geolat</b> and <b>geolong</b> for all geo methods.<br><br><br><h3><font><font size="4"><font size="4">User agents</font></font></font></h3>Set your <b>User-Agent</b> header to something identifiable. Default
+identifiers like "Mozilla" or "libwww-perl/5.808" may get banned from
+time to time because of rate limits.<br><br>We keep track of each unique User-Agent (app name, major/minor versions and log information included) you send us. To help us identify your client more easily, we <b>highly</b> recommend that your User-Agent fit a more structured format: separate your app's name from the major and minor versions (and any other identifying information). We suggest the separator be a colon (":") to avoid conflicts with other delimiters. We also suggest that you send down the application's version number immediately after the separator. After this phrase, you're free to include any other uniquely identifying information you wish (for logging, debug purposes, etc).<br><br>Example: <b>swipe-checkin:1.5 2009110501</b><br><br>Example: <b>Cool Square:4.0.0.247 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/105 Debug/Blackberry|9630|EMULATOR</b><br><br>Fitting this profile will allow us to automatically track your client in a more efficient way. We'll be able to more efficiently generate auto-upgrade notices (should your app need such hints in future) and usage statistics.<br><br><br><h3><font><font size="4"><font size="4">Rate limiting</font><br>
+</font></font></h3>
+Usage of the API is subject to rate limits. The limits are based on a
+moving window that tracks the number of requests you send per hour.</div><div><br></div><div>The default limit is 200 requests per hour per method. The rate limiting is applied to one of the following, in this order:</div><div><ul><li>the basic auth login</li><li>OAuth consumer key</li><li>IP address</li></ul></div><div>Your application should try to play nicely against our methods. For instance, cache results on your side wherever possible (e.g., /venue calls usually tend to be more long-lived than others). Send back an identifiable User-Agent header.<br><br>We're still learning
+about your apps and tweaking these caps. If your application runs into
+any of our bounds and you think you could use more, write us: <a href="mailto:api@foursquare.com" rel="nofollow">api@foursquare.com</a>. Depending on the method you are using to access our API, we'll need <b>one</b> of the following:</div><div><ul><li>Basic authentication: your user name</li><li>OAuth: the email address you used to register with foursquare _and_ your OAuth consumer key</li><li>Anonymous: IP address of the machine from which you are making calls</li></ul></div><div><br></div><div><h3><font size="4">Methods</font></h3>
+<code></code>
+<h3>Check in methods</h3>
+<h4>Checkins</h4>
+Returns a list of recent checkins from friends.</div><div><br></div><div>If you pass in a geolat/geolong pair (optional, but recommended), we'll send you back a <font face="&#39;courier new&#39;, monospace">distance</font> inside each <font face="&#39;courier new&#39;, monospace">checkin</font> object that you can use to sort your results.<br><br>Some notes on how to parse each <font face="&#39;courier new&#39;, monospace">checkin</font> block:<br><ul><li>if <font face="&#39;courier new&#39;, monospace">venue</font> exists, it's a check-in to a proper place.</li><li>if <font face="&#39;courier new&#39;, monospace">venue</font>&nbsp;and <font face="&#39;courier new&#39;, monospace">shout</font>&nbsp;exist, it's a check-in to a proper place with a shout.</li><li>if only <font face="&#39;courier new&#39;, monospace">shout</font> exists, it's a shout (no check-in). shouts are like callouts or tweets to your network. they need not be tied down to a particular place. it's useful for sending messages like: "hey who's up for hanging out later tonight?".<br></li><li>if no <font face="&#39;courier new&#39;, monospace">venue</font> or <font face="&#39;courier new&#39;, monospace">shout</font> exists, then it's a silent check-in ("off-the-grid" as we like to say). this shows up in the timeline so that you know the person is out and about (to make it easy to meet up after they are done with whatever they are doing. it's useful for stuff like dates, business meetings, etc).</li></ul>
+URL: http://api.foursquare.com/v1/checkins<br>
+Formats: XML, JSON<br>
+HTTP Method(s): GET<br>
+Requires Authentication: Yes<br>
+Parameters:<br><ul><li><b>geolat</b> - (optional, but recommended)</li><li><b>geolong</b> - (optional, but recommended)<br></li></ul>
+Response (truncated):<br><pre>{</pre><pre><code>    checkins:[
+        {
+            id:286939,
+            user:{
+                id:467,
+                firstname:'Sarah',
+                lastname:'Simmons',
+                photo:'http://foursquare.com/userpix/467_1237171998.jpg',
+                gender:'female'
+            },
+            venue:{
+                id:44379,
+                name:'Topshop',
+                address:'478 Broadway',
+                crossstreet:'at Broome',
+                geolat:40.7215,
+                geolong:-74.0001
+            },
+            distance:2382,
+            display:'Sarah S. @ Topshop',
+            shout:'Just tried on a dress ...',
+            created:'Thu, 21 May 09 18:09:22 +0000'
+        }
+    ]
+}<br></code></pre>
+<br><h4><b>Check-in</b></h4><br>Allows you to check-in to a place.<br><br>A <span style="font-family:courier new,monospace">mayor</span>&nbsp;block will be returned if there's any mayor information for this place. It'll include a node&nbsp;<span style="font-family:courier new,monospace">type</span>&nbsp;which has the following values: <span style="font-family:courier new,monospace">new</span> (the user has been appointed mayorship), <span style="font-family:courier new,monospace">nochange</span> (the previous mayorship is still valid), <span style="font-family:courier new,monospace">stolen</span> (the user stole mayorship from the previous mayor).<br><br>A <span style="font-family:courier new,monospace">specials</span>&nbsp;block will be returned if there are any specials associated with this check-in. It'll include subnodes <span style="font-family:courier new,monospace">special</span>&nbsp;which may have various types. The types can be one of: <span style="font-family:courier new,monospace">mayor</span>, <span style="font-family:courier new,monospace">count</span>, <span style="font-family:courier new,monospace">frequency</span>, or <span style="font-family:courier new,monospace">other</span>. If the special is at a nearby venue (instead of at the currently checked-into venue), you'll see a <font face="&#39;courier new&#39;, monospace">{kind: 'nearby'}</font>&nbsp;object and you'll see a <font face="&#39;courier new&#39;, monospace">venue</font>&nbsp;node inside <font face="&#39;courier new&#39;, monospace">special&nbsp;</font>that will highlight the nearby venue. If the special exists at the venue you're currently looking at, no <font face="&#39;courier new&#39;, monospace">venue</font>&nbsp;block will appear and <font face="&#39;courier new&#39;, monospace">kind</font>&nbsp;will read "<font face="&#39;courier new&#39;, monospace">here</font>".<br><br>If you're building an interface that interactively shows unlocked badges and tips, try to conform to this copy so that users will have an easier time recognizing the experience:<br><ul><li>Badge: "You've unlocked [badge/name]: [badge/description]."</li><li>Tip (nearby): "Since you're so close to [venue], [firstname last-initial] says: [tip/text]."</li><li>Tip (here): "Since you're at [venue], [firstname last-initial] says: [tip/text]."</li></ul><br>URL: http://api.foursquare.com/v1/checkin<br>Formats: XML, JSON<br>HTTP Method(s): POST<br>Requires Authentication: Yes<br>Parameters:<br><ul><li><b>vid</b> - (optional, not necessary if you are 'shouting' or have a venue name). ID of the venue where you want to check-in<br></li><li><b>venue</b> - (optional, not necessary if you are 'shouting' or have a vid) if you don't have a venue ID or would rather prefer a 'venueless' checkin, pass the venue name as a string using this parameter. it will become an 'orphan' (no address or venueid but with geolat, geolong)<br></li><li><b>shout</b> - (optional) a message about your check-in. the maximum length of this field is 140 characters<br></li><li><b>private</b> - (optional). "1" means "don't show your friends". "0" means "show everyone"</li><li><b>twitter</b> - (optional, defaults to the user's setting). "1" means "send to Twitter". "0" means "don't send to Twitter"</li><li><b>facebook</b> - (optional, defaults to the user's setting). "1" means "send to Facebook". "0" means "don't send to Facebook"<br></li><li><b>geolat</b> - (optional, but recommended)<br></li><li><b>geolong</b> - (optional, but recommended)<br></li></ul>Response:<br><pre>{</pre><pre><code>    checkin:{
+        message:'OK! We\'ve got you @ 4SQ HQ - Soho. This is your 8th checkin here!',
+        id:413421,
+        created:'Mon, 29 Jun 09 14:21:06 +0000',
+        venue:{
+            id:45506,
+            name:'4SQ HQ - Soho',
+            address:'...',
+            crossstreet:'btw Grand &amp; Broome',
+            city:'New York',
+            state:'NY',
+            zip:10013
+        },
+        mayor:{
+            type:'nochange',
+            checkins:10,
+            user:{
+                id:138,
+                firstname:'Dan',
+                lastname:'M.',
+                photo:'http://playfoursquare.s3.amazonaws.com/userpix_thumbs/138_1237786934.jpg',
+                gender:'male'
+            },
+            message:'Dan M. is The Mayor of Bowery Wine Company.'
+        },
+        badges:{
+            badge:{
+                id:123,
+                name:'Newbie',
+                icon:'http://foursquare.com/img/badge/newbie.png',
+                description:'Congrats on your first checkin!'
+            }
+        },
+        scoring:{
+            score:[
+                {
+                    points:1,
+                    icon:'http://foursquare.com/img/scoring/2.png',
+                    message:'First stop tonight'
+                },
+                {
+                    points:5,
+                    icon:'http://foursquare.com/img/scoring/1.png',
+                    message:'First time @ 4SQ HQ!'
+                }
+            ]
+        },
+        specials:{
+            special:{
+                id:2,
+                type:'mayor',
+                kind:'nearby',
+                message:'If you\'re the mayor, show the bartender and your first drink is free! (just beer and well drinks guys, let\'s be fair)',
+                venue:{
+                    id:333
+                }
+            }
+        },
+        checkin:{
+        }
+    }
+}</code><br><br></pre><h4>History<br></h4>
+Returns a history of checkins for the authenticated user.<br><br>Some notes on how to parse each <font face="&#39;courier new&#39;, monospace">checkin</font> block:<br><ul><li>if <font face="&#39;courier new&#39;, monospace">venue</font>&nbsp;exists, it's a check-in to a proper place.</li><li>if <font face="&#39;courier new&#39;, monospace">venue</font>&nbsp;and <font face="&#39;courier new&#39;, monospace">shout</font>&nbsp;exist, it's a check-in to a proper place with a shout.</li><li>if
+only&nbsp;<font face="&#39;courier new&#39;, monospace">shout</font>&nbsp;exists, it's a shout (no check-in).<br></li></ul>
+URL: http://api.foursquare.com/v1/history<br>
+Formats: XML, JSON<br>
+HTTP Method(s): GET<br>
+Requires Authentication: Yes<br>Parameters:<br><ul><li><b>l</b> - limit of results (optional, default: 20, max: 250). number of checkins to return<br></li><li><b>sinceid </b>- id to start returning results from (optional, if omitted returns most recent results)</li></ul>Response (truncated):<code><br><br></code></div><div><code><div>{</div><div>&nbsp;&nbsp; &nbsp;checkins:[</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:947380,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;venue:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:34655,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;name:'Monday Room',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;primarycategory:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:79156,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;fullpathname:'Nightlife:Cocktails / Mixology',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;nodename:'Cocktails / Mixology',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iconurl:'http://foursquare.com/img/categories/nightlife/cocktails.png'</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;address:'201 Elizabeth St',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;crossstreet:'btw Prince &amp; Spring',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;city:'New York',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;state:'NY',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;zip:10012,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;geolat:40.722,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;geolong:-73.9944,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;phone:2123437011</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shout:'drinks with brier',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;created:'Thu, 03 Sep 09 01:23:40 +0000'</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:944792</div><div>...</div><div><br></div></code></div><div><h3>User methods</h3>
+<h4>User detail</h4>
+Returns profile information (badges, etc) for a given user. If the user has recent check-in data (ie, if the user is self or is a friend of the authenticating user), this data will be returned as well in a <span style="font-family:courier new,monospace">checkin</span>&nbsp;block.<br><br>If the user requested is 'self' (ie, the authenticating user), a <span style="font-family:courier new,monospace">settings</span>&nbsp;block with defaults will be returned. This settings block includes attributes like <span style="font-family:courier new,monospace">sendtotwitter, sendtofacebook</span>. <span style="font-family:courier new,monospace">sendtotwitter</span> will indicate whether the default action is to tweet check-in information to Twitter (the possible values are <span style="font-family:courier new,monospace">true</span> and <span style="font-family:courier new,monospace">false</span>). <span style="font-family:courier new,monospace">sendtofacebook</span> will indicate whether the default action is to send check-in information to the user's Facebook news feed. <span style="font-family:courier new,monospace">pings</span> will indicate whether the user will receive check-in notification pings from client apps (iPhone, Android, Blackberry, ...). The possible values for <span style="font-family:courier new,monospace">pings</span> are: <span style="font-family:courier new,monospace">on</span> (send pings) and&nbsp;<span style="font-family:courier new,monospace">off</span> (don't send pings).<br><br>Lastly, if the user is a friend of the authenticating user, you'll have access to the requested user's phone, email, Twitter and Facebook ID. In addition to this, you'll also see a setting <span style="font-family:courier new,monospace">get_pings</span>. <span style="font-family:courier new,monospace">get_pings</span> will indicate whether the authenticating user is setup to receive check-in pings from the friend (push notifications, etc). The possible values for <span style="font-family:courier new,monospace">get_pings</span> are <span style="font-family:courier new,monospace">true</span> and <span style="font-family:courier new,monospace">false</span>.<br><br>The <span style="font-family:courier new,monospace">friendstatus</span>&nbsp;node has four possible values:<br><ul><li><font size="3" face="&#39;courier new&#39;, monospace"><span style="font-size:11px">friend</span></font> - the requested user is your friend</li><li><span style="font-family:courier new,monospace">pendingyou</span> - the requested user sent you a friend request that you have not accepted</li><li><span style="font-family:courier new,monospace">pendingthem</span> - you have sent a friend request to the requested user but they have not accepted</li><li>node absent&nbsp;- the requested user is not your friend (and neither party has made an attempt at connecting)</li></ul>The latter two will be particularly useful in showing status in your application. If '<span style="font-family:courier new,monospace">pendingyou</span>', you'll probably want to lead them to an approve/ignore action. If '<span style="font-family:courier new,monospace">pendingthem</span>', you'll probably want to just show 'pending approval' as a note.</div><div><br></div><div>A hint: you can also use this call as a way to verify credentials (ensure that the user hasn't revoked OAuth permission or that their Basic Auth login hasn't changed).<br><br>
+URL: http://api.foursquare.com/v1/user<br>
+Formats: XML, JSON<br>
+HTTP Method(s): GET<br>
+Requires Authentication: Yes<br>
+Parameters:
+<ul><li><b>uid</b> - userid for the user whose information you want to retrieve. if you do not specify a 'uid', the authenticated user's profile data will be returned.</li><li><b>twitter</b> - twitter handle for the user whose information you want to retrieve. if you specify both 'uid' and 'twitter', 'uid' will take precedence.</li><li><b>badges</b> - (optional, default: false) set to true ("1") to also show badges for this user. by default, this will show badges earned worldwide.<br></li><li><b>mayor</b> - (optional, default: false) set to true ("1") to also show venues for which this user is a mayor. by default, this will show mayorships worldwide.<br></li></ul>
+Response (truncated):<br>
+<pre><code>{
+    user:{
+        id:33,
+        firstname:'Naveen',
+        lastname:'Selvadurai',
+        photo:'http://foursquare.com/userpix/33_1235974851.jpg',
+        gender:'male',
+        phone:2129103995,
+        email:'n@naveen.com',
+        twitter:'naveen',
+        facebook:29103995,
+        friendstatus:'friend',
+        checkin:{
+            id:413421,
+            created:'Mon, 29 Jun 09 14:21:06 +0000',
+            venue:{
+                id:45506,
+                name:'4SQ HQ - Soho',
+                address:'...',
+                crossstreet:'btw Grand &amp; Broome',
+                city:'New York',
+                state:'NY',
+                zip:10013
+            }
+        },
+        badges:[
+            {
+</code><code>        </code>        name:'Newbie',
+                icon:'http://foursquare.com/img/badge/newbie_on.png',
+                description:'Congrats on your first check-in!'
+            }</pre><pre><code><br></code>Response for 'self' authenticated (truncated):<br><br>{
+    user:{
+        id:33,</pre><pre>...
+        settings:{
+            sendtotwitter:'false',
+            sendtofacebook:'false',
+            pings:'on'
+        }</pre><h4>Friends</h4>
+Returns a list of friends. If you do not specify uid, the authenticating user's list of friends will be returned. If the friend has allowed it, you'll also see links to their Twitter and Facebook accounts.<br><br>
+URL: http://api.foursquare.com/v1/friends<br>
+Formats: XML, JSON<br>
+HTTP Method(s): GET<br>
+Requires Authentication: Yes<br>Parameters:<br><ul><li><b>uid</b> - user id of the person for whom you want to pull a friend graph (optional)</li></ul><br>Response (truncated):<br><code><div>{</div><div>&nbsp;&nbsp; &nbsp;friends:[</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:32,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;firstname:'Dennis',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lastname:'Crowley',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;photo:'http://playfoursquare.s3.amazonaws.com/userpix_thumbs/32_1239135232.jpg',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;gender:'male',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;phone:2120000000,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;email:'dennis@crowley.co.uk',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;twitter:'dens',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;facebook:803834</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}</div><div>&nbsp;&nbsp; &nbsp;]</div><div>}</div></code></div><div>
+<h3>Venue methods</h3>
+<h4>Nearby and search</h4>
+Returns a list of venues near the area specified or that match the search term. (The distance returned is in meters). If you authenticate, the method will return venue meta-data related to you and your friends. If you do not authenticate, you will not get this data.<br><br>Note that most of the fields returned inside <font face="&#39;courier new&#39;, monospace">venue</font>&nbsp;can be optional. The user may create a venue that has no address, city or state (the venue is created instead at the geolat/geolong specified). Your client should handle these conditions safely.</div><div><br></div><div>You'll also notice a <font face="&#39;courier new&#39;, monospace">stats</font>&nbsp;block that reveals some count data about the venue. <font face="&#39;courier new&#39;, monospace">herenow</font>&nbsp;shows the number of people currently there (this value can be <font face="&#39;courier new&#39;, monospace">0</font>).<br><br>
+URL: http://api.foursquare.com/v1/venues<br>
+Formats: XML, JSON<br>
+HTTP Method(s): GET<br>
+Requires Authentication: No, but recommended<br>
+Parameters:
+<ul><li><b>geolat</b> - latitude (required)<br></li><li><b>geolong</b> - longitude (required)<br></li><li><b>l</b> - limit of results (optional, default 10, maximum 50)</li><li><b>q</b> - keyword search (optional)</li></ul>
+Response (truncated):<br>
+<pre>{</pre><pre><code>    groups:[
+        {
+            type:'Nearby favorites',
+            venue:{
+                id:257,
+                name:'Bowery Ballroom',
+                primarycategory:{
+                    id:{
+                        value:79167,
+                        id:{
+                            fullpathname:'Nightlife:Music Venue:Rock Club',
+                            nodename:'Rock Club',
+                            iconurl:'http://foursquare.com/img/categories/nightlife/default.png',
+                            distance:10,
+                            address:'6 Delancey St',
+                            crossstreet:'at Bowery',
+                            city:'New York',
+                            state:'NY',
+                            zip:10002,
+                            geolat:40.7204,
+                            geolong:-73.9933,
+                            phone:2120000000,
+                            twitter:'BoweryBallroom',
+                            stats:{
+                                herenow:36
+                            },
+                            venue:{
+                                id:5055,
+                                name:'Hiro Ballroom'</code></pre><pre><code>...</code></pre>
+<h4>Venue details</h4>
+When given a venue identifier (<font face="&#39;courier new&#39;, monospace">vid</font>), returns venue data, including mayorship, tips/to-dos and tags. If the <font face="&#39;courier new&#39;, monospace">vid</font> given is one that has been merged into another "master" venue, the response will show data about the "master" instead of giving you an error.<br><br>A&nbsp;<span style="font-family:&#39;courier new&#39;, monospace">specials</span>&nbsp;block will be returned if there are any specials associated with this check-in. It'll include subnodes&nbsp;<span style="font-family:&#39;courier new&#39;, monospace">special</span>&nbsp;which may have various types. The types can be one of:&nbsp;<span style="font-family:&#39;courier new&#39;, monospace">mayor</span>,&nbsp;<span style="font-family:&#39;courier new&#39;, monospace">count</span>,&nbsp;<span style="font-family:&#39;courier new&#39;, monospace">frequency</span>, or&nbsp;<span style="font-family:&#39;courier new&#39;, monospace">other</span>. If the special is at a nearby venue (instead of at the currently visible venue), you'll see a&nbsp;<font face="&#39;courier new&#39;, monospace">{kind: 'nearby'}</font>&nbsp;object and you'll see a&nbsp;<font face="&#39;courier new&#39;, monospace">venue</font>&nbsp;node inside&nbsp;<font face="&#39;courier new&#39;, monospace">special</font>&nbsp;that will highlight the nearby venue. If the special exists at the venue you're currently looking at, no&nbsp;<font face="&#39;courier new&#39;, monospace">venue</font>&nbsp;block will appear and&nbsp;<font face="&#39;courier new&#39;, monospace">kind</font>&nbsp;will read "<font face="&#39;courier new&#39;, monospace">here</font>".</div><div><br>If you authenticate, you'll get back social meta data:<br><ul><li>stats - shows whether you and your friends have ever checked in here (<span style="font-family:courier new,monospace">beenhere</span>); total checkins at the venue (<font face="&#39;courier new&#39;, monospace">stats/checkins</font>); and total people there now (<font face="&#39;courier new&#39;, monospace">stats/herenow</font>). the <font face="&#39;courier new&#39;, monospace">checkins</font>&nbsp;and <font face="&#39;courier new&#39;, monospace">herenow</font>&nbsp;blocks serve as a live count of people currently at the venue: if someone moves, the count will drop</li><li>checkins - show the people currently checked into this location (ie, last three hours). you'll see <span style="font-family:courier new,monospace">shout</span>&nbsp;and full <span style="font-family:courier new,monospace">lastname</span>&nbsp;if they are friends with the authenticating user. this block will only return the last 50 results. to get a count of all people there, use <font face="&#39;courier new&#39;, monospace">stats/herenow</font></li></ul><br>
+URL: http://api.foursquare.com/v1/venue<br>
+Formats: XML, JSON<br>
+HTTP Method(s): GET<br>
+Requires Authentication: No, but recommended<br>
+Parameters:
+<ul><li><b>vid</b> - the ID for the venue for which you want information
+</li></ul>
+Response (truncated):<br><pre>{</pre><pre>    "venue": {
+        "id": 49049,
+        "name": "Pig &amp; Whistle",
+        "primarycategory": {
+            "id": 79153,
+            "fullpathname": "Nightlife:Bar",
+            "nodename": "Bar",
+            "iconurl": "http://foursquare.com/img/categories/nightlife/default.png"
+        },
+        "address": "365 Greenwich St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10013",
+        "geolat": 40.7192,
+        "geolong": -74.0103,
+        "stats": {
+            "checkins": 24,
+            "herenow": "0",
+            "beenhere": {
+                "me": true
+            },
+            "mayor": {
+                "user": {
+                    "id": 36690,
+                    "firstname": "Mike",
+                    "lastname": "P.",
+                    "photo": "http://playfoursquare.s3.amazonaws.com/userpix_thumbs/4a9f29d1e43d7.jpg",
+                    "gender": "male"
+                },
+                "count": 2
+            }
+        },
+        "tips": [
+            {
+                "id": 14506,
+                "text": "if you stay for a while the owner is more than likely to drop by with free food or drink",
+                "created": "Fri, 26 Jun 09 18:45:49 +0000",
+                "user": {
+                    "id": 16970,
+                    "firstname": "Greg",
+                    "lastname": "S.",
+                    "photo": "http://playfoursquare.s3.amazonaws.com/userpix_thumbs/4a4262911f7cf.jpg",
+                    "gender": "male"
+                }
+            },
+            {
+                "id": 8713,
+                "text": "one of the many \"Pig\" places in the city i want to go to. (hey! i should make a \"Pig\" list).",
+                "created": "Thu, 30 Apr 09 14:40:17 +0000",
+                "user": {
+                    "id": 33,
+                    "firstname": "Naveen",
+                    "photo": "http://playfoursquare.s3.amazonaws.com/userpix_thumbs/YSTILJBL51CMM024.jpg",
+                    "gender": "male"
+                }
+            }
+        ],
+        "categories": [
+            {
+                "id": 79153,
+                "fullpathname": "Nightlife:Bar",
+                "nodename": "Bar",
+                "iconurl": "http://foursquare.com/img/categories/nightlife/default.png"
+            }
+        ],
+        "specials": [
+            
+        ]
+    }
+}</pre><pre><code><br></code></pre><pre><code><span style="font-family:arial, sans-serif;white-space:normal;font-size:13px"><div><h4 style="letter-spacing:0.2em">Categories list</h4>Returns a hierarchical list of categories currently supported by the platform. The values can be described as:</div><div><ul><li><b>categories</b> - an array of subcategories</li><li><b>id</b> - the category id at this level (to be used as <font face="&#39;courier new&#39;, monospace">primarycategoryid</font> when passed to /addvenue)</li><li><b>fullpathname</b> - a colon (":") delimited path to the category</li><li><b>nodename</b> - name of the current category (to be displayed in your interface)</li><li><b>iconurl</b> - URL to the category icon (cache these per session or max, per week as they are subject to change)</li></ul></div><div>Note that top-level categories do not have IDs because they cannot be assigned to a venue.</div><div><br></div><div>When designing your client apps, you might want to take care to pull this list down only once per session (and perhaps cache it for a short while).<br><br></div><div>URL: http://api.foursquare.com/v1/categories<br>Formats: XML, JSON<br>HTTP Method(s): GET<br>Requires Authentication: No<br>Parameters: None<br>Response (truncated):</div><div><br></div><div><span style="font-family:&#39;courier new&#39;, monospace;font-size:small;white-space:pre">{</span></div><div><font face="&#39;courier new&#39;, monospace"><span style="white-space:pre;font-size:small">    categories:[
+        {
+            fullpathname:'Arts &amp; Entertainment',
+            nodename:'Arts &amp; Entertainment',
+            iconurl:'http://foursquare.com/img/categories/arts_entertainment.png',
+            categories:[                
+                    {
+                        id:78959,
+                        fullpathname:'Arts &amp; Entertainment:Arcade',
+                        nodename:'Arcade',
+                        iconurl:'http://foursquare.com/img/categories/arts_entertainment/arcade.png'
+                    },
+                    {
+                        id:78960,
+                        fullpathname:'Arts &amp; Entertainment:Art Gallery',
+                        nodename:'Art Gallery',
+                        iconurl:'http://foursquare.com/img/categories/arts_entertainment/artgallery.png'
+                    }
+                ]</span></font></div><div><font face="monospace"><span style="white-space:pre">...</span></font></div><div><font face="monospace"><span style="white-space:pre"><br></span></font></div></span></code></pre><h4>Add venue<br></h4>
+Allows you to add a new venue.<br><br>If you find this method returns an <span style="font-family:courier new,monospace">error</span>, give the user the option to edit her inputs. In addition to this, give users the ability to say "never mind, check-in here anyway" and perform a manual ("venueless") checkin by specifying just the venue name to <span style="font-family:courier new,monospace">/v1/checkin</span>. You'll rarely run into this case, but there's a chance you'll see this case if the user wants to force a duplicate venue.<br><br>All fields are optional, but you must specify either a valid address or a geolat/geolong pair. It's recommended that you pass a geolat/geolong pair in every case.</div><div><br></div><div>You may also, optionally, pass in a category (<font face="&#39;courier new&#39;, monospace">primarycategoryid</font>) to which you want this venue assigned. You can browse a full list of categories using the <font face="&#39;courier new&#39;, monospace">/categories</font> method. On add venue, it is recommended that you show the user this categories hierarchy and allow them to choose something suitable.<br><br>
+URL: http://api.foursquare.com/v1/addvenue<br>
+Formats: XML, JSON<br>
+HTTP Method(s): POST<br>
+Requires Authentication: Yes<br>
+Parameters:
+<ul><li><b>name</b> - the name of the venue</li><li><b>address</b> - (optional) the address of the venue (e.g., "202 1st Avenue")<br></li><li><b>crossstreet</b> - (optional) the cross streets (e.g., "btw Grand &amp; Broome")</li><li><b>city</b> - (optional) the city name where this venue is</li><li><b>state</b> - (optional) the state where the city is</li><li><b>zip</b> - (optional) the ZIP code for the venue</li><li><b>phone</b> - (optional) the phone number for the venue</li><li><b>geolat</b> - (optional, but recommended)<br></li><li><b>geolong</b> - (optional, but recommended)</li><li><b>primarycategoryid</b> - (optional) the ID of the category to which you want to assign this venue</li></ul>
+Response (truncated):</div><div><span style="font-family:monospace;font-size:11px"><br></span></div><div><span style="font-family:monospace;font-size:11px">{</span></div><div><code><div>&nbsp;&nbsp; &nbsp;venue:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;id:49049,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;name:'Pig &amp; Whistle',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;primarycategory:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:79153,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;fullpathname:'Nightlife:Bar',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;nodename:'Bar',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iconurl:'http://foursquare.com/img/categories/nightlife/default.png'</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;},</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;address:'365 Greenwich St',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;crossstreet:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;},</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;city:'New York',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;state:'NY',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;zip:10013,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;phone:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;},</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;geolat:40.7192,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;geolong:-74.0103,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;stats:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;checkins:0</div><div>...</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;},</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;tips:[</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{</div><div>...</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;]</div><div>&nbsp;&nbsp; &nbsp;}</div><div>}</div></code><code><br></code><h4>Propose venue edit<br></h4>
+Allows you to flag/propose a change to a venue. If the user knows the correct address, use this method to save it. Otherwise, use /flagmislocated to flag the venue instead (you need not specify a new address or geolat/geolong in that case).<br><br>
+URL: http://api.foursquare.com/v1/venue/proposeedit<br>
+Formats: XML, JSON<br>
+HTTP Method(s): POST<br>
+Requires Authentication: Yes<br>
+Parameters:
+<ul><li><b>vid</b> - (required) the venue for which you want to propose an edit<br></li><li><b>name</b> - (required) the name of the venue</li><li><b>address</b> - (required) the address of the venue (e.g., "202 1st Avenue")<br></li><li><b>crossstreet</b> - the cross streets (e.g., "btw Grand &amp; Broome")</li><li><b>city</b> - (required) the city name where this venue is</li><li><b>state</b> - (required) the state where the city is</li><li><b>zip</b> - (optional) the ZIP code for the venue</li><li><b>phone</b> - (optional) the phone number for the venue</li><li><b>geolat</b> - (required)<br></li><li><b>geolong</b> - (required)</li></ul>
+Response (truncated):<br><code><div><div>{</div><div>&nbsp;&nbsp; &nbsp;response:'ok'</div><div>}</div></div><br></code><h4>Flag venue as closed<br></h4>
+Allows you to flag a venue as a 'closed' venue. The flag action will be pushed into a moderation queue. Once a venue is approved closed, it will no longer show up in search results.<br><br>
+URL: http://api.foursquare.com/v1/venue/flagclosed<br>
+Formats: XML, JSON<br>
+HTTP Method(s): POST<br>
+Requires Authentication: Yes<br>
+Parameters:
+<ul><li><b>vid</b> - the venue that you want marked closed (required)<br></li></ul>
+Response:<span style="font-family:monospace;font-size:11px"><div>{</div><div>&nbsp;&nbsp; &nbsp;response:'ok'</div><div>}</div><div><br></div></span></div><div><code><span style="font-family:arial, sans-serif;font-size:13px"><h4 style="letter-spacing:0.2em">Flag venue as mislocated<br></h4>Allows you to flag a venue that might be geocoded improperly. The flag action will be pushed into a queue as a hint. If the user knows the correct address, use /proposeedit to save it. If they know a venue is in the wrong place, but do not know the address, it's enough to provide this mislocated hint to the system instead.<br><br>URL: http://api.foursquare.com/v1/venue/flagmislocated<br>Formats: XML, JSON<br>HTTP Method(s): POST<br>Requires Authentication: Yes<br>Parameters:<ul><li><b>vid</b>&nbsp;- the venue that you want marked mislocated (required)<br></li></ul>Response:<span style="font-family:monospace;font-size:11px"><div>{</div><div>&nbsp;&nbsp; &nbsp;response:'ok'</div><div>}</div><div><br></div></span></span></code></div><div><code><span style="font-size:13px"><code></code></span></code><font face="monospace"><span style="font-family:arial, sans-serif;font-size:13px"><div><code><span style="font-family:arial, sans-serif;font-size:13px"><h4 style="letter-spacing:0.2em">Flag venue as duplicate<br></h4>Allows you to flag a venue that might be a duplicate. The flag action will be pushed into a queue as a hint.<br><br>URL: http://api.foursquare.com/v1/venue/flagduplicate<br>Formats: XML, JSON<br>HTTP Method(s): POST<br>Requires Authentication: Yes<br>Parameters:<ul><li><b>vid</b>&nbsp;- the venue that you want marked as a duplicate (required)<br></li></ul>Response:<span style="font-family:monospace;font-size:11px"><div>{</div><div>&nbsp;&nbsp; &nbsp;response:'ok'</div><div>}</div><div><br></div></span></span></code></div></span></font><h3>Tip methods</h3>
+<h4>Nearby<br></h4>
+Returns a list of tips near the area specified. (The distance returned is in meters).<br><br>
+URL: http://api.foursquare.com/v1/tips<br>
+Formats: XML, JSON<br>
+HTTP Method(s): GET<br>
+Requires Authentication: No, but recommended<br>
+Parameters:
+<ul><li><b>geolat</b> - latitude (required)<br></li><li><b>geolong</b> - longitude (required)<br></li><li><b>l</b> - limit of results (optional, default 30)</li></ul>
+Response (truncated):</div><div><span style="font-family:monospace;font-size:11px"><br></span></div><div><span style="font-family:monospace;font-size:11px">{</span></div><div><code><div>&nbsp;&nbsp; &nbsp;groups:[</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;type:'Nearby',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;tip:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:8774,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;text:'The burgers here are surprisingly delicious! Order one and wait out the ten minutes by having a pleasant conversation with Margaret.',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;distance:0,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;created:'Thu, 30 Apr 09 23:41:27 +0000',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;user:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:1818,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;firstname:'Joe',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lastname:'LaPenna',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;photo:'http://foursquare.com/userpix/1818_1239601037.jpg',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;gender:'male'</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;venue:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:36235,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;name:'KK Cafe',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;address:'252 Divisadero st',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;crossstreet:'Haight'</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</div></code><br><h4>Add tip/to-do<br></h4>
+Allows you to add a new tip or to-do at a venue.<br><br>
+URL: http://api.foursquare.com/v1/addtip<br>
+Formats: XML, JSON<br>
+HTTP Method(s): POST<br>
+Requires Authentication: Yes<br>
+Parameters:
+<ul><li><b>vid</b> - the venue where you want to add this tip (required)<br></li><li><b>text</b> - the text of the tip or to-do item (required)<br>
+</li><li><b>type</b> - specify one of 'tip' or 'todo' (optional, default: tip)</li><li><b>geolat</b> - (optional, but recommended)<br></li><li><b>geolong</b> - (optional, but recommended)</li></ul>
+Response:</div><div><span style="font-family:monospace;font-size:11px">{</span></div><div><code><div>&nbsp;&nbsp; &nbsp;tip:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;id:16634,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;text:'Get the hamburg doria (it\'s not on the menu)',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;created:'Fri, 10 Jul 09 17:17:38 +0000'</div><div>&nbsp;&nbsp; &nbsp;}</div><div>}</div></code><h4>Mark tip as to-do<br></h4>
+Allows you to mark a tip as a to-do item.<br><br>
+URL: http://api.foursquare.com/v1/tip/marktodo<br>
+Formats: XML, JSON<br>
+HTTP Method(s): POST<br>
+Requires Authentication: Yes<br>
+Parameters:
+<ul><li><b>tid</b> - the tip that you want to mark to-do (required)<br></li></ul>
+Response:</div><div><span style="font-family:monospace;font-size:11px">{</span></div><div><code><div>&nbsp;&nbsp; &nbsp;tip:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;id:94337,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;text:'good selection of port.',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;created:'Tue, 24 Nov 09 21:07:41 +0000'</div><div>&nbsp;&nbsp; &nbsp;}</div><div>}</div></code><h4>Mark tip as done<br></h4>
+Allows you to mark a tip as done.<br>
+<br>
+URL: http://api.foursquare.com/v1/tip/markdone<br>
+Formats: XML, JSON<br>
+HTTP Method(s): POST<br>
+Requires Authentication: Yes<br>
+Parameters:
+<ul><li><b>tid</b> - the tip that you want to mark done (required)<br></li></ul>
+Response:</div><div><span style="font-family:monospace;font-size:11px">{</span></div><div><code><span style="font-family:arial, sans-serif;font-size:13px"><div><code><div>&nbsp;&nbsp; &nbsp;tip:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;id:94337,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;text:'good selection of port.',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;created:'Tue, 24 Nov 09 21:07:41 +0000'</div><div>&nbsp;&nbsp; &nbsp;}</div><div>}</div><div><font face="arial, sans-serif"><span style="letter-spacing:2px"><b><font face="monospace"><span style="font-weight:normal;letter-spacing:normal"><br></span></font></b></span></font></div></code></div></span></code><h4 style="letter-spacing:0.2em">Unmark a tip<br></h4>Allows you to unmark a tip (it will revert the previous action, if there was any on the tip). For example, if a tip was on your to-do list, it would be taken off.<br><br>URL: http://api.foursquare.com/v1/tip/unmark<br>Formats: XML, JSON<br>HTTP Method(s): POST<br>Requires Authentication: Yes<br>Parameters:<ul><li><b>tid</b>&nbsp;- the tip that you want to unmark (required)<br></li></ul>Response:</div><div><span style="font-family:monospace;font-size:11px">{</span></div><div><code><span style="font-family:arial, sans-serif;font-size:13px"><div><code><div>&nbsp;&nbsp; &nbsp;tip:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;id:94337,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;text:'good selection of port.',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;created:'Tue, 24 Nov 09 21:07:41 +0000'</div><div>&nbsp;&nbsp; &nbsp;}</div><div>}</div><div><font size="3"><span style="font-size:11px"><font size="3"><span style="font-size:13px"><br></span></font></span></font></div></code></div></span></code></div><div><code><br></code><h3>Friend methods</h3><h4>Pending friend requests<br></h4><p>
+Shows you a list of users with whom you have a pending friend request (ie, they've requested to add you as a friend, but you have not approved).</p><br><p>
+URL: http://api.foursquare.com/v1/friend/requests<br>
+Formats: XML, JSON<br>
+HTTP Method(s): GET<br>
+Requires Authentication: Yes<br><br></p>
+Response:</div><div><code>{</code></div><div><code><div>&nbsp;&nbsp; &nbsp;requests:[</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:16294,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;firstname:'Benjamin',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;lastname:'Bloom',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;photo:'http://playfoursquare.s3.amazonaws.com/userpix_thumbs/16294_1254927789056.jpg',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;gender:'male',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;twitter:'bsbnyc',</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;facebook:401256</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}</div><div>...</div><br></code><h4>Approve friend request<br></h4>
+<p>Approves a pending friend request from another user. On success, returns the <span style="font-family:courier new,monospace">user</span>&nbsp;object.<br></p>
+<br>
+<p>
+URL: http://api.foursquare.com/v1/friend/approve<br>
+Formats: XML, JSON<br>
+HTTP Method(s): POST<br>
+Requires Authentication: Yes</p><p>Parameters:</p><ul><li><b>uid</b> - the user ID of the user who you want to approve<br></li></ul>
+Response (truncated):</div><div><code>{</code></div><div><code><div>&nbsp;&nbsp; &nbsp;user:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;id:16294,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;firstname:...</div></code><code><br></code><h4>Deny friend request<br></h4>
+<p>Denies a pending friend request from another user. On success, returns the <span style="font-family:courier new,monospace">user</span>&nbsp;object.<br>
+</p>
+<br>
+<p>
+URL: http://api.foursquare.com/v1/friend/deny<br>
+Formats: XML, JSON<br>
+HTTP Method(s): POST<br>
+Requires Authentication: Yes</p>
+<p>Parameters:</p>
+<ul><li><b>uid</b> - the user ID of the user who you want to deny<br>
+  </li></ul>
+Response (truncated):</div><div><code>{</code></div><div><code><div>&nbsp;&nbsp; &nbsp;user:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;id:16294,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;firstname:...</div><div><br></div></code><h4>Send friend request<br></h4>
+<p>Sends a friend request to another user. On success, returns the <span style="font-family:courier new,monospace">user</span>&nbsp;object.<br>
+</p>
+<br>
+<p>
+URL: http://api.foursquare.com/v1/friend/sendrequest<br>
+Formats: XML, JSON<br>
+HTTP Method(s): POST<br>
+Requires Authentication: Yes</p>
+<p>Parameters:</p>
+<ul><li><b>uid</b> - the user ID of the user to whom you want to send a friend request<br>
+  </li></ul>
+Response (truncated):</div><div><code>{</code></div><div><code><div>&nbsp;&nbsp; &nbsp;user:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;id:16294,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;firstname:...</div><div><br></div><br></code><h4>Find friends by name<br></h4>
+<p>When passed a free-form text string, returns a list of matching <span style="font-family:courier new,monospace">user</span>&nbsp;objects. The method only returns matches of people with whom you are not already friends.
+</p>
+<br>
+<p>
+URL: http://api.foursquare.com/v1/findfriends/byname<br>
+Formats: XML, JSON<br>
+HTTP Method(s): GET<br>
+Requires Authentication: Yes</p>
+<p>Parameters:</p>
+<ul><li><b>q</b> - the string you want to use to search firstnames and lastnames<br>
+  </li></ul>
+Response (truncated):</div><div><code>{</code></div><div><code><div>&nbsp;&nbsp; &nbsp;users:[</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:16294,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;firstname:'...'</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}</div><br></code><h4>Find friends by phone<br></h4>
+<p>When passed phone number(s), returns a list of matching <span style="font-family:courier new,monospace">user</span>&nbsp;objects. The method only returns matches of people with whom you are not already friends. You can pass a single number as a parameter, or you can pass multiple numbers separated by commas.<br></p>
+<br>
+<p>
+URL: http://api.foursquare.com/v1/findfriends/byphone<br>
+Formats: XML, JSON<br>
+HTTP Method(s): GET<br>
+Requires Authentication: Yes</p>
+<p>Parameters:</p>
+<ul><li><b>q</b> - the string you want to use to search for phone numbers<br>
+  </li></ul>
+Response (truncated):</div><div><code>{</code></div><div><code><div>&nbsp;&nbsp; &nbsp;users:[</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:16294,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;firstname:'...'</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}</div><br></code><h4>Find friends by using a Twitter name<br></h4>
+<p>When passed a Twitter name (user A), returns a list of matching <span style="font-family:courier new,monospace">user</span>&nbsp;objects that correspond to user A's friends on Twitter. The method only returns matches of people with whom you are not already friends.<br></p><p><br></p><p>If you don't pass in a Twitter name, it will attempt to use the Twitter name associated with the authenticating user.<br>
+</p>
+<br>
+<p>
+URL: http://api.foursquare.com/v1/findfriends/bytwitter<br>
+Formats: XML, JSON<br>
+HTTP Method(s): GET<br>
+Requires Authentication: Yes</p>
+<p>Parameters:</p>
+<ul><li><b>q</b> - (optional) the Twitter name you want to use to search<br>
+  </li></ul>
+Response (truncated):</div><div><code>{</code></div><div><code><div>&nbsp;&nbsp; &nbsp;users:[</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;id:16294,</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;firstname:'...'</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;}</div></code><br><br><h3>Settings methods</h3><h4>Set pings<br></h4><p>
+Allows you to change notification options for yourself (<span style="font-family:courier new,monospace">self</span>) globally as well as for each individual friend (identified by their <span style="font-family:courier new,monospace">uid</span>).</p><p><br></p><p>For example: To set pings on for a user identified by UID <span style="font-family:courier new,monospace">33</span>: "<span style="font-family:courier new,monospace">33=on</span>". To set pings to '<span style="font-family:courier new,monospace">off</span>' for yourself: "<span style="font-family:courier new,monospace">self=off</span>".<br><br>
+URL: http://api.foursquare.com/v1/settings/setpings<br>
+Formats: XML, JSON<br>
+HTTP Method(s): POST<br>
+Requires Authentication: Yes<br>
+Parameters:
+</p><ul><li><b>self</b> - the ping status for yourself (globally). possible values are <span style="font-family:courier new,monospace">on</span>&nbsp;and&nbsp;<span style="font-family:courier new,monospace">off</span>.</li><li><b>[uid]</b> - set the ping status for a friend. possible values are <span style="font-family:courier new,monospace">on</span> and <span style="font-family:courier new,monospace">off</span>.<br></li></ul>
+Response:</div><div><code>{</code></div><div><code><div>&nbsp;&nbsp; &nbsp;settings:{</div><div>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;pings:'on'</div><div>&nbsp;&nbsp; &nbsp;}</div><div>}</div><div><br></div></code><h3>Other methods</h3>
+<h4>Test<br></h4>
+<p><font>Returns the string "ok".</font><br></p><br>
+URL: http://api.foursquare.com/v1/test<br>
+Formats: XML, JSON<br>
+HTTP Method(s): GET<br>
+Requires Authentication: None<br><br>Response:</div><div><span style="font-family:monospace;font-size:11px">{</span></div><div><code><div>&nbsp;&nbsp; &nbsp;response:'ok'</div><div>}</div><div><font face="arial, sans-serif" size="3"><span style="font-size:13px"><font face="monospace" size="3"><span style="font-size:11px"><br></span></font></span></font></div></code><h3><font><font size="4"><font size="4">Error conditions<br>
+</font></font></font></h3>Depending on the situation, the API will send back an error response. These can fall into a few different categories:<br><br><b>{error}</b>: You've misused the method. Check to make sure you've passed in the appropriate parameters and that you are using the right HTTP method (GET vs POST). This will have an HTTP status code of 501 (Not Implemented).<br><ul><li>Example: <span style="font-family:courier new,monospace">{ error: 'Invalid Attribute Value: uid lksdjfl' }</span></li></ul><br><b>{ratelimited}</b>: You've hit a rate limit for this method. Check your code to make sure you aren't unnecessarily calling the same method multiple times in a row. This will have an HTTP status code of 400.<br><ul><li>Example:
+<span style="font-family:courier new,monospace">{ ratelimited: 'quota exceeded' }</span></li></ul><br><b>{unauthorized}</b>: Your authentication credentials were invalid. Check to make sure you are passing in the right username (email, phone) and password pair. This will have an HTTP status code of 401 (Unauthorized).<br><ul><li>Example: <span style="font-family:courier new,monospace">{ unauthorized: 'authentication failed' }</span></li></ul>
+<br><br></div></div><h3><font><font size="4">Changelog</font></font></h3>20090521 - naveen - Initial (alpha) release.<br>20090522-20090606 - [a whole bunch of things happened]<br>20090607 - naveen - nearby tips are revealed (/v1/tips). in /venue[s], stats block reveals social meta data<br>20090608 - naveen - /checkins accepts optional cityid parameter<br>20090613 - naveen - /user has parameters which determine whether to show badge and mayor data<br>20090617 - naveen - /addtip now allows you to add tips and to-dos at a venue<br>20090618 - naveen - explained the different &lt;checkin&gt; types returned by /checkins<br>20090629 - naveen - expanded breakdown (mayor, points) data returned by /checkin; now supports /addvenue<br>20090706 - naveen - /venue exposes &lt;tags&gt;<br>20090709 - naveen - support for HTTP Basic Authentication<br>20090710 - naveen - response from /addtip is a &lt;tip&gt; object<br>20090715 - naveen - /friends exposes a list of the authenticating user's friends<br>20090729 - naveen - /checkins has &lt;display&gt; node to help keep 'presence' language consistent<br>20090806 - naveen - /venue and /venues now expose a venue's twitter name<br>20090812 - naveen - /test<br>20090902 - naveen - /v1/history exposes your own history<br>20090904 - harryh - changed domain name<br>20090908 - naveen - showing "feeds_key" in authenticated /user response<br>20091005 - naveen - /history now wants "l" for limit instead of "limit". /tips now requires geolat, geolong<br>20091104 - naveen - /user now highlights whether a requested user is the authenticating user's friend<br>20091105 - naveen - highlighting the fact that shouts have a maximum length of 140 characters<br>20091109 - naveen - auth for /v1/venue is optional (if auth, you'll get back social meta data)<br>20091110 - naveen - added "Notes" section; minor updates to better describe alternate response branches<br>20091113 - naveen - 'Optional' authentication is now marked 'Recommended'; a note about blank parameters<br>20091116 - naveen - Comments on rate limiting; change to formatting of "who's here" data; the /v1 api is now publicly launched<br>20091117 - naveen - Distances are always returned in meters<br>20091119 - naveen - /friends will return any user's social graph<br>20091124 - naveen - Ping statuses and settings (global, per-friend) are exposed<br>20091129 - naveen - friend request methods (see pending requests, send/approve/deny request)<br>20091130 - naveen - friend finder methods; /checkcity authentication is optional<br>20091203 - naveen - recommended copy for post-checkin view (badges, tips)<br>20091214 - naveen - suggesting that you pass in geolat and geolong for all geo methods (cityid will go away soon)<br>20091215 - naveen - tip (mark as done, mark as todo) and venue (flag closed, flag address) actions<br>20091216 - naveen - exposing "send to Facebook" functionality<br>20091221 - naveen - a note about sending back identifiable User-Agents<br>20100104 - naveen - highlighting error conditions (&lt;error&gt;, &lt;ratelimited&gt;, &lt;unauthorized&gt;)<br>20100108 - naveen - the concept of cities (cityid and all city-related methods) has now been removed<br>20100109 - naveen - in /v1/user, &lt;city&gt; is now deprecated<br>20100115 - naveen - /friends now reveals phone and email address (if the friend allows it)<br>20100116 - naveen - updating /v1/venue to show that it returns specials (and how to interpret them)<br>20100118 - naveen - added a separate section on User-Agents with best practices<div>20100210 - naveen - amended the response for /proposeedit<br>20100227 - naveen - /venues and /venue return stats on the number of people currently at a venue<br>20100308 - naveen - category support</div><div>20100318 - naveen - removing documentation of feeds_key (it was deprecated a while ago)</div><div>20100323 - naveen - expanded the note on rate limits</div><div>20100401 - naveen - for clarity, &lt;special&gt; will reveal a &lt;kind&gt; which indicates where it belongs<br>20100429 - naveen - provide the ability to unmark a tip (take it off your list or mark it 'not done')</div><div>20100517 - naveen - support for tombstones in /venue (a venue has been merged into another)</div><div>20100518 - naveen - flag a venue as mislocated</div><div>20100519 - naveen - flag a venue as a duplicate</div><div>20100520 - naveen - goodnight pings are deprecated</div><div>20100706 - naveen - all examples now in JSON. XML is still supported, but we like JSON :)</div><div>20100707 - naveen - amended note on rate limits to clarify how to get them upped</div><div>20100719 - naveen - /user now can be queried using a user's Twitter name</div><div>20100810 - kushal - fix incorrect sample responses<br><br><br></div><wbr></div>
+  <div class="clear"></div>
+  </div>
+</div>
+</div>
+  <div style="padding-top: 20px;"></div>
+  <table align="left" cellpadding="0" cellspacing="0" width="100%"><tbody><tr valign="center">
+  <td>
+  </td><td align="right">
+  Version:&nbsp;
+  <select onchange="window.location.href = &#39;?version=&#39; + this.value;">
+  <option value="240" selected="">
+  Current
+  by kushal
+  -
+Aug 10
+  </option><option value="239">
+  236. Edit
+  by kushal
+  -
+Aug 10
+  </option><option value="238">
+  235. Edit
+  by naveen
+  -
+Jul 19
+  </option><option value="237">
+  234. Edit
+  by naveen
+  -
+Jul 7
+  </option><option value="236">
+  233. Edit
+  by naveen
+  -
+Jul 7
+  </option><option value="235">
+  232. Edit
+  by naveen
+  -
+Jul 6
+  </option><option value="234">
+  231. Edit
+  by jon
+  -
+Jun 16
+  </option><option value="233">
+  230. Edit
+  by naveen
+  -
+May 27
+  </option><option value="232">
+  229. Edit
+  by naveen
+  -
+May 20
+  </option><option value="231">
+  228. Edit
+  by naveen
+  -
+May 19
+  </option><option value="230">
+  227. Edit
+  by naveen
+  -
+May 18
+  </option><option value="229">
+  226. Edit
+  by naveen
+  -
+May 18
+  </option><option value="228">
+  225. Edit
+  by naveen
+  -
+May 17
+  </option><option value="227">
+  224. Edit
+  by naveen
+  -
+Apr 29
+  </option><option value="226">
+  223. Edit
+  by naveen
+  -
+Apr 29
+  </option><option value="225">
+  222. Edit
+  by naveen
+  -
+Apr 29
+  </option><option value="224">
+  221. Edit
+  by naveen
+  -
+Apr 1
+  </option><option value="223">
+  220. Edit
+  by naveen
+  -
+Apr 1
+  </option><option value="222">
+  219. Edit
+  by naveen
+  -
+Apr 1
+  </option><option value="221">
+  218. Edit
+  by naveen
+  -
+Mar 29
+  </option><option value="220">
+  217. Edit
+  by naveen
+  -
+Mar 23
+  </option><option value="219">
+  216. Edit
+  by naveen
+  -
+Mar 23
+  </option><option value="218">
+  215. Edit
+  by naveen
+  -
+Mar 18
+  </option><option value="217">
+  214. Edit
+  by naveen
+  -
+Mar 9
+  </option><option value="216">
+  213. Edit
+  by naveen
+  -
+Mar 8
+  </option><option value="215">
+  212. Edit
+  by naveen
+  -
+Mar 8
+  </option><option value="214">
+  211. Edit
+  by naveen
+  -
+Mar 8
+  </option><option value="213">
+  210. Edit
+  by naveen
+  -
+Mar 8
+  </option><option value="212">
+  209. Edit
+  by naveen
+  -
+Mar 8
+  </option><option value="211">
+  208. Edit
+  by naveen
+  -
+Mar 8
+  </option><option value="210">
+  207. Edit
+  by naveen
+  -
+Mar 8
+  </option><option value="209">
+  206. Edit
+  by naveen
+  -
+Mar 8
+  </option><option value="208">
+  205. Edit
+  by naveen
+  -
+Mar 8
+  </option><option value="207">
+  204. Edit
+  by naveen
+  -
+Mar 6
+  </option><option value="206">
+  203. Edit
+  by naveen
+  -
+Mar 6
+  </option><option value="205">
+  202. Edit
+  by naveen
+  -
+Mar 6
+  </option><option value="204">
+  201. Edit
+  by naveen
+  -
+Mar 6
+  </option><option value="203">
+  200. Edit
+  by naveen
+  -
+Mar 6
+  </option><option value="202">
+  199. Edit
+  by naveen
+  -
+Feb 25
+  </option><option value="201">
+  198. Edit
+  by naveen
+  -
+Feb 18
+  </option><option value="200">
+  197. Edit
+  by naveen
+  -
+Feb 17
+  </option><option value="199">
+  196. Edit
+  by naveen
+  -
+Feb 11
+  </option><option value="198">
+  195. Edit
+  by naveen
+  -
+Feb 10
+  </option><option value="197">
+  194. Edit
+  by naveen
+  -
+Feb 3
+  </option><option value="196">
+  193. Edit
+  by naveen
+  -
+Jan 20
+  </option><option value="195">
+  192. Edit
+  by naveen
+  -
+Jan 18
+  </option><option value="194">
+  191. Edit
+  by naveen
+  -
+Jan 18
+  </option><option value="193">
+  190. Edit
+  by naveen
+  -
+Jan 16
+  </option><option value="192">
+  189. Edit
+  by naveen
+  -
+Jan 16
+  </option><option value="191">
+  188. Edit
+  by naveen
+  -
+Jan 15
+  </option><option value="190">
+  187. Edit
+  by naveen
+  -
+Jan 15
+  </option><option value="189">
+  186. Edit
+  by naveen
+  -
+Jan 14
+  </option><option value="188">
+  185. Edit
+  by naveen
+  -
+Jan 9
+  </option><option value="187">
+  184. Edit
+  by naveen
+  -
+Jan 9
+  </option><option value="186">
+  183. Edit
+  by naveen
+  -
+Jan 9
+  </option><option value="185">
+  182. Edit
+  by naveen
+  -
+Jan 8
+  </option><option value="184">
+  181. Edit
+  by naveen
+  -
+Jan 8
+  </option><option value="183">
+  180. Edit
+  by naveen
+  -
+Jan 7
+  </option><option value="182">
+  179. Edit
+  by naveen
+  -
+Jan 4
+  </option><option value="181">
+  178. Edit
+  by naveen
+  -
+Jan 4
+  </option><option value="180">
+  177. Edit
+  by naveen
+  -
+Jan 4
+  </option><option value="179">
+  176. Edit
+  by naveen
+  -
+Jan 3
+  </option><option value="178">
+  175. Edit
+  by naveen
+  -
+Dec 22 2009
+  </option><option value="177">
+  174. Edit
+  by naveen
+  -
+Dec 21 2009
+  </option><option value="176">
+  173. Edit
+  by naveen
+  -
+Dec 18 2009
+  </option><option value="175">
+  172. Edit
+  by naveen
+  -
+Dec 16 2009
+  </option><option value="174">
+  171. Edit
+  by naveen
+  -
+Dec 15 2009
+  </option><option value="173">
+  170. Edit
+  by naveen
+  -
+Dec 15 2009
+  </option><option value="172">
+  169. Edit
+  by naveen
+  -
+Dec 15 2009
+  </option><option value="171">
+  168. Edit
+  by naveen
+  -
+Dec 15 2009
+  </option><option value="170">
+  167. Edit
+  by naveen
+  -
+Dec 14 2009
+  </option><option value="169">
+  166. Edit
+  by naveen
+  -
+Dec 11 2009
+  </option><option value="168">
+  165. Edit
+  by harryh
+  -
+Dec 9 2009
+  </option><option value="167">
+  164. Edit
+  by harryh
+  -
+Dec 9 2009
+  </option><option value="166">
+  163. Edit
+  by naveen
+  -
+Dec 4 2009
+  </option><option value="165">
+  162. Edit
+  by naveen
+  -
+Dec 4 2009
+  </option><option value="164">
+  161. Edit
+  by naveen
+  -
+Dec 3 2009
+  </option><option value="163">
+  160. Edit
+  by naveen
+  -
+Dec 3 2009
+  </option><option value="162">
+  159. Edit
+  by naveen
+  -
+Dec 1 2009
+  </option><option value="161">
+  158. Edit
+  by naveen
+  -
+Nov 30 2009
+  </option><option value="160">
+  157. Edit
+  by naveen
+  -
+Nov 30 2009
+  </option><option value="159">
+  156. Edit
+  by naveen
+  -
+Nov 30 2009
+  </option><option value="158">
+  155. Edit
+  by naveen
+  -
+Nov 30 2009
+  </option><option value="157">
+  154. Edit
+  by naveen
+  -
+Nov 30 2009
+  </option><option value="156">
+  153. Edit
+  by naveen
+  -
+Nov 30 2009
+  </option><option value="155">
+  152. Edit
+  by naveen
+  -
+Nov 30 2009
+  </option><option value="154">
+  151. Edit
+  by naveen
+  -
+Nov 30 2009
+  </option><option value="153">
+  150. Edit
+  by naveen
+  -
+Nov 30 2009
+  </option><option value="152">
+  149. Edit
+  by naveen
+  -
+Nov 30 2009
+  </option><option value="151">
+  148. Edit
+  by naveen
+  -
+Nov 29 2009
+  </option><option value="150">
+  147. Edit
+  by naveen
+  -
+Nov 29 2009
+  </option><option value="149">
+  146. Edit
+  by naveen
+  -
+Nov 25 2009
+  </option><option value="148">
+  145. Edit
+  by naveen
+  -
+Nov 24 2009
+  </option><option value="147">
+  144. Edit
+  by naveen
+  -
+Nov 24 2009
+  </option><option value="146">
+  143. Edit
+  by naveen
+  -
+Nov 24 2009
+  </option><option value="145">
+  142. Edit
+  by naveen
+  -
+Nov 24 2009
+  </option><option value="144">
+  141. Edit
+  by naveen
+  -
+Nov 24 2009
+  </option><option value="143">
+  140. Edit
+  by naveen
+  -
+Nov 24 2009
+  </option><option value="142">
+  139. Edit
+  by naveen
+  -
+Nov 19 2009
+  </option><option value="141">
+  138. Edit
+  by naveen
+  -
+Nov 19 2009
+  </option><option value="140">
+  137. Edit
+  by naveen
+  -
+Nov 18 2009
+  </option><option value="139">
+  136. Edit
+  by naveen
+  -
+Nov 18 2009
+  </option><option value="138">
+  135. Edit
+  by naveen
+  -
+Nov 17 2009
+  </option><option value="137">
+  134. Edit
+  by naveen
+  -
+Nov 16 2009
+  </option><option value="136">
+  133. Edit
+  by naveen
+  -
+Nov 16 2009
+  </option><option value="135">
+  132. Edit
+  by naveen
+  -
+Nov 16 2009
+  </option><option value="134">
+  131. Edit
+  by naveen
+  -
+Nov 16 2009
+  </option><option value="133">
+  130. Edit
+  by naveen
+  -
+Nov 16 2009
+  </option><option value="132">
+  129. Edit
+  by naveen
+  -
+Nov 16 2009
+  </option><option value="131">
+  128. Edit
+  by naveen
+  -
+Nov 16 2009
+  </option><option value="130">
+  127. Edit
+  by harryh
+  -
+Nov 16 2009
+  </option><option value="129">
+  126. Edit
+  by harryh
+  -
+Nov 16 2009
+  </option><option value="128">
+  125. Edit
+  by harryh
+  -
+Nov 16 2009
+  </option><option value="127">
+  124. Edit
+  by harryh
+  -
+Nov 16 2009
+  </option><option value="126">
+  123. Edit
+  by naveen
+  -
+Nov 15 2009
+  </option><option value="125">
+  122. Edit
+  by naveen
+  -
+Nov 15 2009
+  </option><option value="124">
+  121. Edit
+  by naveen
+  -
+Nov 14 2009
+  </option><option value="123">
+  120. Edit
+  by naveen
+  -
+Nov 13 2009
+  </option><option value="122">
+  119. Edit
+  by naveen
+  -
+Nov 12 2009
+  </option><option value="121">
+  118. Edit
+  by naveen
+  -
+Nov 11 2009
+  </option><option value="120">
+  117. Edit
+  by naveen
+  -
+Nov 10 2009
+  </option><option value="119">
+  116. Edit
+  by naveen
+  -
+Nov 10 2009
+  </option><option value="118">
+  115. Edit
+  by naveen
+  -
+Nov 10 2009
+  </option><option value="117">
+  114. Edit
+  by naveen
+  -
+Nov 10 2009
+  </option><option value="116">
+  113. Edit
+  by naveen
+  -
+Nov 10 2009
+  </option><option value="115">
+  112. Edit
+  by naveen
+  -
+Nov 10 2009
+  </option><option value="114">
+  111. Edit
+  by naveen
+  -
+Nov 10 2009
+  </option><option value="113">
+  110. Edit
+  by naveen
+  -
+Nov 10 2009
+  </option><option value="112">
+  109. Edit
+  by naveen
+  -
+Nov 9 2009
+  </option><option value="111">
+  108. Edit
+  by naveen
+  -
+Nov 9 2009
+  </option><option value="110">
+  107. Edit
+  by naveen
+  -
+Nov 5 2009
+  </option><option value="109">
+  106. Edit
+  by naveen
+  -
+Nov 4 2009
+  </option><option value="108">
+  105. Edit
+  by naveen
+  -
+Nov 4 2009
+  </option><option value="107">
+  104. Edit
+  by naveen
+  -
+Oct 5 2009
+  </option><option value="106">
+  103. Edit
+  by naveen
+  -
+Oct 5 2009
+  </option><option value="105">
+  102. Edit
+  by naveen
+  -
+Sep 13 2009
+  </option><option value="104">
+  101. Edit
+  by naveen
+  -
+Sep 8 2009
+  </option><option value="103">
+  100. Edit
+  by naveen
+  -
+Sep 8 2009
+  </option><option value="102">
+  99. Edit
+  by harryh
+  -
+Sep 4 2009
+  </option><option value="101">
+  98. Edit
+  by harryh
+  -
+Sep 4 2009
+  </option><option value="100">
+  97. Edit
+  by naveen
+  -
+Sep 3 2009
+  </option><option value="99">
+  96. Edit
+  by naveen
+  -
+Sep 2 2009
+  </option><option value="98">
+  95. Edit
+  by naveen
+  -
+Sep 2 2009
+  </option><option value="97">
+  94. Edit
+  by naveen
+  -
+Sep 2 2009
+  </option><option value="96">
+  93. Edit
+  by naveen
+  -
+Aug 12 2009
+  </option><option value="95">
+  92. Edit
+  by naveen
+  -
+Aug 12 2009
+  </option><option value="94">
+  91. Edit
+  by naveen
+  -
+Aug 6 2009
+  </option><option value="93">
+  90. Edit
+  by naveen
+  -
+Aug 6 2009
+  </option><option value="92">
+  89. Edit
+  by naveen
+  -
+Aug 5 2009
+  </option><option value="91">
+  88. Edit
+  by naveen
+  -
+Jul 29 2009
+  </option><option value="90">
+  87. Edit
+  by naveen
+  -
+Jul 29 2009
+  </option><option value="89">
+  86. Edit
+  by naveen
+  -
+Jul 20 2009
+  </option><option value="88">
+  85. Edit
+  by naveen
+  -
+Jul 17 2009
+  </option><option value="87">
+  84. Edit
+  by naveen
+  -
+Jul 17 2009
+  </option><option value="86">
+  83. Edit
+  by naveen
+  -
+Jul 15 2009
+  </option><option value="85">
+  82. Edit
+  by naveen
+  -
+Jul 15 2009
+  </option><option value="84">
+  81. Edit
+  by naveen
+  -
+Jul 15 2009
+  </option><option value="83">
+  80. Edit
+  by naveen
+  -
+Jul 13 2009
+  </option><option value="82">
+  79. Edit
+  by naveen
+  -
+Jul 13 2009
+  </option><option value="81">
+  78. Edit
+  by naveen
+  -
+Jul 10 2009
+  </option><option value="80">
+  77. Edit
+  by naveen
+  -
+Jul 10 2009
+  </option><option value="79">
+  76. Edit
+  by naveen
+  -
+Jul 10 2009
+  </option><option value="78">
+  75. Edit
+  by naveen
+  -
+Jul 10 2009
+  </option><option value="77">
+  74. Edit
+  by naveen
+  -
+Jul 9 2009
+  </option><option value="76">
+  73. Edit
+  by naveen
+  -
+Jul 9 2009
+  </option><option value="75">
+  72. Edit
+  by naveen
+  -
+Jul 9 2009
+  </option><option value="74">
+  71. Edit
+  by naveen
+  -
+Jul 9 2009
+  </option><option value="73">
+  70. Edit
+  by naveen
+  -
+Jul 9 2009
+  </option><option value="72">
+  69. Edit
+  by naveen
+  -
+Jul 9 2009
+  </option><option value="71">
+  68. Edit
+  by naveen
+  -
+Jul 7 2009
+  </option><option value="70">
+  67. Edit
+  by naveen
+  -
+Jul 6 2009
+  </option><option value="69">
+  66. Edit
+  by naveen
+  -
+Jul 6 2009
+  </option><option value="68">
+  65. Edit
+  by naveen
+  -
+Jul 6 2009
+  </option><option value="67">
+  64. Edit
+  by naveen
+  -
+Jul 3 2009
+  </option><option value="66">
+  63. Edit
+  by naveen
+  -
+Jun 29 2009
+  </option><option value="65">
+  62. Edit
+  by naveen
+  -
+Jun 29 2009
+  </option><option value="64">
+  61. Edit
+  by naveen
+  -
+Jun 29 2009
+  </option><option value="63">
+  60. Edit
+  by naveen
+  -
+Jun 29 2009
+  </option><option value="62">
+  59. Edit
+  by naveen
+  -
+Jun 29 2009
+  </option><option value="61">
+  58. Edit
+  by naveen
+  -
+Jun 18 2009
+  </option><option value="60">
+  57. Edit
+  by naveen
+  -
+Jun 18 2009
+  </option><option value="59">
+  56. Edit
+  by naveen
+  -
+Jun 17 2009
+  </option><option value="58">
+  55. Edit
+  by naveen
+  -
+Jun 17 2009
+  </option><option value="57">
+  54. Edit
+  by naveen
+  -
+Jun 13 2009
+  </option><option value="56">
+  53. Edit
+  by naveen
+  -
+Jun 13 2009
+  </option><option value="55">
+  52. Edit
+  by naveen
+  -
+Jun 10 2009
+  </option><option value="54">
+  51. Edit
+  by naveen
+  -
+Jun 8 2009
+  </option><option value="53">
+  50. Edit
+  by naveen
+  -
+Jun 8 2009
+  </option><option value="52">
+  49. Edit
+  by naveen
+  -
+Jun 7 2009
+  </option><option value="51">
+  48. Edit
+  by naveen
+  -
+Jun 7 2009
+  </option><option value="50">
+  47. Edit
+  by naveen
+  -
+Jun 7 2009
+  </option><option value="49">
+  46. Edit
+  by naveen
+  -
+Jun 7 2009
+  </option><option value="48">
+  45. Edit
+  by naveen
+  -
+Jun 7 2009
+  </option><option value="47">
+  44. Edit
+  by naveen
+  -
+Jun 7 2009
+  </option><option value="46">
+  43. Edit
+  by naveen
+  -
+Jun 7 2009
+  </option><option value="45">
+  42. Edit
+  by naveen
+  -
+Jun 7 2009
+  </option><option value="44">
+  41. Edit
+  by naveen
+  -
+Jun 7 2009
+  </option><option value="43">
+  40. Edit
+  by naveen
+  -
+Jun 7 2009
+  </option><option value="42">
+  39. Edit
+  by naveen
+  -
+Jun 7 2009
+  </option><option value="41">
+  38. Edit
+  by naveen
+  -
+Jun 5 2009
+  </option><option value="40">
+  37. Edit
+  by naveen
+  -
+Jun 4 2009
+  </option><option value="39">
+  36. Edit
+  by naveen
+  -
+Jun 1 2009
+  </option><option value="38">
+  35. Edit
+  by naveen
+  -
+Jun 1 2009
+  </option><option value="37">
+  34. Edit
+  by naveen
+  -
+Jun 1 2009
+  </option><option value="36">
+  33. Edit
+  by naveen
+  -
+May 31 2009
+  </option><option value="35">
+  32. Edit
+  by naveen
+  -
+May 29 2009
+  </option><option value="34">
+  31. Edit
+  by naveen
+  -
+May 29 2009
+  </option><option value="33">
+  30. Edit
+  by naveen
+  -
+May 29 2009
+  </option><option value="32">
+  29. Edit
+  by naveen
+  -
+May 29 2009
+  </option><option value="31">
+  28. Edit
+  by naveen
+  -
+May 29 2009
+  </option><option value="30">
+  27. Edit
+  by naveen
+  -
+May 29 2009
+  </option><option value="29">
+  26. Edit
+  by naveen
+  -
+May 29 2009
+  </option><option value="28">
+  25. Edit
+  by naveen
+  -
+May 29 2009
+  </option><option value="27">
+  24. Edit
+  by naveen
+  -
+May 29 2009
+  </option><option value="26">
+  23. Edit
+  by naveen
+  -
+May 29 2009
+  </option><option value="25">
+  22. Edit
+  by harryh
+  -
+May 28 2009
+  </option><option value="24">
+  21. Edit
+  by naveen
+  -
+May 28 2009
+  </option><option value="23">
+  20. Edit
+  by naveen
+  -
+May 28 2009
+  </option><option value="22">
+  19. Edit
+  by naveen
+  -
+May 28 2009
+  </option><option value="21">
+  18. Edit
+  by naveen
+  -
+May 28 2009
+  </option><option value="20">
+  17. Edit
+  by naveen
+  -
+May 28 2009
+  </option><option value="19">
+  16. Edit
+  by naveen
+  -
+May 28 2009
+  </option><option value="18">
+  15. Edit
+  by naveen
+  -
+May 26 2009
+  </option><option value="17">
+  14. Edit
+  by naveen
+  -
+May 21 2009
+  </option><option value="16">
+  13. Edit
+  by jon
+  -
+May 21 2009
+  </option><option value="15">
+  12. Edit
+  by naveen
+  -
+May 21 2009
+  </option><option value="14">
+  11. Edit
+  by naveen
+  -
+May 21 2009
+  </option><option value="13">
+  10. Edit
+  by naveen
+  -
+May 21 2009
+  </option><option value="12">
+  9. Edit
+  by naveen
+  -
+May 21 2009
+  </option><option value="11">
+  8. Edit
+  by naveen
+  -
+May 21 2009
+  </option><option value="10">
+  7. Edit
+  by naveen
+  -
+May 21 2009
+  </option><option value="9">
+  6. Edit
+  by naveen
+  -
+May 21 2009
+  </option><option value="8">
+  5. Edit
+  by naveen
+  -
+May 21 2009
+  </option><option value="7">
+  4. Edit
+  by naveen
+  -
+May 21 2009
+  </option><option value="6">
+  3. Edit
+  by naveen
+  -
+May 21 2009
+  </option><option value="5">
+  2. Edit
+  by jon
+  -
+May 21 2009
+  </option><option value="4">
+  1. Created
+  by naveen
+  -
+May 21 2009
+  </option></select>
+  </td>
+  </tr></tbody></table>
+  <div class="clear"></div>
+  </div>
+  <div class="maincontheaderboxatt">
+  <div class="hsep padt3"></div>
+  </div>
+  <div class="maincontboxatt">
+  <div class="mrgt0 mrgb0"></div>
+<style type="text/css"><!--
+
+#moduleContentsNav .depth0 td {
+  padding-top: 6px;
+}
+#moduleContentsNav .depth1 td {
+  padding-top: 3px;
+}
+#moduleContentsNav .depth2 td {
+  padding-top: 2px;
+}
+
+#moduleContentsNav .depth0 .name {
+  font-size: 130%;
+  font-family: helvetica;
+}
+
+#moduleContentsNav .depth1 .name {
+  font-size: 110%;
+}
+
+#moduleContentsNav .depth2 .name {
+  font-size: 95%;
+}
+
+#moduleContentsNav .ln,
+#moduleContentsNav .ln:visited,
+#moduleContentsNav .ln:link {
+  color: #0000cc;
+}
+
+#moduleContentsNav .dln,
+#moduleContentsNav .dln:visited,
+#moduleContentsNav .dln:link {
+  color: #7777cc;
+}
+
+#moduleContentsNav_outline_tbl td.firstcol {
+  padding-left: 6px;
+}
+
+#moduleContentsNav_sort_bar td {
+  padding: 4px 2px 3px 0px;
+  border-top: 1px solid #d2e3ff;
+  border-bottom: 1px solid #898a8d;
+}
+
+--></style>
+<div class="module" id="moduleContentsNav">
+</div>
+  </div>
+  <div class="padt10"></div>
+  <div class="maincontboxatt padt4">
+  <form id="create_new_page_form" method="POST" action="http://groups.google.com/group/foursquare-api/create?Action.Create" style="display: inline;">
+  <input type="hidden" name="POST_TOKEN" value="EDF8963B5F7B2EF3D6EEA52C4ACD01FF">
+  <input type="hidden" name="name" value="">
+  <input type="hidden" name="type" value="editable_page">
+  </form>
+  <div class="padt10"></div>
+  <div>
+  </div>
+  <div>
+  <div>
+  <div>
+  <div><div class="rf algnr wdthauto">
+  <a target="_blank" class="grltl" href="http://groups.google.com/groups/abuse?group=foursquare-api&type=page&url=http%3A%2F%2Fgroups.google.com%2Fgroup%2Ffoursquare-api%2Fweb%2Fapi-documentation&_done=%2Fgroup%2Ffoursquare-api%2Fweb%2Fapi-documentation%3F&">Report this page</a>
+  </div>
+  <div class="lf algnl wdthauto" style="display:block;" name="Bottom_toggle_add_comment" id="moduleEditablePage1_toggle_add_comment">
+  <a class="on" href="http://groups.google.com/group/foursquare-api/web/api-documentation#" onclick="_G2_GetModule(&#39;moduleAddComment2&#39;).togCommentBox(); tog(&#39;block&#39;, &#39;moduleEditablePage1_toggle_add_comment&#39;); tog(&#39;block&#39;, &#39;moduleEditablePage1_toggle_hide_comment&#39;); return false;">Discuss this page</a>
+  </div>
+  <div class="lf algnl wdthauto" style="display:none;" name="Bottom_toggle_hide_comment" id="moduleEditablePage1_toggle_hide_comment">
+  <a class="on" href="http://groups.google.com/group/foursquare-api/web/api-documentation#" onclick="_G2_GetModule(&#39;moduleAddComment2&#39;).togCommentBox(); tog(&#39;block&#39;, &#39;moduleEditablePage1_toggle_add_comment&#39;); tog(&#39;block&#39;, &#39;moduleEditablePage1_toggle_hide_comment&#39;); return false;">Hide message box</a>
+  </div>
+  <br class="hght0 clear" style="font-size:0px;">
+<div class="module nohide" id="moduleAddComment2">
+<div class="padt4 hide" name="moduleAddComment2_comment_main_div" id="moduleAddComment2_comment_main_div">
+ <table border="0" cellpadding="1" cellspacing="0" width="100%">
+  <tbody><tr><td>
+  <div>
+  <form method="POST" action="http://groups.google.com/group/foursquare-api/post" style="display:inline">
+  <input type="hidden" name="module_name" value="moduleAddComment2">
+  <input type="hidden" name="always_redir_done" value="1">
+  <input type="hidden" name="from" value="robspychala@gmail.com">
+  <input type="hidden" name="to" value="foursquare-api@googlegroups.com">
+  <input type="hidden" name="minreplyto" value="&lt;foursquare-api.9674c56069dd882@pages.googlegroups.com&gt;">
+  <input type="hidden" name="custom_email_header.0.Name" value="X-Google-Wiki">
+  <input type="hidden" name="custom_email_header.0.Value" value="CjkIAhCCsfe04IrTswkYBCDwASoRYXBpLWRvY3VtZW50YXRpb24w29DKBDoOZm91cnNxdWFyZS1hcGk=">
+  <input type="hidden" name="WebToken" value="6ec2cffcf30d2661b57108fbb39f72ff">
+  <input type="hidden" name="subject" value="Discussion on api-documentation">
+  <div class="padt5">
+  <textarea cols="79" id="moduleAddComment2_comment_text" name="body" rows="5"></textarea>
+  </div>
+  <input type="hidden" name="_done" value="/group/foursquare-api/web/api-documentation?msg=cs">
+  <div class="padt4">
+  <input type="submit" name="Action.Post" value="Post">
+  </div>
+  </form>
+  </div>
+  </td></tr>
+  </tbody></table>
+</div>
+</div>
+<script language="javascript1.3"><!--
+
+(function () {
+  var module = _G2_RegisterModule('moduleAddComment2');
+
+  module.show = function() {
+    this.style.display = "block";
+  }
+
+  module.hide = function() {
+    this.style.display = "none";
+  }
+
+  module.load = function() {
+    this.maybeFocusCommentText();
+  }
+
+  module.maybeFocusCommentText = function() {
+    var comment_main_div = document.getElementById('moduleAddComment2_comment_main_div');
+
+    try {
+      var text_el = document.getElementById('moduleAddComment2_comment_text');
+
+      // Move cursor to beginning of text area
+      if (text_el.createTextRange) {
+        var range = text_el.createTextRange();
+        range.move("character", 0);
+        range.select();
+      } else if (text_el.setSelectionRange) {
+        text_el.setSelectionRange(0, 0);
+      }
+
+      text_el.focus();
+    } catch (e) {
+      // Ignore focus-of-invisible exception
+    }
+  }
+
+  module.togCommentBox = function() {
+    tog('block', 'moduleAddComment2_comment_main_div');
+
+    this.maybeFocusCommentText();
+  }
+
+  module.load();
+})();
+
+//--></script>
+  <div class="clear"></div></div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+<div style="padding:10px 10px 0px 20px">
+</div>
+  <div class="padt10 clear"></div>
+  </td><td style="background-color: #e8eef7; ">
+  <div style="width: 32ex; height: 500px;">
+  <img width="1" height="500" alt="">
+  </div>
+  </td></tr></tbody></table>
+  <div style="background-color: #e8eef7">
+<div class="padt10 padb10">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr valign="center">
+  <td align="center" style="padding-right:1em;" class="fontsize2">
+  <b><a style="color: #00c" target="_top" href="http://groups.google.com/groups/create?lnk=gcf">Create a group</a></b><font color="#333"> - </font>
+  <a style="color: #00c" target="_top" href="http://groups.google.com/">Google Groups</a><font color="#333"> - </font>
+  <a style="color: #00c" target="_top" href="http://www.google.com/webhp?hl=en">Google Home</a><font color="#333"> - </font>
+  <a style="color: #00c" target="_top" href="http://groups.google.com/intl/en/googlegroups/terms_of_service3.html">Terms of Service</a><font color="#333"> - </font>
+  <a style="color: #00c" target="_top" href="http://groups.google.com/intl/en/googlegroups/privacy3.html">Privacy Policy</a>
+  </td>
+  </tr>
+  <tr>
+  <td align="center" style="color: #333" class="fontsize1 padt5">©2010 Google</td>
+  </tr>
+  </tbody></table>
+</div>
+  </div>
+<script language="javascript"><!--
+if( loaddef != "" ) {
+  window.onload=new Function( loaddef );
+}
+if( resizedef != "" ) {
+  window.onresize = new Function( resizedef );
+}
+//--></script>
+  <script src="./API documentation - foursquare API   Google Groups_files/urchin.js" type="text/javascript"> </script>
+  <script type="text/javascript"><!--
+      
+        _uacct = "UA-1044941-1";
+      
+      urchinTracker("\x2Fgroup\x2Ffoursquare-api\x2Fweb\x2Fapi-documentation?als_gt=group\x26als_greg=US\x26als_gact=\x26als_gsubs=1247\x26als_gview=ANYONE\x26als_gpjoin=y\x26als_sstat=s\x26als_usc=12\x26");
+    //--></script>
+
+
+</body></html>

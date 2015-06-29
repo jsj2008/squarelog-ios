@@ -1,0 +1,14 @@
+#import <UIKit/UIKit.h>
+
+#import "SLTableViewController.h"
+
+@interface Tip2ViewController320 : SLTableViewController {
+
+	NSMutableArray *venueInfo;
+    NSInteger venueId;
+}
+
+@property (nonatomic, retain) NSMutableArray *venueInfo;
+@property NSInteger venueId;
+
+@end

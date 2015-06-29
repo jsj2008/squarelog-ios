@@ -1,0 +1,273 @@
+#import "AppDelegate.h"
+#import "DashboardViewController320.h"
+#import "FSPostQueue.h"
+#import "UIDevice+Machine.h"
+#import "NSString+Path.h"
+#import "ReachabilityHelper.h"
+#import "ImageCache.h"
+#import "AccountTableViewController320.h"
+
+#import "FSTipsLookup.h"
+#import "FSVenuesLookup.h"
+#import "GNFindNearbyLookup.h"
+
+#import "FSCheckinsLookup.h"
+
+static NSString *cacheDirectory;
+static NSString *imageCacheDirectoryName;
+static NSString *uploadTempDirectoryName;
+
+@implementation AppDelegate
+
+@synthesize window;
+@synthesize navigationController;
+
+#pragma mark -
+#pragma mark Application lifecycle
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
+{	
+    {
+        LOG_EXPR([NSDate date]);
+        [[FSCheckinsLookup sharedInstance] loadCheckins];
+        LOG_EXPR([NSDate date]);
+        [[FSCheckinsLookup sharedInstance] refreshCheckinTimes];
+        LOG_EXPR([NSDate date]);
+    }
+    
+	AccountTableViewController320 *root = [AccountTableViewController320 new];
+    root.title = @"Accounts";
+	navigationController = [[UINavigationController alloc] initWithRootViewController:root];
+	[root release];
+    
+    DashboardViewController320 *dash = [DashboardViewController320 new];
+    [navigationController pushViewController:dash animated:NO];
+    [dash release];
+	
+    window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [window addSubview:navigationController.view];
+    [window makeKeyAndVisible];
+    
+    if (![UIDevice currentDevice].isMultitaskingDevice) {
+        [[FSPostQueue sharedInstance] performSelector:@selector(resume) withObject:nil afterDelay:0];
+    }
+
+    [ReachabilityHelper sharedInstance];
+    
+    return YES;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    
+    /*
+     Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+     Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+     */
+}
+
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    /*
+     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+     If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
+     */
+    
+    [[FSCheckinsLookup sharedInstance] saveCheckins];
+}
+
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    /*
+     Called as part of  transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
+     */
+}
+
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    /*
+     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+     */
+    
+    //[[ReachabilityHelper sharedInstance] lookupReachability];
+    [[FSPostQueue sharedInstance] performSelector:@selector(resume) withObject:nil afterDelay:0];
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    
+    [[FSCheckinsLookup sharedInstance] saveCheckins];
+    
+    [ManagedObjectContext() save:nil];
+}
+
+#pragma mark -
+#pragma mark Core Data stack
+
+/**
+ Returns the managed object context for the application.
+ If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
+ */
+- (NSManagedObjectContext *)managedObjectContext {
+    
+    if (managedObjectContext_ != nil) {
+        return managedObjectContext_;
+    }
+    
+    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    if (coordinator != nil) {
+        managedObjectContext_ = [[NSManagedObjectContext alloc] init];
+        [managedObjectContext_ setPersistentStoreCoordinator:coordinator];
+    }
+    return managedObjectContext_;
+}
+
+
+/**
+ Returns the managed object model for the application.
+ If the model doesn't already exist, it is created from the application's model.
+ */
+- (NSManagedObjectModel *)managedObjectModel {
+    
+    if (managedObjectModel_ != nil) {
+        return managedObjectModel_;
+    }
+    NSString *modelPath = [[NSBundle mainBundle] pathForResource:@"Posts" ofType:@"momd"];
+    NSURL *modelURL = [NSURL fileURLWithPath:modelPath];
+    managedObjectModel_ = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];    
+    return managedObjectModel_;
+}
+
+
+/**
+ Returns the persistent store coordinator for the application.
+ If the coordinator doesn't already exist, it is created and the application's store added to it.
+ */
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
+    
+    if (persistentStoreCoordinator_ != nil) {
+        return persistentStoreCoordinator_;
+    }
+                         
+    NSURL *storeURL = [NSURL fileURLWithPath: [[self applicationCacheDirectory] stringByAppendingPathComponent: @"Posts.sqlite"]];
+    
+    NSError *error = nil;
+    persistentStoreCoordinator_ = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    if (!(persistentStore_ = [persistentStoreCoordinator_ addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])) {
+        /*
+         Replace this implementation with code to handle the error appropriately.
+         
+         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+         
+         Typical reasons for an error here include:
+         * The persistent store is not accessible;
+         * The schema for the persistent store is incompatible with current managed object model.
+         Check the error message to determine what the actual problem was.
+         
+         
+         If the persistent store is not accessible, there is typically something wrong with the file path. Often, a file URL is pointing into the application's resources directory instead of a writeable directory.
+         
+         If you encounter schema incompatibility errors during development, you can reduce their frequency by:
+         * Simply deleting the existing store:
+         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
+         
+         * Performing automatic lightweight migration by passing the following dictionary as the options parameter: 
+         [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],NSMigratePersistentStoresAutomaticallyOption, [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+         
+         Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
+         
+         */
+        _NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }    
+    
+    return persistentStoreCoordinator_;
+}
+
+#pragma mark -
+#pragma mark Application's Documents directory
+
+- (void)applicationCacheDirectoryReset 
+{
+    
+    [persistentStoreCoordinator_ removePersistentStore:persistentStore_ error:nil];
+    
+    [managedObjectContext_ release]; managedObjectContext_ = nil;
+    [managedObjectModel_ release]; managedObjectModel_= nil;
+    [persistentStoreCoordinator_ release]; persistentStoreCoordinator_ = nil;
+    //[persistentStore_ release]; persistentStore_ = nil;    
+    
+    [cacheDirectory release]; cacheDirectory = nil;
+    [imageCacheDirectoryName release]; imageCacheDirectoryName = nil;
+    [uploadTempDirectoryName release]; uploadTempDirectoryName = nil;
+    
+    NSString *cacheDirectoryName = [((AppDelegate*)[UIApplication sharedApplication].delegate) applicationCacheDirectory];
+    [[NSFileManager defaultManager] removeItemAtPath:cacheDirectoryName error:nil];    
+}
+
+- (NSString *)applicationCacheDirectory
+{
+    if (cacheDirectory == nil) {
+        
+        cacheDirectory = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] 
+                                    stringByAppendingPathComponent:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]];
+        [cacheDirectory retain];        
+        [cacheDirectory createFilePathStructure];
+    } 
+    
+    return cacheDirectory;
+}
+
+- (NSString *)applicationImageCacheDirectory
+{
+	if (imageCacheDirectoryName == nil) {
+        
+        imageCacheDirectoryName = [((AppDelegate*)[UIApplication sharedApplication].delegate) applicationCacheDirectory];
+        imageCacheDirectoryName = [imageCacheDirectoryName stringByAppendingPathComponent:@"Images"];
+        [imageCacheDirectoryName retain];
+        [imageCacheDirectoryName createFilePathStructure];
+	}
+	
+    return imageCacheDirectoryName;
+}
+
+- (NSString *)applicationUploadTempDirectory
+{
+	if (uploadTempDirectoryName == nil) {
+        
+		uploadTempDirectoryName = [((AppDelegate*)[UIApplication sharedApplication].delegate) applicationCacheDirectory];
+        uploadTempDirectoryName = [uploadTempDirectoryName stringByAppendingPathComponent:@"PhotosToUpload"];
+		[uploadTempDirectoryName retain];
+		[uploadTempDirectoryName createFilePathStructure];
+    }
+	
+    return uploadTempDirectoryName;
+}
+
+#pragma mark -
+#pragma mark Memory management
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    /*
+     Free up as much memory as possible by purging cached data objects that can be recreated (or reloaded from disk) later.
+     */
+    
+    [[ImageCache sharedImageCache] removeAllImagesInMemory];
+    
+    [FSTipsLookup sharedInstance].locationTips = nil;
+    [FSTipsLookup sharedInstance].lastLookup = nil;
+    [FSTipsLookup sharedInstance].tips = nil;
+    [FSVenuesLookup sharedInstance].locationVenues = nil;
+    [FSVenuesLookup sharedInstance].venues = nil;
+    [FSVenuesLookup sharedInstance].lastLookup = nil;
+    [GNFindNearbyLookup sharedInstance].places = nil;
+    [GNFindNearbyLookup sharedInstance].lastLookup = nil;
+}
+
+- (void)dealloc {
+	[navigationController release];
+	[window release];
+	[super dealloc];
+}
+
+
+@end
+

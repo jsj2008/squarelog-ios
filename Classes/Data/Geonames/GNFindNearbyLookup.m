@@ -1,0 +1,114 @@
+#import "GNFindNearbyLookup.h"
+
+#import "UIApplication+Network.h"
+#import "WikipediaTableViewCell320.h"
+#import "NSObject+YAJL.h"
+
+@implementation GNFindNearbyLookup
+
+@synthesize queue, places;
+
+#pragma mark -
+#pragma mark Singleton definition
+
+GTMOBJECT_SINGLETON_BOILERPLATE(GNFindNearbyLookup, sharedInstance)
+
+#pragma mark -
+
+//http://www.geonames.org/export/wikipedia-webservice.html#findNearbyWikipedia
+
+//http://ws.geonames.org/findNearbyWikipediaJSON?lat=47&lng=9
+
+- (void) lookupWithLocation:(CLLocation*) location {
+    
+    [self cancel];
+    
+    NSString *url = [NSString stringWithFormat:@"%@/findNearbyWikipediaJSON?lat=%f&lng=%f&maxRows=40",
+                     GN_API_BASE_URL,
+                     location.coordinate.latitude,
+                     location.coordinate.longitude,
+                     nil];
+    
+    _NSLog(url);
+    
+    // Create the request.
+    NSMutableURLRequest *theRequest=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]
+                                                            cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                        timeoutInterval:TIMEOUT_INTERVAL];
+    
+    self.queue = [NSOperationQueue new];
+    [self.queue setMaxConcurrentOperationCount:1];
+    
+    [self sendRequest:theRequest];
+}
+
+#pragma mark -
+#pragma mark NSURLConnection delegates
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    
+    SEL sel = @selector(parseData:);
+    NSMethodSignature *sig = [self methodSignatureForSelector:sel];
+    
+    NSInvocation* invo = [NSInvocation invocationWithMethodSignature:sig];
+    [invo setTarget:self];
+    [invo setSelector:sel];
+    [invo setArgument:&receivedData atIndex:2];
+    
+    NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithInvocation:invo];
+    [queue addOperation:operation]; 
+    [operation release];
+    
+    [theConnection release]; theConnection = nil;
+	
+	[UIApplication endNetworkOperation];
+    
+}
+
+- (void)didFinishParsing:(NSDictionary *)data
+{
+    [self performSelectorOnMainThread:@selector(setPlaces:) withObject:data waitUntilDone:NO];
+    self.queue = nil;
+}
+
+- (void)parseData:(NSMutableData*)_receivedData
+{
+    
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    
+    NSDictionary *rawData = [_receivedData yajl_JSON]; [_receivedData release];
+    
+    _NSLog(@"started");
+    
+    NSDictionary* wikiPoints = [GNFindNearbyLookup parseToTableViewVenues:rawData];
+    
+    _NSLog(@"ended started");
+    
+    if (![queue isSuspended]) {
+        [self didFinishParsing:wikiPoints];
+    }
+    
+    [pool release];
+}
+
+- (void) handleError:(NSError*)_error
+{
+    [super handleError:_error];
+    [self performSelector:@selector(setError:) withObject:_error];
+}
+
+#pragma mark -
+
++ (NSDictionary*) parseToTableViewVenues:(NSDictionary*)rawData 
+{
+    
+    for (NSMutableDictionary* item in [rawData objectForKey:@"geonames"]) {
+            
+        [item setObject:[NSNumber numberWithInt:[WikipediaTableViewCell320 createRenderTreeWithWidth:320 wikiData:item]] forKey:@"height"];
+    }
+    
+    return rawData;
+}
+
+@end

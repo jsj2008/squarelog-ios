@@ -1,0 +1,75 @@
+TJSDemoApp
+v7
+r1
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Debug/JSDemoApp.app
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Debug/JSDemoApp.app/Contents/Info.plist
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Debug/JSDemoApp.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Debug/JSDemoApp.app/Contents/Resources/DefaultValues.plist
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Debug/JSDemoApp.app/Contents/Resources/JSDemoAppMainMenu.nib
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Debug/JSDemoApp.app/Contents/Resources/ParserTest.html
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Debug/JSDemoApp.app/Contents/Resources/Test.html
+t2
+s0
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/jsdemoapp/DefaultValues.plist
+c000000004BD8B1F4000000000000018B
+t1272492532
+s395
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/jsdemoapp/JSDemoAppMainMenu.xib
+c000000004BD8B1F40000000000027A36
+t1272492532
+s162358
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/jsdemoapp/ParserTest.html
+c000000004BD8B1F400000000000002DE
+t1272492532
+s734
+
+N/Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/jsdemoapp/Test.html
+c000000004BD8B1F400000000000002D1
+t1272492532
+s721
+
+Njsdemoapp/JSDemoApp-Info.plist
+c000000004BD8B1F400000000000002F5
+t1272492532
+s757
+
+CCompileXIB /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/jsdemoapp/JSDemoAppMainMenu.xib
+r0
+
+CCopyPlistFile /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Debug/JSDemoApp.app/Contents/Resources/DefaultValues.plist jsdemoapp/DefaultValues.plist
+r0
+
+CCpResource build/Debug/JSDemoApp.app/Contents/Resources/ParserTest.html jsdemoapp/ParserTest.html
+r0
+
+CCpResource build/Debug/JSDemoApp.app/Contents/Resources/Test.html jsdemoapp/Test.html
+r0
+
+CProcessInfoPlistFile /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Debug/JSDemoApp.app/Contents/Info.plist jsdemoapp/JSDemoApp-Info.plist
+r0
+
+CTouch /Users/robs/Documents/Dev/iPhone/sixhex/Libraries/itod-parsekit-02aebf3/build/Debug/JSDemoApp.app
+r0
+

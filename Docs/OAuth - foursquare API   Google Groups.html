@@ -1,0 +1,1245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0055)http://groups.google.com/group/foursquare-api/web/oauth -->
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <LINK rel="SHORTCUT ICON" href="http://groups.google.com/groups/img/3/favicon.ico">
+  <TITLE>
+  OAuth -
+  foursquare API |
+  Google Groups
+  </TITLE>
+  <META name="save" content="history">
+<NOSCRIPT></NOSCRIPT>
+<SCRIPT language="javascript"><!--
+  document.write('<style type="text/css">.scripthide { display: none; } .scriptinline { display: inline; } .scriptblock { display: block; }</style>');
+//--></SCRIPT><STYLE type="text/css">.scripthide { display: none; } .scriptinline { display: inline; } .scriptblock { display: block; }</STYLE>
+<SCRIPT language="javascript1.2"><!--
+  if (document.getElementById)
+    document.write('<style type="text/css">.script12hide { display: none; } .script12inline { display: inline; } .script12block { display: block; } .lnav { position: absolute; } .lnavch { margin-left:23.0ex;}</style>');
+//--></SCRIPT><STYLE type="text/css">.script12hide { display: none; } .script12inline { display: inline; } .script12block { display: block; } .lnav { position: absolute; } .lnavch { margin-left:23.0ex;}</STYLE>
+<SCRIPT language="javascript1.3"><!--
+  if (document.getElementById)
+    document.write('<style type="text/css">.script13hide { display: none; } .script13inline { display: inline; } .script13block { display: block; }</style>');
+//--></SCRIPT><STYLE type="text/css">.script13hide { display: none; } .script13inline { display: inline; } .script13block { display: block; }</STYLE>
+<STYLE type="text/css"><!--
+  @import "/groups/style.css?ig=1&stock=0&av=3&hl=en&v=679";
+  
+--></STYLE>
+  <SCRIPT language="javascript1.3" src="./OAuth - foursquare API   Google Groups_files/g2_common-19bbbb3d18cdd8cd613a76ae0f332207.js"></SCRIPT>
+<SCRIPT language="javascript"><!--
+
+// ----------------------------------
+// used for dynamic function generation on event handlers
+
+var loaddef = "";
+var resizedef = "";
+
+//-----------------------------------
+// Browser detection and support
+
+var agt = navigator.userAgent.toLowerCase();
+var is_opera = (agt.indexOf("opera") != -1);
+var is_ie = (agt.indexOf("msie") != -1) && document.all && !is_opera;
+var is_ie5 = (agt.indexOf("msie 5") != -1) && document.all;
+window.agt = agt;
+window.is_opera = is_opera;
+window.is_ie = is_ie;
+window.is_ie5 = is_ie5;
+
+// ----------------------------------
+// cross-browser functions
+
+var IE_all_cache = new Object();
+function IE_getElementById(id) {
+  if (IE_all_cache[id] == null) {
+    IE_all_cache[id] = document.all[id];
+  }
+  return IE_all_cache[id];
+}
+
+if (document.all) {
+  if (!document.getElementById) {
+    document.getElementById = IE_getElementById;
+  }
+}
+
+
+
+  //----------------------------------
+  // Timezone detection (sets cookie)
+
+  try {
+    document.cookie = 'GTZ=' + (new Date()).getTimezoneOffset() + ';path=/;expires=Mon, 01-Jan-2024 00:00:01 GMT';
+  } catch(e) {}
+
+
+// ---------------------------------
+// shelled functions for old javascript
+function tog() {}
+
+//--></SCRIPT>
+<SCRIPT language="javascript1.3"><!--
+
+// ----------------------------------
+// visibility functions
+
+function tog() {
+  // tog: toggle the visibility of html elements (arguments[1..]) from none to
+  // arguments[0].  Return what should be returned in a javascript onevent().
+  display = arguments[0];
+  for( var i=1; i<arguments.length; i++ ) {    
+    var x = document.getElementById(arguments[i]);
+    if (!x) continue;
+    if (x.style.display == "none" || x.style.display == "") {
+      x.style.display = display;
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  var e = is_ie ? window.event : this;
+  if (e) {
+    if (is_ie) {
+      e.cancelBubble = true;
+      e.returnValue = false;
+      return false;
+    } else {
+      return false;
+    }
+  }
+}
+
+
+_G2_initCurrentDomain('googlegroups.com',
+            false,
+            true);
+
+_G2_initCurrentGroup('foursquare-api',
+            'a');
+
+
+
+
+//--></SCRIPT>
+<SCRIPT language="javascript"><!--
+  window.gbar={};(function(){function h(a,b,d){var c="on"+b;if(a.addEventListener)a.addEventListener(b,d,false);else if(a.attachEvent)a.attachEvent(c,d);else{var f=a[c];a[c]=function(){var e=f.apply(this,arguments),g=d.apply(this,arguments);return e==undefined?g:g==undefined?e:g&&e}}};var i=window.gbar,k,l,m;function n(a){var b=window.encodeURIComponent&&(document.forms[0].q||"").value;if(b)a.href=a.href.replace(/([?&])q=[^&]*|$/,function(d,c){return(c||"&")+"q="+encodeURIComponent(b)})}i.qs=n;function o(a,b,d,c,f,e){var g=document.getElementById(a);if(g){var j=g.style;j.left=c?"auto":b+"px";j.right=c?b+"px":"auto";j.top=d+"px";j.visibility=l?"hidden":"visible";if(f&&e){j.width=f+"px";j.height=e+"px"}else{o(k,b,d,c,g.offsetWidth,g.offsetHeight);l=l?"":a}}}i.tg=function(a){a=a||window.event;var b,d=a.target||a.srcElement;a.cancelBubble=true;if(k!=null)p(d);else{b=document.createElement(Array.every||window.createPopup?"iframe":"div");b.frameBorder="0";k=b.id="gbs";b.src="javascript:''";d.parentNode.appendChild(b);h(document,"click",i.close);p(d);i.alld&&i.alld(function(){var c=document.getElementById("gbli");if(c){var f=c.parentNode;q(f,c);var e=c.prevSibling;f.removeChild(c);i.removeExtraDelimiters(f,e);b.style.height=f.offsetHeight+"px"}})}};function r(a){var b,d=document.defaultView;if(d&&d.getComputedStyle){if(a=d.getComputedStyle(a,""))b=a.direction}else b=a.currentStyle?a.currentStyle.direction:a.style.direction;return b=="rtl"}function p(a){var b=0;if(a.className!="gb3")a=a.parentNode;var d=a.getAttribute("aria-owns")||"gbi",c=a.offsetWidth,f=a.offsetTop>20?46:24,e=false;do b+=a.offsetLeft||0;while(a=a.offsetParent);a=(document.documentElement.clientWidth||document.body.clientWidth)-b-c;c=r(document.body);if(d=="gbi"){var g=document.getElementById("gbi");q(g,document.getElementById("gbli")||g.firstChild);if(c){b=a;e=true}}else if(!c){b=a;e=true}l!=d&&i.close();o(d,b,f,e)}i.close=function(){l&&o(l,0,0)};function s(a,b,d){if(!m){m="gb2";if(i.alld){var c=i.findClassName(a);if(c)m=c}}a.insertBefore(b,d).className=m}function q(a,b){for(var d,c=window.navExtra;c&&(d=c.pop());)s(a,d,b)}i.addLink=function(a,b,d){if((b=document.getElementById(b))&&a){a.className="gb4";var c=document.createElement("span");c.appendChild(a);c.appendChild(document.createTextNode(" | "));c.id=d;b.appendChild(c)}}})();
+//--></SCRIPT>
+<STYLE type="text/css"><!--
+  #gbar,#guser{font-size:13px;padding-top:1px !important}#gbar{float:left;height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}#gbs,.gbm{background:#fff;left:0;position:absolute;text-align:left;visibility:hidden;z-index:1000}.gbm{border:1px solid;border-color:#c9d7f1 #36c #36c #a2bae7;z-index:1001}.gb1{margin-right:.5em}.gb1,.gb3{zoom:1}.gb2{display:block;padding:.2em .5em;}.gb2,.gb3{text-decoration:none;border-bottom:none}a.gb1,a.gb2,a.gb3,a.gb4{color:#00c !important}.gbi .gb3,.gbi .gb2,.gbi .gb4{color:#dd8e27 !important}.gbf .gb3,.gbf .gb2,.gbf .gb4{color:#900 !important}a.gb2:hover{background:#36c;color:#fff !important}
+--></STYLE>
+<SCRIPT language="javascript"><!--
+function ad_resize() {}
+function if_resize() {}
+function fin_resize() {}
+function qs() {}
+//--></SCRIPT>
+<SCRIPT language="javascript1.2"><!--
+function if_resize(name, w, h) {
+  if (document.getElementById && document.getElementById(name)){
+    document.getElementById(name).style.height = h + "px";
+    document.getElementById(name).style.width = w + "px";
+  }
+}
+function ad_resize(w, h) {
+  if_resize("google_ads_frame",w,h);
+}
+function fin_resize(w, h) {
+  if_resize("google_finance_frame",w,h);
+}
+
+function qs(el) {
+  if (window.RegExp && window.encodeURIComponent) {
+    var qe=encodeURIComponent(document.gs.q.value);
+
+    if (qe == '') {
+      return 1;
+    }
+
+    if (el.href.indexOf("q=")!=-1) {
+      el.href=el.href.replace(new RegExp("q=[^&$]*"),"q="+qe);
+    } else {
+      el.href+="&q="+qe;
+    }
+  }
+  return 1;
+}
+
+//--></SCRIPT>
+  <LINK rel="alternate" type="application/rss+xml" title="RSS" href="http://groups.google.com/group/foursquare-api/feed/rss_v2_0_msgs.xml">
+  <LINK rel="alternate" type="application/atom+xml" title="Atom" href="http://groups.google.com/group/foursquare-api/feed/atom_v1_0_msgs.xml">
+</HEAD><BODY onresize="" onload="" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" bgcolor="white">
+  <STYLE type="text/css"><!--
+    .mygp1 { padding-bottom: 7px;padding-right: 12px}
+    .mygp2 { padding-bottom: 7px; padding-left: 12px}
+  --></STYLE>
+  <DIV class="algnl padall8" id="myg_popup" style="display:none; position: absolute; background-color: white;border-top: 1px solid #cccccc; border-left: 2px solid #cccccc; border-right: 2px solid #b3b3b3; border-bottom: 2px solid #b3b3b3;z-index: 2">
+  <TABLE cellpadding="0" border="0" cellspacing="0">
+  <COL style="width: 23.0ex">
+  <COL style="width: 23.0ex">
+  <TBODY><TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/?lnk="></A>&nbsp;<B><FONT color="#6f6f6f" dir="ltr">(79)</FONT></B>
+  </TD>
+  <TD class="mygp2" valign="top">
+  foursquare API
+  </TD>
+  </TR>
+  <TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/?lnk="></A>&nbsp;<B><FONT color="#6f6f6f" dir="ltr">(30)</FONT></B>
+  </TD>
+  <TD class="mygp2" valign="top">
+  <A class="on" href="http://groups.google.com/group/gevent?lnk=">gevent: coroutine-based Python network library</A>&nbsp;<B><FONT color="#6f6f6f" dir="ltr">(229)</FONT></B>
+  </TD>
+  </TR>
+  <TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/android-beginners?lnk=">Android Beginners</A>&nbsp;<B><FONT color="#6f6f6f" dir="ltr">(15820)</FONT></B>
+  </TD>
+  <TD class="mygp2" valign="top">
+  <A class="on" href="http://groups.google.com/group/google-appengine?lnk=">Google App Engine</A>&nbsp;<B><FONT color="#6f6f6f" dir="ltr">(362)</FONT></B>
+  </TD>
+  </TR>
+  <TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/hosted-mail-delivery?lnk=">Best Practices</A>&nbsp;<B><FONT color="#6f6f6f" dir="ltr">(822)</FONT></B>
+  </TD>
+  <TD class="mygp2" valign="top">
+  <A class="on" href="http://groups.google.com/group/liftweb?lnk=">Lift</A>&nbsp;<B><FONT color="#6f6f6f" dir="ltr">(8435)</FONT></B>
+  </TD>
+  </TR>
+  <TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/django-users?lnk=">Django users</A>&nbsp;<B><FONT color="#6f6f6f" dir="ltr">(14101)</FONT></B>
+  </TD>
+  <TD class="mygp2" valign="top">
+  <A class="on" href="http://groups.google.com/group/apps-features?lnk=">News &amp; Updates</A>&nbsp;<B><FONT color="#6f6f6f" dir="ltr">(2344)</FONT></B>
+  </TD>
+  </TR>
+  <TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/ec2ubuntu?lnk=">ec2ubuntu</A>&nbsp;<B><FONT color="#6f6f6f" dir="ltr">(3215)</FONT></B>
+  </TD>
+  <TD class="mygp2" valign="top">
+  <A class="on" href="http://groups.google.com/group/hosted-misc?lnk=">Updates &amp; Announcements</A>&nbsp;<B><FONT color="#6f6f6f" dir="ltr">(671)</FONT></B>
+  </TD>
+  </TR>
+  <TR><TD class="padb7 padt8" valign="bottom" colspan="2"><B>Recently visited</B>&nbsp;
+  <A href="http://groups.google.com/groups/clearrecent?Action.ClearRecent&_done=%2Fgroup%2Ffoursquare-api%2Fweb%2Foauth" class="ucl">[clear]</A></TD></TR>
+  <TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/bespin?lnk=">Bespin</A>
+  </TD>
+  <TD valign="top" class="mygp2">
+  <A class="on" href="http://groups.google.com/group/jsio?lnk=">js.io</A>
+  </TD>
+  </TR>
+  <TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/comp.lang.c?lnk=">comp.lang.c</A>
+  </TD>
+  <TD valign="top" class="mygp2">
+  <A class="on" href="http://groups.google.com/group/mollified?lnk=">Mollify</A>
+  </TD>
+  </TR>
+  <TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/des-moines-cocoaheads?lnk=">Des Moines CocoaHeads</A>
+  </TD>
+  <TD valign="top" class="mygp2">
+  <A class="on" href="http://groups.google.com/group/node-mongodb-native?lnk=">node-mongodb-native</A>
+  </TD>
+  </TR>
+  <TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/google-appengine-downtime-notify?lnk=">Google App Engine Downtime Notify</A>
+  </TD>
+  <TD valign="top" class="mygp2">
+  <A class="on" href="http://groups.google.com/group/nodejs?lnk=">nodejs</A>
+  </TD>
+  </TR>
+  <TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/google-appengine-java?lnk=">Google App Engine for Java</A>
+  </TD>
+  <TD valign="top" class="mygp2">
+  <A class="on" href="http://groups.google.com/group/prediction-api-discuss?lnk=">prediction-api-discuss</A>
+  </TD>
+  </TR>
+  <TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/google-appengine-python?lnk=">google-appengine-python</A>
+  </TD>
+  <TD valign="top" class="mygp2">
+  <A class="on" href="http://groups.google.com/group/tweetphoto?lnk=">TweetPhoto Developers</A>
+  </TD>
+  </TR>
+  <TR>
+  <TD valign="top" class="mygp1">
+  <A class="on" href="http://groups.google.com/group/jquery-dev?lnk=">jQuery Development</A>
+  </TD>
+  <TD valign="top" class="mygp2">
+  <A class="on" href="http://groups.google.com/group/twitter-development-talk?lnk=">Twitter Development Talk</A>
+  </TD>
+  </TR>
+  </TBODY></TABLE>
+  <DIV class="padt8">
+  <A href="http://www.google.com/alerts?t=8"><IMG src="./OAuth - foursquare API   Google Groups_files/envelope.gif" alt="Groups Alerts" border="0" height="15" width="16"></A>
+  <A href="http://www.google.com/alerts?t=8">Groups Alerts</A>
+  </DIV>
+  <DIV style="padding-top: 15px;">
+  <B><A href="http://groups.google.com/groups/create?lnk=l">Create a group...</A></B>
+  </DIV>
+  </DIV>
+  <DIV class="ggaiabar">
+  <DIV id="gbar"><NOBR><A href="http://mail.google.com/mail/?tab=gm" class="gb1">Gmail</A> <A href="http://www.google.com/calendar/render?tab=gc" class="gb1">Calendar</A> <A href="http://docs.google.com/?tab=go&authuser=0" class="gb1">Documents</A> <A href="http://www.google.com/webhp?hl=en&tab=gw" onclick="gbar.qs(this)" class="gb1">Web</A> <A href="http://www.google.com/reader/?tab=gy" class="gb1">Reader</A> <A href="http://www.google.com/intl/en/options/" onclick="this.blur();gbar.tg(event);return !1" aria-haspopup="true" class="gb3"><U>more</U> <SMALL>▼</SMALL></A><DIV class="gbm" id="gbi"><A href="http://picasaweb.google.com/home?hl=en&tab=gq" onclick="gbar.qs(this)" class="gb2">Photos</A> <A href="http://sites.google.com/?tab=g3" class="gb2">Sites</A> <B class="gb2">Groups</B> <A href="http://www.youtube.com/?hl=en&tab=g1" onclick="gbar.qs(this)" class="gb2">YouTube</A> <DIV class="gb2"><DIV class="gbd"></DIV></DIV><A href="http://www.google.com/imghp?hl=en&tab=gi" onclick="gbar.qs(this)" class="gb2">Images</A> <A href="http://video.google.com/?hl=en&tab=gv" onclick="gbar.qs(this)" class="gb2">Videos</A> <A href="http://maps.google.com/maps?hl=en&tab=gl" onclick="gbar.qs(this)" class="gb2">Maps</A> <A href="http://news.google.com/nwshp?hl=en&tab=gn" onclick="gbar.qs(this)" class="gb2">News</A> <A href="http://www.google.com/prdhp?hl=en&tab=gf" onclick="gbar.qs(this)" class="gb2">Shopping</A> <A href="http://books.google.com/bkshp?hl=en&tab=gp" onclick="gbar.qs(this)" class="gb2">Books</A> <A href="http://translate.google.com/?hl=en&tab=gT" onclick="gbar.qs(this)" class="gb2">Translate</A> <A href="http://scholar.google.com/schhp?hl=en&tab=gs" onclick="gbar.qs(this)" class="gb2">Scholar</A> <A href="http://www.google.com/finance?hl=en&tab=ge" onclick="gbar.qs(this)" class="gb2">Finance</A> <A href="http://blogsearch.google.com/?hl=en&tab=gb" onclick="gbar.qs(this)" class="gb2">Blogs</A> <DIV class="gb2"><DIV class="gbd"></DIV></DIV><A href="http://www.google.com/intl/en/options/" class="gb2">even more »</A> </DIV></NOBR></DIV><DIV class="gbh" style="left:0"></DIV><DIV class="gbh" style="right:0"></DIV>
+  <DIV align="right" id="guser" width="100%">
+  <NOBR>
+  <B>robspychala@gmail.com</B> |
+  <A class="on" id="myg_lnk" href="http://groups.google.com/">My Groups</A><IMG id="myg_img" src="./OAuth - foursquare API   Google Groups_files/mygroups_lt.gif" width="14" height="14" align="absmiddle" style="position: relative;margin-top: -1px;" class="noscripthide scripthide script12hide script13inline mrgl2">
+  <SCRIPT language="javascript1.3"><!--
+    function MygPopup(el, link_el) {
+      this.link_el = link_el;
+      this.el = el;
+      this.popupOpened = false;
+      this.mouseOver = false;
+      this.el.onclick = this.onClick.bind(this);
+      this.el.onmouseover = this.onMouseOver.bind(this);
+      this.el.onmouseout = this.onMouseOut.bind(this);
+      window.onresize = this.onResize.bind(this);
+      this.ignoreNext = false;
+    }
+    MygPopup.prototype.onClick = function(e) {
+      var e = e || window.event;
+      if (IsDescendant(this.el, GetEventTarget(e))
+          && this.popupOpened) {
+        
+        if (this.ignoreNext) {
+          this.ignoreNext = false;
+          return;
+        }
+      }
+      if (!IsDescendant(this.getPopup(), GetEventTarget(e))) {
+        this.toggle();
+      }
+    }
+    MygPopup.prototype.getPopup = function() {
+      if (!this.popup_el) {
+        this.popup_el = document.getElementById('myg_popup');
+      }
+      return this.popup_el;
+    }
+    MygPopup.prototype.toggle = function() {
+      this.popupOpened = !this.popupOpened;
+      var popup = this.getPopup();
+      if (this.popupOpened) {
+        popup.style.visibility = "hidden";
+        popup.style.display = "block";
+        this.setLeftPos();
+        popup.style.top = (GetPageOffsetTop(this.el)
+                           + this.el.offsetHeight) + "px";
+        this.mouseUpListener = this.onClick.bind(this);
+        listen(document, "mousedown", this.mouseUpListener);
+        
+        popup.style.visibility = "visible";
+        this.ignoreNext = true;
+      } else {
+        unlisten(document, "mousedown", this.mouseUpListener);
+        this.mouseUpListener = null;
+        
+        popup.style.visibility = "hidden";
+      }
+      this.updateImage();
+    }
+    MygPopup.prototype.updateImage = function() {
+      if (this.popupOpened) {
+        this.el.src = "/groups/img/mygroups_down.gif";
+      } else if (this.mouseOver) {
+        this.el.src = "/groups/img/mygroups_up.gif";
+      } else {
+        this.el.src = "/groups/img/mygroups_lt.gif";
+      }
+    }
+    MygPopup.prototype.onMouseOver = function() {
+      this.mouseOver = true;
+      this.updateImage();
+    }
+    MygPopup.prototype.onMouseOut = function() {
+      this.mouseOver = false;
+      this.updateImage();
+    }
+
+    
+
+    MygPopup.prototype.setLeftPos = function() {
+      var popup = this.getPopup();
+      
+        var setLeft = GetWindowWidth(window) - popup.offsetWidth - 5;
+        popup.style.left = Math.min(setLeft,
+                                    GetPageOffsetLeft(this.link_el)) + "px";
+      
+    }
+    MygPopup.prototype.onResize = function() {
+      if (this.popupOpened) {
+        this.setLeftPos();
+      }
+    }
+
+    var mygPopup = new MygPopup(document.getElementById('myg_img'),
+                                document.getElementById('myg_lnk'));
+  //--></SCRIPT>
+ |
+  <A class="on" href="http://groups.google.com/groups/favorites">Favorites</A> |
+  <A class="on" href="http://groups.google.com/groups/profile?myprofile">Profile</A> |
+  <A target="_blank" href="http://groups.google.com/support?hl=en">Help</A> |
+  <A href="https://www.google.com/accounts/ManageAccount?hl=en">My Account</A> |
+  <A target="_top" href="http://groups.google.com/groups/signout?q=1&_done=%2Fgroup%2Ffoursquare-api%2Fweb%2Foauth">Sign out</A>
+</NOBR>
+  </DIV>
+  </DIV>
+  <DIV class="clear"></DIV>
+  <DIV class="gtopbar">
+  <TABLE cellpadding="0" cellspacing="0" width="100%" border="0">
+  <TBODY><TR valign="top">
+  <TD class="maincell">
+  <TABLE cellpadding="0" cellspacing="0" border="0"><TBODY><TR valign="top"><TD width="140" style="overflow: hidden;"><A href="http://groups.google.com/"><IMG src="./OAuth - foursquare API   Google Groups_files/groups_logo_sm.gif" width="140" height="30" alt="Google Groups Home" border="0" style="position: relative; top: 2px; margin-right: 10px;"></A></TD>
+  </TR></TBODY></TABLE>
+  </TD>
+  </TR>
+  </TBODY></TABLE>
+  </DIV>
+  <SCRIPT language="javascript"><!--
+
+    
+    function google_ad_request_done(google_ads) {
+      /*
+       * Verify that there are actually ads to display.
+       */
+      var google_num_ads = google_ads.length;
+      if (google_num_ads <= 0) {
+        return;
+      }
+
+      var narrowAds = "<div class=\"box\">";
+  narrowAds += "<div class=\"sponsor-note\">Sponsored links</div>";
+  for(var i = 0; i < google_num_ads; i++){
+        narrowAds += '<div class="ad-item">' +
+  '<a href="' + google_ads[i].url + '" ' +
+          'onmouseout="window.status=\'\';return true" ' +
+          'onmouseover="window.status=\'go to ' +
+          google_ads[i].visible_url + '\';return true" ' +
+          'style="text-decoration:none">' +
+  '<span style="text-decoration:underline;" class="ad-subject">' +
+  google_ads[i].line1 + '<br></span>' +
+  '<span style="color:#000000">' + google_ads[i].line2 + '<br></span>' +
+  '<span style="color:#000000">' + google_ads[i].line3 + '<br></span>' +
+  '<span style="color:#008000">' + google_ads[i].visible_url +
+  '</span></a></div>';
+  }
+  var fill_ad_div = function() {
+  var ad_div = document.getElementById("google_ads_site");
+  if (ad_div) {
+  ad_div.innerHTML = narrowAds;
+  } else {
+  setTimeout(fill_ad_div, 10);
+  }
+  }
+  fill_ad_div();
+  }
+  function adsIframeHtml() {
+  return "<!DOCTYPE html><html><body><script type='text/javascript'>google_ad_request_done = parent.google_ad_request_done;google_ad_client = 'ca-google_groups'; google_max_num_ads = 3; google_ad_output = 'js'; google_ad_type = 'text'; google_language = 'en'; google_page_url = 'http://groups.google.com\x5Cx2Fgroup\x5Cx2Ffoursquare-api\x5Cx2Fweb\x5Cx2Foauth'; google_encoding = 'utf8'; google_safe = 'high'; google_adtest = 'off';"
+  + "<\/script> <script language='JavaScript' src='http://pagead2.googlesyndication.com/pagead/show_ads.js'><\/script><\/body><\/html>";
+  }
+  //--></SCRIPT>
+  <IFRAME width="0" height="0" frameborder="0" scrolling="no" src="javascript:parent.adsIframeHtml()"></IFRAME>
+  <DIV style="border-top: 1px solid #7799dd; z-index: 1; position: relative;"></DIV>
+  <DIV style="background-color: #e8eef7; padding: 4px 10px 4px 10px; ">
+  <TABLE class="grhdr " cellpadding="0" cellspacing="0" width="100%"><TBODY>
+  <TR valign="middle">
+  <TD class="padr10" width="42" height="42">
+  <DIV style="width:42px; height:42px; overflow: hidden;">
+  <DIV style="width:42px; height:42px; background:url(/group/foursquare-api/icon?v=1&amp;hl=en)"></DIV>
+  </DIV>
+  </TD><TD>
+  <DIV class="ghgrn">
+  <A class="ln" href="http://groups.google.com/group/foursquare-api">foursquare API</A>
+  </DIV>
+  </TD><TD style="padding-left: 35px" align="right">
+  <SCRIPT><!--
+                function sg() {
+                  document.gs3.q.value = document.gs2.q.value;
+                  document.gs3.submit();
+                }
+              //--></SCRIPT>
+  <FORM name="gs2" method="GET" action="http://groups.google.com/group/foursquare-api/search">
+  <TABLE cellpadding="0" cellspacing="0"><TBODY><TR><TD>
+  <INPUT type="hidden" name="group" value="foursquare-api"><INPUT type="text" name="q" size="20" maxlength="2048" value="" style="width: 25ex">
+  </TD>
+  <TD class="padl5">
+  <INPUT type="submit" class="bt" style="width:100%" name="qt_g" value="Search this group">
+  </TD>
+  <TD class="padl5">
+  <INPUT type="button" class="bt" style="width:100%" name="qt_s" onclick="sg();" value="Search Groups">
+  </TD>
+  </TR></TBODY></TABLE>
+  </FORM>
+  <FORM class="hide" name="gs3" method="GET" action="http://groups.google.com/groups/search">
+  <INPUT type="hidden" name="qt_s" value="1">
+  <INPUT type="hidden" name="q" size="20" maxlength="2048" value="">
+  </FORM>
+  </TD>
+  </TR>
+  </TBODY></TABLE>
+  </DIV>
+  <DIV style="border-top: 1px solid #7799dd"></DIV>
+  <DIV class="rf" style="width: 32ex;">
+  <DIV class="overflow-hide" style="position: absolute; margin-top: -1px; margin-left: -1px;z-index: 1;">
+  <DIV class="mrgl1 " style="width: 32ex; background-color: #e8eef7;">
+  <DIV class="padb10 padr10">
+  <DIV class="rnsecs">
+  <TABLE></TABLE>
+  <DIV class="sec">
+  <A class="secln" href="http://groups.google.com/group/foursquare-api">Home</A>
+  </DIV>
+  <TABLE></TABLE>
+  <DIV class="sec">
+  <DIV style="">
+  <A class="seclnact" href="http://groups.google.com/group/foursquare-api/topics">Discussions</A>
+  </DIV>
+  </DIV>
+  <TABLE></TABLE>
+  <DIV class="selsec">
+  <A class="seclnact" href="http://groups.google.com/group/foursquare-api/web">Pages</A>
+  <DIV class="actlns">
+  </DIV>
+  </DIV>
+  <TABLE></TABLE>
+  <DIV class="sec">
+  <A class="secln" href="http://groups.google.com/group/foursquare-api/members">Members</A>
+  </DIV>
+  <TABLE></TABLE>
+  <DIV class="mrgt5 mrgl10" style="border-bottom: 1px solid #7799dd"></DIV>
+  <DIV class="padt10"></DIV>
+  <DIV class="sec">
+  <A class="seclnlt" href="http://groups.google.com/group/foursquare-api/about">About this group</A>
+  </DIV>
+  <DIV class="sec">
+  <A class="seclnlt" href="http://groups.google.com/group/foursquare-api/subscribe">Edit my membership</A>
+  </DIV>
+  </DIV>
+  <DIV id="google_ads_site" class="g3rtn-ad-site"><DIV class="box"><DIV class="sponsor-note">Sponsored links</DIV><DIV class="ad-item"><A href="http://googleads.g.doubleclick.net/aclk?sa=l&ai=BMrZc0REuTMfqNIr1lAeU2vDGBsC5rrYBwO_uwxbAjbcBsJmZARABGAEg99uNAjgAUM3XoLYHYMnGqYvApNgPsgERZ3JvdXBzLmdvb2dsZS5jb23IAQHaATdodHRwOi8vZ3JvdXBzLmdvb2dsZS5jb20vZ3JvdXAvZm91cnNxdWFyZS1hcGkvd2ViL29hdXRoqAMB6AMf6ANH6AMF6APlA_UDAACAxA&num=1&sig=AGiWqtx5-pxTcfyQN07052zAVdC9m9enjQ&client=ca-google_groups&adurl=http://www.clarilogic.com" onmouseout="window.status=&#39;&#39;;return true" onmouseover="window.status=&#39;go to www.clarilogic.com&#39;;return true" style="text-decoration:none"><SPAN style="text-decoration:underline;" class="ad-subject">Yodlee Integration<BR></SPAN><SPAN style="color:#000000">Let Clarilogic help you with your<BR></SPAN><SPAN style="color:#000000">Yodlee development projects.<BR></SPAN><SPAN style="color:#008000">www.clarilogic.com</SPAN></A></DIV></DIV></DIV>
+  <DIV class="padt5"></DIV>
+  <DIV class="rnimc">
+  <DIV><TABLE cellpadding="0" cellspacing="0" width="100%"><TBODY><TR><TD><DIV style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=e8eef7&amp;w=2&amp;h=2&amp;a=af) 0px 0px; width: 2px; height: 2px"></DIV></TD><TD bgcolor="#7799dd" width="100%" height="2"><IMG alt="" width="1" height="1"></TD><TD><DIV style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=e8eef7&amp;w=2&amp;h=2&amp;a=af) 2px 0px; width: 2px; height: 2px"></DIV></TD></TR></TBODY></TABLE></DIV>
+  <DIV class="padl10 padb2" style="background-color: #7799dd; color: #ffffff;">
+  <B>Group info</B>
+  </DIV>
+  <DIV class="padt4 padb4 padl10 padr10" style="background-color: #ffffff;">
+  <STYLE type="text/css"><!--
+        #moduleGroupInfo td {
+          font-size: 91%;
+        }
+        --></STYLE>
+<STYLE type="text/css"><!--
+
+#moduleGroupInfo .moduleSMALL cat {
+  font-size: 0%;
+  padding-right:7px;
+}
+
+--></STYLE>
+<DIV class="module" id="moduleGroupInfo">
+  <DIV class="moduleSMALL">
+<TABLE class="modtab" cellpadding="0" cellspacing="0" border="0" width="100%" style="table-layout: fixed">
+  <TBODY><TR>
+  <TD class="overflow-hide" nowrap="">
+  <B>Members:</B> 1045
+  </TD>
+  </TR>
+  <TR>
+  <TD class="overflow-hide" nowrap="">
+  <B>Language:</B> English
+  </TD>
+  </TR>
+  <TR>
+  <TD class="overflow-hide">
+  <B>Group categories:</B>
+  <BR>
+  <A href="http://groups.google.com/groups/dir?sel=topic%3D46479.46475">
+  <NOBR>
+  Computers</NOBR><NOBR> &gt;
+  Programming</NOBR></A><BR>
+  <A href="http://groups.google.com/groups/dir?sel=topic%3D46479.46478">
+  <NOBR>
+  Computers</NOBR><NOBR> &gt;
+  Internet</NOBR></A><BR>
+  </TD>
+  </TR>
+  <TR>
+  <TD class="overflow-hide" nowrap="">
+  <B><A class="on" href="http://groups.google.com/group/foursquare-api/about">More group info »</A></B>
+  </TD>
+  </TR>
+</TBODY></TABLE>
+  </DIV>
+</DIV>
+<SCRIPT language="javascript1.3"><!--
+
+(function () {
+  var module = document.getElementById('moduleGroupInfo');
+
+  module.getChildElement = function(child_id) {
+    return document.getElementById(this.id + '_' + child_id);
+  }
+
+  module.load = function() {
+  }
+
+  module.load();
+})();
+
+//--></SCRIPT>
+  </DIV>
+  </DIV>
+  <DIV class="rnimc">
+  <DIV><TABLE cellpadding="0" cellspacing="0" width="100%"><TBODY><TR><TD><DIV style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=e8eef7&amp;w=2&amp;h=2&amp;a=af) 0px 0px; width: 2px; height: 2px"></DIV></TD><TD bgcolor="#7799dd" width="100%" height="2"><IMG alt="" width="1" height="1"></TD><TD><DIV style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=e8eef7&amp;w=2&amp;h=2&amp;a=af) 2px 0px; width: 2px; height: 2px"></DIV></TD></TR></TBODY></TABLE></DIV>
+  <DIV class="padl10 padb2" style="background-color: #7799dd; color: #ffffff;">
+  <B>Recent pages and files</B>
+  </DIV>
+  <DIV class="padt4 padb4 padl10 padr10" style="background-color: #ffffff;">
+  <STYLE type="text/css"><!--
+        #moduleRecentItems .item {
+          font-size: 91%;
+        }
+      --></STYLE>
+<STYLE type="text/css"><!--
+
+--></STYLE>
+<DIV class="module" id="moduleRecentItems">
+  <DIV class="moduleSMALL">
+  <TABLE class="modtab" cellpadding="0" cellspacing="0" border="0" width="100%" style="table-layout: fixed">
+  <TBODY><TR class="item">
+  <TD class="overflow-hide" nowrap="">
+  <IMG src="./OAuth - foursquare API   Google Groups_files/webpage.gif" alt="" class="icon" align="top" height="16" width="16">
+  <A href="./OAuth - foursquare API   Google Groups_files/OAuth - foursquare API   Google Groups.html" class="on">
+  OAuth
+  </A>
+  </TD><TD align="right" nowrap="" width="25%">
+  Jul 1
+  </TD></TR><TR class="item">
+  <TD class="overflow-hide" nowrap="">
+  <IMG src="./OAuth - foursquare API   Google Groups_files/webpage.gif" alt="" class="icon" align="top" height="16" width="16">
+  <A href="http://groups.google.com/group/foursquare-api/web/api-documentation" class="on">
+  API documentation
+  </A>
+  </TD><TD align="right" nowrap="" width="25%">
+  Jun 16
+  </TD></TR><TR class="item">
+  <TD class="overflow-hide" nowrap="">
+  <IMG src="./OAuth - foursquare API   Google Groups_files/webpage.gif" alt="" class="icon" align="top" height="16" width="16">
+  <A href="http://groups.google.com/group/foursquare-api/web/integrations" class="on">
+  Integrations
+  </A>
+  </TD><TD align="right" nowrap="" width="25%">
+  Apr 14
+  </TD></TR><TR class="item">
+  <TD class="overflow-hide" nowrap="">
+  <IMG src="./OAuth - foursquare API   Google Groups_files/webpage.gif" alt="" class="icon" align="top" height="16" width="16">
+  <A href="http://groups.google.com/group/foursquare-api/web/libraries" class="on">
+  Libraries
+  </A>
+  </TD><TD align="right" nowrap="" width="25%">
+  Mar 5
+  </TD></TR><TR class="item">
+  <TD class="overflow-hide" nowrap="">
+  <IMG src="./OAuth - foursquare API   Google Groups_files/webpage.gif" alt="" class="icon" align="top" height="16" width="16">
+  <A href="http://groups.google.com/group/foursquare-api/web/resources" class="on">
+  resources
+  </A>
+  </TD><TD align="right" nowrap="" width="25%">
+  Jan 20
+  </TD></TR><TR class="item">
+  <TD class="overflow-hide" nowrap="">
+  <IMG src="./OAuth - foursquare API   Google Groups_files/photo.gif" alt="" class="icon" align="top" height="16" width="16">
+  <A target="_blank" href="http://foursquare-api.googlegroups.com/web/special-unlocked.png?gda=btpmSEYAAABNHGZmEKf3Fklidy_fZ0V5VTkpU33Z3zHRNr4GwOBtzBGWY2E7bJbMHco0sgWFxPl3riz0RlMs_1ov_iNdB7P8E-Ea7GxYMt0t6nY0uV5FIQ" class="on">
+  special-unlocked.png
+  </A>
+  </TD><TD align="right" nowrap="" width="25%">
+  Jan 20
+  </TD></TR><TR class="item">
+  <TD class="overflow-hide" nowrap="">
+  <IMG src="./OAuth - foursquare API   Google Groups_files/photo.gif" alt="" class="icon" align="top" height="16" width="16">
+  <A target="_blank" href="http://foursquare-api.googlegroups.com/web/special-nearby.png?gda=Z3GDnEQAAABNHGZmEKf3Fklidy_fZ0V5VTkpU33Z3zHRNr4GwOBtzBveh-_Khc9a-oTLo3bxvZtV6u9SiETdg0Q2ffAyHU-dzc4BZkLnSFWX59nr5BxGqA" class="on">
+  special-nearby.png
+  </A>
+  </TD><TD align="right" nowrap="" width="25%">
+  Jan 20
+  </TD></TR><TR class="item">
+  <TD class="overflow-hide" nowrap="">
+  <IMG src="./OAuth - foursquare API   Google Groups_files/photo.gif" alt="" class="icon" align="top" height="16" width="16">
+  <A target="_blank" href="http://foursquare-api.googlegroups.com/web/special-here.png?gda=UoL-VkIAAABNHGZmEKf3Fklidy_fZ0V5VTkpU33Z3zHRNr4GwOBtzMGUo-IG_K2_MTALHKESgX9V4u3aa4iAIyYQIqbG9naPgh6o8ccLBvP6Chud5KMzIQ" class="on">
+  special-here.png
+  </A>
+  </TD><TD align="right" nowrap="" width="25%">
+  Jan 20
+  </TD></TR><TR class="item">
+  <TD class="overflow-hide" nowrap="">
+  <IMG src="./OAuth - foursquare API   Google Groups_files/photo.gif" alt="" class="icon" align="top" height="16" width="16">
+  <A target="_blank" href="http://foursquare-api.googlegroups.com/web/crown.png?gda=pJIgLjsAAABNHGZmEKf3Fklidy_fZ0V50QVk3iE-FPlQ5wbTjS_dIfS7jQYXEQlRoAnWjnxM_ZYGRdr3QrylPkw2aRbXD_gF" class="on">
+  crown.png
+  </A>
+  </TD><TD align="right" nowrap="" width="25%">
+  Jan 20
+  </TD></TR><TR class="item">
+  <TD class="overflow-hide" nowrap="">
+  <IMG src="./OAuth - foursquare API   Google Groups_files/photo.gif" alt="" class="icon" align="top" height="16" width="16">
+  <A target="_blank" href="http://foursquare-api.googlegroups.com/web/crown_50x50.png?gda=L3tJG0EAAABNHGZmEKf3Fklidy_fZ0V50QVk3iE-FPlQ5wbTjS_dITykQ07YUIwS8FGDnMQvmSJTCT_pCLcFTwcI3Sro5jAzlXFeCn-cdYleF-vtiGpWAA" class="on">
+  crown_50x50.png
+  </A>
+  </TD><TD align="right" nowrap="" width="25%">
+  Jan 20
+  </TD></TR></TBODY></TABLE>
+  </DIV>
+</DIV>
+<SCRIPT language="javascript1.3"><!--
+
+(function () {
+  var module = document.getElementById('moduleRecentItems');
+
+  module.getChildElement = function(child_id) {
+    return document.getElementById(this.id + '_' + child_id);
+  }
+
+  module.load = function() {
+  }
+
+  module.load();
+})();
+
+//--></SCRIPT>
+  </DIV>
+  </DIV>
+  </DIV>
+</DIV>
+</DIV>
+</DIV>
+  <TABLE class="wdth100  overflow-hide" cellpadding="0" cellspacing="0" style="table-layout: fixed;">
+  <COL width="*" height="100%"><COL style="width:32ex;"><TBODY><TR valign="top"><TD class=" overflow-hide" style="border-bottom: 1px solid #7799dd;; border-right: 1px solid #7799dd;">
+<SCRIPT><!--
+  function GN_confirmChangeCurrentVersion() {
+    return confirm("Are you sure you want to make this version the current version?");
+  }
+  function GN_confirmDeletePage() {
+    return confirm("Are you sure you want to delete this page?");
+  }
+//--></SCRIPT>
+<DIV class="maincontheaderbox hide" id="message_bar_padding" name="message_bar_padding">
+</DIV>
+<DIV class="maincontheaderbox" style="">
+  <DIV class="secttlbarwrap">
+  <DIV><TABLE cellpadding="0" cellspacing="0" width="100%"><TBODY><TR><TD><DIV style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=white&amp;w=4&amp;h=4&amp;a=af) 0px 0px; width: 4px; height: 4px"></DIV></TD><TD bgcolor="#7799dd" width="100%" height="4"><IMG alt="" width="1" height="1"></TD><TD><DIV style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=white&amp;w=4&amp;h=4&amp;a=af) 4px 0px; width: 4px; height: 4px"></DIV></TD></TR></TBODY></TABLE></DIV>
+  <DIV class="secttlbar">
+  <TABLE cellpadding="0" cellspacing="0" width="100%"><TBODY><TR>
+  <TD>
+  <SPAN class="secttl">
+  OAuth &nbsp;
+  </SPAN>
+  </TD><TD align="right">
+  &nbsp; <SPAN class="frtxt">
+  </SPAN>
+  </TD></TR></TBODY></TABLE>
+  </DIV>
+  <DIV><TABLE cellpadding="0" cellspacing="0" width="100%"><TBODY><TR><TD><DIV style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=white&amp;w=4&amp;h=4&amp;a=af) 0px 4px; width: 4px; height: 4px"></DIV></TD><TD bgcolor="#7799dd" width="100%" height="4"><IMG alt="" width="1" height="1"></TD><TD><DIV style="background: url(/groups/roundedcorners?c=7799dd&amp;bc=white&amp;w=4&amp;h=4&amp;a=af) 4px 4px; width: 4px; height: 4px"></DIV></TD></TR></TBODY></TABLE></DIV>
+  </DIV>
+</DIV>
+<DIV class="maincontboxhead">
+<DIV class="module" id="moduleEditablePage1">
+  <STYLE type="text/css"><!--
+  .editable {
+    border: 0;
+  }
+
+  .layout img {
+    border: 0;
+  }
+
+  .layout h1 {
+  	/*font-size: 3em;*/
+  	font-weight: bold;
+  	letter-spacing: 2px;
+  }
+  .layout h2 {
+  	/*font-size: 2em;*/
+  	font-weight: normal;
+  }
+  .layout h3 {
+  	/*font-size: 1.5em;*/
+  }
+  .layout h4 {
+  	/*font-size: 1.2em;*/
+  	letter-spacing: 0.2em;
+  }
+  .layout h5 {
+  	/*font-size: 1.2em;*/
+  }
+  .layout h6 {
+  	/*font-size: 1em;*/
+  	font-weight: bold;
+  }
+
+  .layout p,
+  .layout td {
+  	/*line-height: 1.6em;*/
+        margin: 0;
+  }
+--></STYLE>
+<DIV class="layout">
+  <DIV class="layoutregion">
+  <DIV id="g_body" style="overflow: auto;"><H3>Why oauth?</H3>
+<DIV>oauth is the standard for giving users controls over which third-party applications have access to their accounts over an API. &nbsp;Twitter, along with many other services, have adopted it and intend to fully replace basic http authentication for their APIs.</DIV>
+<DIV><BR>
+</DIV>
+<DIV>Foursquare users will be able to see, via the settings page, which third-party applications have access to their account. &nbsp;They have the ability to revoke access to an individual application without affecting any others. &nbsp; In addition to the transparency provided to the user, they also have the benefit of being able to turn a single app off without affecting any others. &nbsp;That would not be the case if they were forced to change their password to remove access from an undesirable service.</DIV>
+<DIV><BR>
+</DIV>
+<DIV>You can get more information on oauth at <A href="http://oauth.net/" rel="nofollow">oauth.net</A></DIV>
+<DIV><BR>
+</DIV>
+<H3>register your client</H3>
+<DIV>The first step to developing against the foursquare api will be to register your application and take note of your consumer key and secret. &nbsp;You can do that at&nbsp;<A href="http://playfoursquare.com/oauth" rel="nofollow">foursquare.com/oauth</A></DIV>
+<H3>oauth workflow</H3>
+<DIV>oauth was originally designed as a very web centric protocol. &nbsp;The traditional browser based workflow involves redirecting a user from your application to foursquare where the user an authenticat, approve, and then be redirected by to your application. &nbsp;We realize that this is inconvenient workflow for a desktop/mobile client and provided an alternative workflow</DIV>
+<H4>Web Browser Applications</H4>
+<DIV>
+<OL><LI>get request key and secret</LI>
+<LI>provide link to foursquare authorization page</LI>
+<LI>user will approve or deny access and be redirected to your application</LI>
+<LI>get access key and secret and store in your database</LI>
+<LI>use access key and secret to make api method calls</LI>
+</OL>
+</DIV>
+<H4>Desktop/Mobile Client Applications</H4>
+<DIV>We provide this mechanism under the assumption that if a user has installed your application on their hardware they, trust it enough to pass through their authentication information to foursquare. &nbsp;Please do not use this mechanism for a web application.&nbsp;</DIV>
+<DIV>
+<OL><LI>exchange foursquare username and password for an access key and token (<B>do not store username and password</B>)
+<OL><LI>see instructions below</LI>
+</OL>
+</LI>
+<LI>use access key and token to make api method calls</LI>
+</OL>
+<H4>xAuth Credentials Exchange</H4>
+<DIV>The xAuth exchange allows you to exchange a username and password for an oauth access token. &nbsp;This is a tradeoff between convenience and security and should only be used when the regular oauth redirect flow is not feasible or extremely cumbersome. &nbsp;Users will still be relinquishing their credentials to your application, but those credentials should only be used for the exchange and should not be stored.</DIV>
+<DIV><BR>
+</DIV>
+<DIV>We're using the specification developed by twitter:&nbsp;<A href="http://dev.twitter.com/pages/xauth" rel="nofollow">http://dev.twitter.com/pages/xauth</A></DIV>
+<DIV><BR>
+</DIV>
+<DIV>To use, create request,&nbsp;<B>signed with your consumer,</B> to http://foursquare.com/oauth/access_token with the following params</DIV>
+<DIV>
+<UL><LI>x_auth_username=emailORphone</LI>
+<LI>x_auth_password=password</LI>
+<LI>x_auth_mode=clientauth</LI></UL>
+</DIV>
+<DIV>A successful request will return an oauth_token and oauth_token_secret as form encoded parameters. &nbsp;That is the access token pair and should be stored by your application to make signed calls on behalf of the user.</DIV>
+</DIV>
+<DIV><BR>
+</DIV>
+<DIV><I>see ruby example below</I></DIV>
+<DIV><BR>
+</DIV>
+<DIV>note: an oauth signature or authentication error will return a standard http header with status code 401</DIV>
+<DIV><BR>
+</DIV>
+<H3>Endpoints</H3>
+<DIV>
+<UL><LI><FONT face="&#39;courier new&#39;, monospace">/oauth/request_token
+</FONT>
+<UL><LI>&nbsp;first step of the oauth dance: retrieve the request token</LI></UL>
+</LI>
+<LI><FONT face="&#39;courier new&#39;, monospace">/oauth/authorize
+</FONT>
+<UL><LI>&nbsp;second step in oauth dance: user follows a link to this page to authorize your application</LI></UL>
+</LI>
+<LI>/<FONT face="&#39;courier new&#39;, monospace">oauth/access_token
+</FONT>
+<UL><LI>final step in oauth dance: exchange a request token for an access token</LI>
+<LI>xauth: exchange username/password for access token</LI></UL>
+</LI>
+<LI><FONT face="&#39;courier new&#39;, monospace">/mobile/oauth/authorize</FONT></LI>
+<UL><LI>&nbsp;a very lightweight mobile version of the authorize page</LI></UL>
+</UL>
+</DIV>
+<H3>Example Code</H3>
+<DIV>There are several good oauth libraries in various languages that you can find via the google or on <A href="http://oauth.net/" rel="nofollow">oauth.net</A>, we've provided a few examples using the ruby oauth gem from&nbsp;<A href="http://oauth.rubyforge.org/" rel="nofollow">oauth.rubyforge.org</A></DIV>
+<H4>Web application oauth dance</H4>
+note that the :site for initiating the oauth dance is foursquare.com and api calls are made to <B>api</B>.foursquare.com
+<PRE>require 'rubygems'
+require 'oauth'
+token = 'consumer_token'
+secret = 'consumer_secret'
+
+consumer = OAuth::Consumer.new(token,secret, {
+       :site               =&gt; "http://foursquare.com",
+       :scheme             =&gt; :header,
+       :http_method        =&gt; :post,
+       :request_token_path =&gt; "/oauth/request_token",
+       :access_token_path  =&gt; "/oauth/access_token",
+       :authorize_path     =&gt; "/oauth/authorize"
+      })
+
+request_token = consumer.get_request_token(:oauth_callback =&gt; "oob")
+
+puts 'Go here: '
+puts request_token.authorize_url
+puts 'Enter verifier: '
+verifier = gets.chomp 
+
+access_token = request_token.get_access_token(:oauth_verifier =&gt; verifier)
+
+puts 'User Info: ' + access_token.get('http://api.foursquare.com/v1/user.json').body</PRE>
+<B>
+xAuth Auth Exchange
+</B>
+<PRE>require 'rubygems'
+require 'oauth
+
+consumer = OAuth::Consumer.new('token','secret')
+
+token_hash = consumer.token_request(:post,web + 'oauth/access_token', nil, {},{:x_auth_username =&gt; 'phoneORemail', :x_auth_password =&gt; 'password', :x_auth_mode =&gt; 'client_auth'})
+
+access_token = OAuth::AccessToken.from_hash(consumer, token_hash)
+
+puts 'User Info: ' + access_token.get(api + 'user.json').body
+
+</PRE>
+<WBR></DIV>
+  <DIV class="clear"></DIV>
+  </DIV>
+</DIV>
+</DIV>
+  <DIV style="padding-top: 20px;"></DIV>
+  <TABLE align="left" cellpadding="0" cellspacing="0" width="100%"><TBODY><TR valign="center">
+  <TD>
+  </TD><TD align="right">
+  Version:&nbsp;
+  <SELECT onchange="window.location.href = &#39;?version=&#39; + this.value;">
+  <OPTION value="25" selected="">
+  Current
+  by jon
+  -
+Jul 1
+  </OPTION><OPTION value="24">
+  21. Edit
+  by jon
+  -
+Jun 24
+  </OPTION><OPTION value="23">
+  20. Edit
+  by jon
+  -
+Jun 24
+  </OPTION><OPTION value="22">
+  19. Edit
+  by jon
+  -
+Jun 17
+  </OPTION><OPTION value="21">
+  18. Edit
+  by jon
+  -
+Jun 17
+  </OPTION><OPTION value="20">
+  17. Edit
+  by jon
+  -
+Jun 16
+  </OPTION><OPTION value="19">
+  16. Edit
+  by jon
+  -
+Jun 16
+  </OPTION><OPTION value="18">
+  15. Edit
+  by jon
+  -
+Jun 16
+  </OPTION><OPTION value="17">
+  14. Edit
+  by jon
+  -
+Jun 16
+  </OPTION><OPTION value="16">
+  13. Edit
+  by naveen
+  -
+Dec 23 2009
+  </OPTION><OPTION value="15">
+  12. Edit
+  by harryh
+  -
+Sep 4 2009
+  </OPTION><OPTION value="14">
+  11. Edit
+  by jon
+  -
+May 21 2009
+  </OPTION><OPTION value="13">
+  10. Edit
+  by jon
+  -
+May 21 2009
+  </OPTION><OPTION value="12">
+  9. Edit
+  by jon
+  -
+May 21 2009
+  </OPTION><OPTION value="11">
+  8. Edit
+  by jon
+  -
+May 21 2009
+  </OPTION><OPTION value="10">
+  7. Edit
+  by naveen
+  -
+May 21 2009
+  </OPTION><OPTION value="9">
+  6. Edit
+  by jon
+  -
+May 21 2009
+  </OPTION><OPTION value="8">
+  5. Edit
+  by jon
+  -
+May 21 2009
+  </OPTION><OPTION value="7">
+  4. Edit
+  by jon
+  -
+May 21 2009
+  </OPTION><OPTION value="6">
+  3. Edit
+  by jon
+  -
+May 21 2009
+  </OPTION><OPTION value="5">
+  2. Edit
+  by jon
+  -
+May 21 2009
+  </OPTION><OPTION value="4">
+  1. Created
+  by jon
+  -
+May 21 2009
+  </OPTION></SELECT>
+  </TD>
+  </TR></TBODY></TABLE>
+  <DIV class="clear"></DIV>
+  </DIV>
+  <DIV class="maincontheaderboxatt">
+  <DIV class="hsep padt3"></DIV>
+  </DIV>
+  <DIV class="maincontboxatt">
+  <DIV class="mrgt0 mrgb0"></DIV>
+<STYLE type="text/css"><!--
+
+#moduleContentsNav .depth0 td {
+  padding-top: 6px;
+}
+#moduleContentsNav .depth1 td {
+  padding-top: 3px;
+}
+#moduleContentsNav .depth2 td {
+  padding-top: 2px;
+}
+
+#moduleContentsNav .depth0 .name {
+  font-size: 130%;
+  font-family: helvetica;
+}
+
+#moduleContentsNav .depth1 .name {
+  font-size: 110%;
+}
+
+#moduleContentsNav .depth2 .name {
+  font-size: 95%;
+}
+
+#moduleContentsNav .ln,
+#moduleContentsNav .ln:visited,
+#moduleContentsNav .ln:link {
+  color: #0000cc;
+}
+
+#moduleContentsNav .dln,
+#moduleContentsNav .dln:visited,
+#moduleContentsNav .dln:link {
+  color: #7777cc;
+}
+
+#moduleContentsNav_outline_tbl td.firstcol {
+  padding-left: 6px;
+}
+
+#moduleContentsNav_sort_bar td {
+  padding: 4px 2px 3px 0px;
+  border-top: 1px solid #d2e3ff;
+  border-bottom: 1px solid #898a8d;
+}
+
+--></STYLE>
+<DIV class="module" id="moduleContentsNav">
+</DIV>
+  </DIV>
+  <DIV class="padt10"></DIV>
+  <DIV class="maincontboxatt padt4">
+  <FORM id="create_new_page_form" method="POST" action="http://groups.google.com/group/foursquare-api/create?Action.Create" style="display: inline;">
+  <INPUT type="hidden" name="POST_TOKEN" value="33AE29E5BA72ADEDEB1C20D416B3B55C">
+  <INPUT type="hidden" name="name" value="">
+  <INPUT type="hidden" name="type" value="editable_page">
+  </FORM>
+  <DIV class="padt10"></DIV>
+  <DIV>
+  </DIV>
+  <DIV>
+  <DIV>
+  <DIV>
+  <DIV><DIV class="rf algnr wdthauto">
+  <A target="_blank" class="grltl" href="http://groups.google.com/groups/abuse?group=foursquare-api&type=page&url=http%3A%2F%2Fgroups.google.com%2Fgroup%2Ffoursquare-api%2Fweb%2Foauth&_done=%2Fgroup%2Ffoursquare-api%2Fweb%2Foauth%3F&">Report this page</A>
+  </DIV>
+  <DIV class="lf algnl wdthauto" style="display:block;" name="Bottom_toggle_add_comment" id="moduleAddComment2_toggle_add_comment">
+  <A class="on" href="http://groups.google.com/group/foursquare-api/web/oauth#" onclick="_G2_GetModule(&#39;moduleAddComment2&#39;).togCommentBox(); tog(&#39;block&#39;, &#39;moduleAddComment2_toggle_add_comment&#39;); tog(&#39;block&#39;, &#39;moduleAddComment2_toggle_hide_comment&#39;); return false;">Discuss this page</A>
+  </DIV>
+  <DIV class="lf algnl wdthauto" style="display:none;" name="Bottom_toggle_hide_comment" id="moduleAddComment2_toggle_hide_comment">
+  <A class="on" href="http://groups.google.com/group/foursquare-api/web/oauth#" onclick="_G2_GetModule(&#39;moduleAddComment2&#39;).togCommentBox(); tog(&#39;block&#39;, &#39;moduleAddComment2_toggle_add_comment&#39;); tog(&#39;block&#39;, &#39;moduleAddComment2_toggle_hide_comment&#39;); return false;">Hide message box</A>
+  </DIV>
+  <BR class="hght0 clear" style="font-size:0px;">
+<DIV class="module nohide" id="moduleAddComment2">
+<DIV class="padt4 hide" name="moduleAddComment2_comment_main_div" id="moduleAddComment2_comment_main_div">
+ <TABLE border="0" cellpadding="1" cellspacing="0" width="100%">
+  <TBODY><TR><TD>
+  <DIV>
+  <FORM method="POST" action="http://groups.google.com/group/foursquare-api/post" style="display:inline">
+  <INPUT type="hidden" name="module_name" value="moduleAddComment2">
+  <INPUT type="hidden" name="always_redir_done" value="1">
+  <INPUT type="hidden" name="from" value="robspychala@gmail.com">
+  <INPUT type="hidden" name="to" value="foursquare-api@googlegroups.com">
+  <INPUT type="hidden" name="minreplyto" value="&lt;foursquare-api.db270632ac2cb3f1@pages.googlegroups.com&gt;">
+  <INPUT type="hidden" name="custom_email_header.0.Name" value="X-Google-Wiki">
+  <INPUT type="hidden" name="custom_email_header.0.Value" value="Ci0IAhDx57LhqsbBk9sBGAUgGSoFb2F1dGgw29DKBDoOZm91cnNxdWFyZS1hcGk=">
+  <INPUT type="hidden" name="WebToken" value="43fb2e76a97492fb2e88889cf944cbd8">
+  <INPUT type="hidden" name="subject" value="Discussion on oauth">
+  <DIV class="padt5">
+  <TEXTAREA cols="79" id="moduleAddComment2_comment_text" name="body" rows="5"></TEXTAREA>
+  </DIV>
+  <INPUT type="hidden" name="_done" value="/group/foursquare-api/web/oauth?msg=cs">
+  <DIV class="padt4">
+  <INPUT type="submit" name="Action.Post" value="Post">
+  </DIV>
+  </FORM>
+  </DIV>
+  </TD></TR>
+  </TBODY></TABLE>
+</DIV>
+</DIV>
+<SCRIPT language="javascript1.3"><!--
+
+(function () {
+  var module = _G2_RegisterModule('moduleAddComment2');
+
+  module.show = function() {
+    this.style.display = "block";
+  }
+
+  module.hide = function() {
+    this.style.display = "none";
+  }
+
+  module.load = function() {
+    this.maybeFocusCommentText();
+  }
+
+  module.maybeFocusCommentText = function() {
+    var comment_main_div = document.getElementById('moduleAddComment2_comment_main_div');
+
+    try {
+      var text_el = document.getElementById('moduleAddComment2_comment_text');
+
+      // Move cursor to beginning of text area
+      if (text_el.createTextRange) {
+        var range = text_el.createTextRange();
+        range.move("character", 0);
+        range.select();
+      } else if (text_el.setSelectionRange) {
+        text_el.setSelectionRange(0, 0);
+      }
+
+      text_el.focus();
+    } catch (e) {
+      // Ignore focus-of-invisible exception
+    }
+  }
+
+  module.togCommentBox = function() {
+    tog('block', 'moduleAddComment2_comment_main_div');
+
+    this.maybeFocusCommentText();
+  }
+
+  module.load();
+})();
+
+//--></SCRIPT>
+  <DIV class="clear"></DIV></DIV>
+  </DIV>
+  </DIV>
+  </DIV>
+  </DIV>
+
+<DIV style="padding:10px 10px 0px 20px">
+</DIV>
+  <DIV class="padt10 clear"></DIV>
+  </TD><TD style="background-color: #e8eef7; ">
+  <DIV style="width: 32ex; height: 500px;">
+  <IMG width="1" height="500" alt="">
+  </DIV>
+  </TD></TR></TBODY></TABLE>
+  <DIV style="background-color: #e8eef7">
+<DIV class="padt10 padb10">
+  <TABLE width="100%" border="0" cellpadding="0" cellspacing="0">
+  <TBODY><TR valign="center">
+  <TD align="center" style="padding-right:1em;" class="fontsize2">
+  <B><A style="color: #00c" target="_top" href="http://groups.google.com/groups/create?lnk=gcf">Create a group</A></B><FONT color="#333"> - </FONT>
+  <A style="color: #00c" target="_top" href="http://groups.google.com/">Google Groups</A><FONT color="#333"> - </FONT>
+  <A style="color: #00c" target="_top" href="http://www.google.com/webhp?hl=en">Google Home</A><FONT color="#333"> - </FONT>
+  <A style="color: #00c" target="_top" href="http://groups.google.com/intl/en/googlegroups/terms_of_service3.html">Terms of Service</A><FONT color="#333"> - </FONT>
+  <A style="color: #00c" target="_top" href="http://groups.google.com/intl/en/googlegroups/privacy3.html">Privacy Policy</A>
+  </TD>
+  </TR>
+  <TR>
+  <TD align="center" style="color: #333" class="fontsize1 padt5">©2010 Google</TD>
+  </TR>
+  </TBODY></TABLE>
+</DIV>
+  </DIV>
+<SCRIPT language="javascript"><!--
+if( loaddef != "" ) {
+  window.onload=new Function( loaddef );
+}
+if( resizedef != "" ) {
+  window.onresize = new Function( resizedef );
+}
+//--></SCRIPT>
+  <SCRIPT src="./OAuth - foursquare API   Google Groups_files/urchin.js" type="text/javascript"> </SCRIPT>
+  <SCRIPT type="text/javascript"><!--
+      
+        _uacct = "UA-1044941-1";
+      
+      urchinTracker("\x2Fgroup\x2Ffoursquare-api\x2Fweb\x2Foauth?als_gt=group\x26als_greg=US\x26als_gact=\x26als_gsubs=1045\x26als_gview=ANYONE\x26als_gpjoin=y\x26als_sstat=s\x26als_usc=12\x26");
+    //--></SCRIPT>
+
+
+</BODY></HTML>
